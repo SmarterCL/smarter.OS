@@ -8,9 +8,8 @@ export function Profile() {
                     {/* Profile Image Column */}
                     <div className="flex flex-col items-center gap-6 lg:w-1/3">
                         <div className="relative h-64 w-64 overflow-hidden rounded-2xl border-2 border-primary/20 bg-secondary shadow-xl ring-1 ring-border sm:h-80 sm:w-80">
-                            {/* Note: User needs to place their image in public/pedro.jpg or update this path */}
                             <img
-                                src="/pedro.jpg"
+                                src="/smarter_founder.jpeg"
                                 alt="Pedro Zaffuto"
                                 className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                             />

@@ -52,7 +52,7 @@ export function CodePreview() {
               </div>
               <div className="ml-8 text-muted-foreground">
                 {"image: "}
-                <span className="text-foreground">{"odoo:17"}</span>
+                <span className="text-foreground">{"odoo:19"}</span>
               </div>
               <div className="ml-8 text-muted-foreground">
                 {"expose: "}

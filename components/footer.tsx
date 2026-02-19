@@ -14,7 +14,7 @@ export function Footer() {
 
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
             <a
-              href="https://github.com/SmarterCL/smarter.io"
+              href="https://mcpservers.org/servers/smartercl/smartermcp"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-colors hover:text-foreground"
@@ -30,7 +30,7 @@ export function Footer() {
 
         <div className="mt-8 border-t border-border pt-8 flex flex-col items-center justify-between gap-4 text-center md:flex-row">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} SmarterOS. Todos los derechos reservados.
+            © {new Date().getFullYear()} Smarter SPA (RUT: 78.233.417-4). Todos los derechos reservados.
           </p>
           <div className="flex gap-4 text-xs text-muted-foreground">
             <a href="/privacidad" className="hover:text-foreground hover:underline">

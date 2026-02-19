@@ -7,6 +7,7 @@ import { CodePreview } from "@/components/code-preview"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 import { Profile } from "@/components/profile"
+import { SercotecChat } from "@/components/sercotec-chat"
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Features />
       <CodePreview />
       <Profile />
+      <SercotecChat />
       <CTASection />
       <Footer />
     </main>

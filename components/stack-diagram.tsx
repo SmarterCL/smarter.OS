@@ -49,7 +49,7 @@ const layers = [
     color: "from-amber-500/15 to-amber-500/5",
     borderColor: "border-amber-500/25",
     accentColor: "text-amber-400",
-    items: ["ERP multi-tenant en Odoo", "Subdominio = Base de datos", "PostgreSQL unico, multiples DB", "CRM, ecommerce, pagos"],
+    items: ["ERP multi-tenant en Odoo V19", "Subdominio = Base de datos", "PostgreSQL unico, multiples DB", "CRM, ecommerce, pagos"],
     description: "Cada cliente vive aislado dentro del mismo sistema.",
   },
   {
@@ -79,7 +79,7 @@ const layers = [
     color: "from-primary/20 to-primary/5",
     borderColor: "border-primary/30",
     accentColor: "text-primary",
-    items: ["VPS optimizado", "CPU suficiente", "RAM coherente", "SSD rapido"],
+    items: ["Mac mini M4 o VPS", "Procesamiento IA Local", "RAM coherente", "SSD rapido"],
     description: "Sin base solida no hay plataforma.",
   },
 ]
@@ -111,11 +111,10 @@ export function StackDiagram() {
               <button
                 key={layer.id}
                 onClick={() => setActiveLayer(isActive ? null : layer.id)}
-                className={`group relative overflow-hidden rounded-xl border text-left transition-all duration-300 ${
-                  isActive
+                className={`group relative overflow-hidden rounded-xl border text-left transition-all duration-300 ${isActive
                     ? `${layer.borderColor} bg-gradient-to-r ${layer.color}`
                     : "border-border bg-card hover:border-border/80 hover:bg-secondary/30"
-                }`}
+                  }`}
               >
                 {/* Layer number indicators */}
                 {index > 0 && index < layers.length - 1 && (
@@ -126,9 +125,8 @@ export function StackDiagram() {
 
                 <div className="flex items-center gap-4 p-5">
                   <div
-                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition-colors ${
-                      isActive ? `bg-background/20 ${layer.accentColor}` : "bg-secondary text-muted-foreground"
-                    }`}
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition-colors ${isActive ? `bg-background/20 ${layer.accentColor}` : "bg-secondary text-muted-foreground"
+                      }`}
                   >
                     <Icon className="h-5 w-5" />
                   </div>

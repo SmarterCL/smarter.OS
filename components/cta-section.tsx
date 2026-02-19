@@ -1,8 +1,8 @@
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, MapPin, Globe, ShoppingBag } from "lucide-react"
 
 export function CTASection() {
   return (
-    <section id="contacto" className="relative border-t border-border py-24 lg:py-32">
+    <section id="invitacion" className="relative border-t border-border py-24 lg:py-32">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-primary/[0.02] to-transparent" />
 
       <div className="relative mx-auto max-w-7xl px-6">
@@ -12,28 +12,49 @@ export function CTASection() {
 
             <div className="relative text-center">
               <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                {"Smarter OS es open source"}
+                {"Invitación Presencial"}
               </h2>
-              <p className="mx-auto mt-4 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-                {"Infraestructura + Seguridad + Multi-tenant + Automatizacion + Canal movil = Modelo SaaS replicable. Explora el codigo, auditalo, replicalo."}
+              <p className="mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
+                {"Ven a conocer la demo en vivo y postula tu proyecto en nuestro centro de operaciones:"}
               </p>
+              <div className="mt-4 flex items-center justify-center gap-2 text-foreground font-medium">
+                <MapPin className="h-5 w-5 text-primary" />
+                <span>Hub Metropolitano San Isidro 85 (A pasos del Metro Santa Lucía)</span>
+              </div>
+              <p className="mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
+                {"Pasa la tarjeta, entra en demo y deja que el sistema trabaje por ti 24/7."}
+              </p>
+
+              <div className="mt-8 text-xl font-bold text-primary">
+                {"SmarterBot – Inteligencia Real. Resultados Reales."}
+              </div>
 
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
-                  href="https://github.com/SmarterCL/smarter.io"
+                  href="https://www.smarterbot.cl"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:opacity-90"
                 >
-                  Ver Repositorio
+                  <Globe className="h-4 w-4" />
+                  www.smarterbot.cl
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
+                <a
+                  href="https://www.smarterbot.store"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 rounded-lg border border-border px-8 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+                >
+                  <ShoppingBag className="h-4 w-4" />
+                  www.smarterbot.store
                 </a>
               </div>
 
               <div className="mt-10 flex items-center justify-center gap-8 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                  En produccion
+                  En producción
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-primary" />
@@ -43,6 +64,10 @@ export function CTASection() {
                   <span className="h-2 w-2 rounded-full bg-amber-500" />
                   Auditado
                 </div>
+              </div>
+
+              <div className="mt-8 text-xs text-muted-foreground/50">
+                Propuesta basada en la infraestructura de Smarter SPA (RUT: 78.233.417-4).
               </div>
             </div>
           </div>

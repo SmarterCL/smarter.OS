@@ -22,34 +22,33 @@ export function Hero() {
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-4 py-1.5">
             <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-medium text-muted-foreground font-mono tracking-wider uppercase">
-              Publicada. Funcionando. Auditada.
+              SmarterBot – Inteligencia Real. Resultados Reales.
             </span>
           </div>
 
           <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-7xl">
-            {"Sistema Operativo Comercial para "}
-            <span className="text-primary">Chile</span>
+            {"Smarter OS – Tu Negocio en "}
+            <span className="text-primary">Piloto Automático</span>
+            {" (Físico + Digital)"}
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground lg:text-xl">
-            {"Preparado para Sercotec y SII. Un stack operativo comercial completo que hace funcionar tu negocio digital con estándares reales."}
+            {"¿Cansado de pagar suscripciones infinitas por herramientas que no hablan entre sí? Es hora de cambiar el juego con un Exoesqueleto Comercial diseñado en Chile."}
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="https://github.com/SmarterCL/smarter.io"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#propuesta"
               className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:opacity-90"
             >
-              Explorar en GitHub
+              Ver La Propuesta
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="#arquitectura"
+              href="#invitacion"
               className="flex items-center gap-2 rounded-lg border border-border px-8 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
             >
-              Ver Arquitectura
+              Invitación Presencial
             </a>
           </div>
         </div>

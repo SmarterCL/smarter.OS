@@ -1,13 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Github } from "lucide-react"
 
 const navLinks = [
   { label: "Arquitectura", href: "#arquitectura" },
-  { label: "Stack", href: "#stack" },
+  { label: "Stack", href: "#propuesta" }, // Updated href to match new ID
   { label: "Capas", href: "#capas" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Contacto", href: "#invitacion" }, // Updated href to match new ID
 ]
 
 export function Navbar() {
@@ -36,11 +36,12 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="https://github.com/SmarterCL/smarter.io"
+            href="https://mcpservers.org/servers/smartercl/smartermcp"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+            className="flex items-center gap-2 rounded-lg bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
+            <Github className="h-4 w-4" />
             GitHub
           </a>
         </div>
