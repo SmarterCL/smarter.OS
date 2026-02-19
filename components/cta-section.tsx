@@ -25,7 +25,7 @@ export function CTASection() {
                 {"Pasa la tarjeta, entra en demo y deja que el sistema trabaje por ti 24/7."}
               </p>
 
-              <div className="mt-8 text-xl font-bold text-primary">
+              <div className="mt-[5px] text-xl font-bold text-primary">
                 {"SmarterBot – Inteligencia Real. Resultados Reales."}
               </div>
 
