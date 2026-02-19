@@ -64,7 +64,7 @@ export function SercotecChat() {
                             </div>
                             <div className="h-8 w-px bg-gray-200 mx-2 hidden sm:block"></div>
                             <h3 className="text-lg font-semibold text-gray-800 hidden sm:block">
-                                Autenticador 2026
+                                Smarter Bot
                             </h3>
                         </div>
                         <div className="text-xs font-mono text-gray-400">
@@ -144,8 +144,8 @@ export function SercotecChat() {
                                             </div>
                                             <div
                                                 className={`rounded-lg px-4 py-2 text-sm max-w-[80%] ${msg.role === "user"
-                                                        ? "bg-primary text-primary-foreground"
-                                                        : "bg-card border border-border text-foreground shadow-sm"
+                                                    ? "bg-primary text-primary-foreground"
+                                                    : "bg-card border border-border text-foreground shadow-sm"
                                                     }`}
                                             >
                                                 {msg.content}
