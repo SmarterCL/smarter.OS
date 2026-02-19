@@ -154,7 +154,7 @@ export function InteractiveStack() {
     const activeItem = stackItems.find(item => item.id === activeId) || stackItems[0]
 
     return (
-        <section id="propuesta" className="py-24 lg:py-32 relative overflow-hidden">
+        <section id="propuesta" className="py-8 lg:py-16 relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-[20%] right-[10%] w-[300px] h-[300px] bg-primary/5 rounded-full blur-[100px]" />
@@ -162,8 +162,8 @@ export function InteractiveStack() {
             </div>
 
             <div className="mx-auto max-w-7xl px-6 relative z-10">
-                <div className="mx-auto mb-16 max-w-3xl text-center">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 mb-6">
+                <div className="mx-auto mb-8 max-w-3xl text-center">
+                    <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 mb-4">
                         <span className="relative flex h-2 w-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
@@ -180,7 +180,31 @@ export function InteractiveStack() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                {/* Mobile View: Sequential List */}
+                <div className="flex flex-col gap-6 lg:hidden">
+                    {stackItems.map((item) => {
+                        const Icon = item.icon
+                        return (
+                            <div key={item.id} className={`overflow-hidden rounded-2xl border ${item.border} bg-card/40 backdrop-blur-sm shadow-sm`}>
+                                <div className={`px-6 py-5 flex items-center gap-4 border-b border-border/50 ${item.bg}`}>
+                                    <div className={`p-2 rounded-lg bg-background/50`}>
+                                        <Icon className={`h-6 w-6 ${item.color}`} />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
+                                        <p className="text-xs text-foreground/70">{item.subtitle}</p>
+                                    </div>
+                                </div>
+                                <div className="p-6">
+                                    {item.content}
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
+
+                {/* Desktop View: Interactive Grid */}
+                <div className="hidden lg:grid grid-cols-12 gap-12 items-start">
                     {/* Navigation (The Stack Layers) */}
                     <div className="lg:col-span-4 flex flex-col gap-3">
                         {stackItems.map((item) => {
