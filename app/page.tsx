@@ -2,7 +2,6 @@ import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { InteractiveStack } from "@/components/interactive-stack"
 import { CodePreview } from "@/components/code-preview"
-import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 import { Profile } from "@/components/profile"
 import { SercotecChat } from "@/components/sercotec-chat"
@@ -16,7 +15,6 @@ export default function Home() {
       <CodePreview />
       <Profile />
       <SercotecChat />
-      <CTASection />
       <Footer />
     </main>
   )

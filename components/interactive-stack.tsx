@@ -173,10 +173,10 @@ export function InteractiveStack() {
                         </span>
                     </div>
                     <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-4">
-                        Sistema Operativo Comercial para Chile
+                        Solución comercial todo en una sola plataforma
                     </h2>
                     <p className="text-xl text-muted-foreground">
-                        Exoesqueleto Comercial. Es hora de cambiar el juego con un sistema diseñado en Chile que lo acomoda todo.
+                        Un solo pago
                     </p>
                 </div>
 
