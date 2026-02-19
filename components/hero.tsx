@@ -27,13 +27,12 @@ export function Hero() {
           </div>
 
           <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-7xl">
-            {"Infraestructura operativa para "}
-            <span className="text-primary">negocios digitales</span>
-            {" multi-tenant"}
+            {"Sistema Operativo Comercial para "}
+            <span className="text-primary">Chile</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground lg:text-xl">
-            {"Un stack operativo comercial completo. No es un proyecto. Es la plataforma que hace funcionar tu negocio digital."}
+            {"Preparado para Sercotec y SII. Un stack operativo comercial completo que hace funcionar tu negocio digital con estándares reales."}
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

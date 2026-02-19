@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
 
 export const metadata: Metadata = {
-  title: 'Smarter OS | Infraestructura Operativa Multi-Tenant',
-  description: 'Stack operativo comercial para negocios digitales. Infraestructura, seguridad, automatización y modelo SaaS replicable.',
+  title: 'Smarter OS | Sistema Operativo Comercial para Chile',
+  description: 'Sistema Operativo Comercial para Chile. Preparado para Sercotec y SII. Infraestructura, seguridad y automatización.',
   icons: {
     icon: [
       {

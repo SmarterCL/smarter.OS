@@ -28,10 +28,21 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-border pt-8 text-center">
+        <div className="mt-8 border-t border-border pt-8 flex flex-col items-center justify-between gap-4 text-center md:flex-row">
           <p className="text-xs text-muted-foreground">
-            {"Stack operativo comercial para negocios digitales multi-tenant. Open source."}
+            © {new Date().getFullYear()} SmarterOS. Todos los derechos reservados.
           </p>
+          <div className="flex gap-4 text-xs text-muted-foreground">
+            <a href="/privacidad" className="hover:text-foreground hover:underline">
+              Privacidad
+            </a>
+            <a href="/terminos" className="hover:text-foreground hover:underline">
+              Términos
+            </a>
+            <a href="/datadelete" className="hover:text-foreground hover:underline">
+              Eliminación de Datos
+            </a>
+          </div>
         </div>
       </div>
     </footer>

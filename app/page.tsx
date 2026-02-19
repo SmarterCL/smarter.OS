@@ -6,6 +6,7 @@ import { Features } from "@/components/features"
 import { CodePreview } from "@/components/code-preview"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
+import { Profile } from "@/components/profile"
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <TechStack />
       <Features />
       <CodePreview />
+      <Profile />
       <CTASection />
       <Footer />
     </main>
