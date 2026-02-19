@@ -1,4 +1,4 @@
-import { ArrowRight, MapPin, Globe, ShoppingBag, Github } from "lucide-react"
+import { ArrowRight, MapPin, Globe, ShoppingBag, Github, Calendar } from "lucide-react"
 
 export function CTASection() {
   return (
@@ -31,13 +31,13 @@ export function CTASection() {
 
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
-                  href="https://www.smarterbot.cl"
+                  href="https://wa.me/56979540471?text=agenda%20demo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:opacity-90"
                 >
-                  <Globe className="h-4 w-4" />
-                  www.smarterbot.cl
+                  <Calendar className="h-4 w-4" />
+                  Genera tu Agenda
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
                 <a
