@@ -1,4 +1,4 @@
-import { ArrowRight, MapPin, Globe, ShoppingBag } from "lucide-react"
+import { ArrowRight, MapPin, Globe, ShoppingBag, Github } from "lucide-react"
 
 export function CTASection() {
   return (
@@ -66,8 +66,19 @@ export function CTASection() {
                 </div>
               </div>
 
-              <div className="mt-8 text-xs text-muted-foreground/50">
-                Propuesta basada en la infraestructura de Smarter SPA (RUT: 78.233.417-4).
+              <div className="mt-8 flex flex-col items-center gap-4">
+                <a
+                  href="https://mcpservers.org/search?query=smarterMCP"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-primary hover:text-foreground"
+                >
+                  <Github className="h-3 w-3" />
+                  GitHub: SmarterMCP
+                </a>
+                <div className="text-xs text-muted-foreground/50">
+                  Propuesta basada en la infraestructura de Smarter SPA (RUT: 78.233.417-4).
+                </div>
               </div>
             </div>
           </div>
