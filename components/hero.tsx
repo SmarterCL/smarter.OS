@@ -17,7 +17,7 @@ export function Hero() {
       {/* Glow effect */}
       <div className="pointer-events-none absolute top-1/4 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-primary/5 blur-[120px]" />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-24 lg:py-32">
+      <div className="relative mx-auto max-w-7xl px-6 pt-2 pb-12 lg:pt-4 lg:pb-20">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-4 py-1.5">
             <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />

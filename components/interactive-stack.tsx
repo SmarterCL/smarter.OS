@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
-import { Database, HardDrive, Cpu, Shield, Layers, Smartphone, Repeat, Lock, Zap, ShoppingCart } from "lucide-react"
+import { Database, HardDrive, Cpu, Shield, Layers, Smartphone, Repeat, Lock, Zap, ShoppingCart, LineChart } from "lucide-react"
 
 const stackItems = [
     {
@@ -125,9 +125,60 @@ const stackItems = [
         )
     },
     {
+        id: "kpi",
+        title: "Observabilidad & IA",
+        subtitle: "Control Total",
+        icon: LineChart,
+        color: "text-rose-500",
+        bg: "bg-rose-500/10",
+        border: "border-rose-500/20",
+        content: (
+            <div className="space-y-4">
+                <h3 className="text-2xl font-bold">Dashboards & Métricas</h3>
+                <p className="text-muted-foreground text-lg">
+                    Visualización en tiempo real de tu operación comercial y el rendimiento de tu IA local.
+                </p>
+                <div className="mt-4 overflow-hidden rounded-lg border border-border bg-card/50">
+                    <div className="overflow-x-auto">
+                        <table className="w-full text-sm">
+                            <thead>
+                                <tr className="border-b border-border/50 bg-secondary/30">
+                                    <th className="px-4 py-3 text-left font-medium text-muted-foreground">Subdominio</th>
+                                    <th className="px-4 py-3 text-left font-medium text-muted-foreground">Herramienta</th>
+                                    <th className="px-4 py-3 text-left font-medium text-muted-foreground">Función</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-border/50">
+                                <tr className="group transition-colors hover:bg-secondary/20">
+                                    <td className="px-4 py-3 font-mono text-xs text-rose-400">ai.smarterbot.cl</td>
+                                    <td className="px-4 py-3 font-semibold">Grafana</td>
+                                    <td className="px-4 py-3 text-muted-foreground">Dashboards de IA (Prometheus)</td>
+                                </tr>
+                                <tr className="group transition-colors hover:bg-secondary/20">
+                                    <td className="px-4 py-3 font-mono text-xs text-rose-400">ia.smarterbot.cl</td>
+                                    <td className="px-4 py-3 font-semibold">Grafana</td>
+                                    <td className="px-4 py-3 text-muted-foreground">Dashboards de IA (Alias)</td>
+                                </tr>
+                                <tr className="group transition-colors hover:bg-secondary/20">
+                                    <td className="px-4 py-3 font-mono text-xs text-blue-400">kpi.smarterbot.cl</td>
+                                    <td className="px-4 py-3 font-semibold">Metabase</td>
+                                    <td className="px-4 py-3 text-muted-foreground">Análisis de Datos (Supabase)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div className="flex gap-2 text-xs text-muted-foreground font-mono bg-secondary/30 p-2 rounded border border-border/50">
+                    <span className="text-rose-400">Note:</span>
+                    <span>kpi.smarterbot.cl redirige a tu instancia privada de Metabase.</span>
+                </div>
+            </div>
+        )
+    },
+    {
         id: "value",
-        title: "Checkout",
-        subtitle: "El Valor Real",
+        title: "Experiencia de Compra",
+        subtitle: "Cierre de Venta",
         icon: ShoppingCart,
         color: "text-primary",
         bg: "bg-primary/10",
@@ -139,10 +190,42 @@ const stackItems = [
                 </div>
                 <h3 className="text-2xl font-bold">Automatización Comercial</h3>
                 <p className="text-muted-foreground">
-                    De webhook a venta en minutos. Generación automática de links de pago e integración con ERP.
+                    De webhook a venta en minutos. Tus clientes pagan en tu propio dominio.
                 </p>
-                <div className="p-4 rounded-lg bg-card border border-border">
-                    <p className="text-sm font-mono text-primary">Estado: LISTO PARA VENDER</p>
+
+                <div className="rounded-lg border border-border bg-card overflow-hidden">
+                    <div className="flex items-center gap-2 border-b border-border bg-secondary/50 px-4 py-2">
+                        <div className="flex gap-1.5">
+                            <div className="h-2.5 w-2.5 rounded-full bg-red-500/50" />
+                            <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/50" />
+                            <div className="h-2.5 w-2.5 rounded-full bg-green-500/50" />
+                        </div>
+                        <div className="mx-auto flex w-full max-w-[200px] items-center justify-center rounded-md bg-background py-0.5 text-[10px] text-muted-foreground font-mono">
+                            <Lock className="mr-1 h-3 w-3" />
+                            flow.smarterbot.cl
+                        </div>
+                    </div>
+                    <div className="p-4 bg-background/50">
+                        <div className="flex items-center justify-between gap-4 rounded border border-border/50 bg-card p-3">
+                            <div className="flex items-center gap-3">
+                                <div className="h-8 w-8 rounded bg-primary/20 flex items-center justify-center">
+                                    <ShoppingCart className="h-4 w-4 text-primary" />
+                                </div>
+                                <div className="text-left">
+                                    <div className="text-sm font-bold">Smarter OS Plan</div>
+                                    <div className="text-xs text-muted-foreground">Suscripción Mensual</div>
+                                </div>
+                            </div>
+                            <div className="text-right">
+                                <div className="text-sm font-bold">$990 USD</div>
+                                <div className="text-xs text-green-500">Pagado</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20">
+                    Estado: LISTO PARA VENDER
                 </div>
             </div>
         )
@@ -173,11 +256,8 @@ export function InteractiveStack() {
                         </span>
                     </div>
                     <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-4">
-                        Solución comercial todo en una sola plataforma
+                        Solución comercial todo en uno
                     </h2>
-                    <p className="text-xl text-muted-foreground">
-                        Un solo pago
-                    </p>
                 </div>
 
                 {/* Mobile View: Sequential List */}
