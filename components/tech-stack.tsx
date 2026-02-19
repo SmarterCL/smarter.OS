@@ -10,7 +10,7 @@ const tools = [
   {
     name: "Hardware Autónomo",
     role: "Procesamiento Local",
-    description: "Setup con Mac mini M4 (24GB RAM / 32GB RAM) para procesar tu propia IA sin depender de la nube.",
+    description: "Configuración high-end con Mac mini M4 Pro, hasta 64GB RAM unificada y Neural Engine 16-core para IA local.",
     icon: HardDrive,
   },
 ]

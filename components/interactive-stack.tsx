@@ -56,16 +56,43 @@ const stackItems = [
         border: "border-zinc-500/20",
         content: (
             <div className="space-y-4">
-                <h3 className="text-2xl font-bold">Mac mini M4</h3>
-                <p className="text-muted-foreground text-lg">
-                    Setup con 24GB/32GB RAM para procesar tu propia IA sin depender de la nube. Control total de tus datos y latencia cero.
-                </p>
-                <div className="relative mt-6 h-32 w-full rounded-xl bg-gradient-to-br from-zinc-800 to-black border border-white/10 flex items-center justify-center overflow-hidden">
-                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
-                    <div className="text-center z-10">
-                        <p className="text-white font-bold text-xl tracking-tight">M4 Chip</p>
-                        <p className="text-zinc-400 text-xs mt-1">Neural Engine de próxima generación</p>
+                <div className="flex items-center justify-between">
+                    <h3 className="text-2xl font-bold">Mac mini M4 Pro</h3>
+                    <div className="hidden sm:inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono border border-emerald-500/20">
+                        referencia real: ≈ $2.9M CLP (64GB / 1TB)
                     </div>
+                </div>
+                <p className="text-muted-foreground text-lg">
+                    Setup con 64GB RAM para procesar tu propia IA sin depender de la nube. Control total de tus datos y latencia cero.
+                </p>
+                <div className="relative mt-4 mb-6 w-full rounded-xl overflow-hidden border border-border/50 bg-black/20 aspect-video flex items-center justify-center">
+                    {/* The generated image will be placed here */}
+                    <img src="/mac-m4-pro.png" alt="Mac mini M4 Pro Server" className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent pointer-events-none"></div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-muted-foreground mt-4">
+                    <div className="flex flex-col gap-1 p-3 rounded-lg bg-card/50 border border-border/50">
+                        <span className="font-semibold text-foreground">Chip</span>
+                        <span>M4 Pro (12 o 14 CPU / 16–20 GPU)</span>
+                    </div>
+                    <div className="flex flex-col gap-1 p-3 rounded-lg bg-card/50 border border-border/50">
+                        <span className="font-semibold text-foreground">RAM</span>
+                        <span>hasta 64 GB unificada</span>
+                    </div>
+                    <div className="flex flex-col gap-1 p-3 rounded-lg bg-card/50 border border-border/50">
+                        <span className="font-semibold text-foreground">SSD</span>
+                        <span>1TB–8TB</span>
+                    </div>
+                    <div className="flex flex-col gap-1 p-3 rounded-lg bg-card/50 border border-border/50">
+                        <span className="font-semibold text-foreground">Neural Engine</span>
+                        <span>16-core (IA local)</span>
+                    </div>
+                </div>
+                <div className="sm:hidden mt-2 inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono border border-emerald-500/20">
+                    💰 En Chile: ≈ $2.9M CLP (64GB / 1TB)
+                </div>
+                <div className="mt-2 text-xs text-muted-foreground">
+                    <span className="font-semibold text-foreground">Puertos:</span> Thunderbolt 5, HDMI, Ethernet, USB-C
                 </div>
             </div>
         )

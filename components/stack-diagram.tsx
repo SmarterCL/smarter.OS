@@ -79,7 +79,7 @@ const layers = [
     color: "from-primary/20 to-primary/5",
     borderColor: "border-primary/30",
     accentColor: "text-primary",
-    items: ["Mac mini M4 o VPS", "Procesamiento IA Local", "RAM coherente", "SSD rapido"],
+    items: ["Mac mini M4 Pro", "Hasta 64GB RAM", "Neural Engine 16-core", "1TB-8TB SSD"],
     description: "Sin base solida no hay plataforma.",
   },
 ]
@@ -112,8 +112,8 @@ export function StackDiagram() {
                 key={layer.id}
                 onClick={() => setActiveLayer(isActive ? null : layer.id)}
                 className={`group relative overflow-hidden rounded-xl border text-left transition-all duration-300 ${isActive
-                    ? `${layer.borderColor} bg-gradient-to-r ${layer.color}`
-                    : "border-border bg-card hover:border-border/80 hover:bg-secondary/30"
+                  ? `${layer.borderColor} bg-gradient-to-r ${layer.color}`
+                  : "border-border bg-card hover:border-border/80 hover:bg-secondary/30"
                   }`}
               >
                 {/* Layer number indicators */}
