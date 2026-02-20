@@ -49,13 +49,12 @@ export function Hero() {
           </div>
 
           <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-7xl">
-            {"Smarter OS – Tu Negocio en "}
+            {"CRM, ERP, n8n, FastAPI, Grafana, Metabase y + en "}
             <span className="text-primary">Piloto Automático</span>
-            {" (Físico + Digital)"}
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground lg:text-xl">
-            {"¿Cansado de pagar suscripciones infinitas por herramientas que no hablan entre sí? Es hora de cambiar el juego con un Exoesqueleto Comercial diseñado en Chile."}
+          <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground lg:text-xl font-medium">
+            {"Todo en un solo servicio. Aplica con Sercotec."}
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -125,6 +124,12 @@ export function Hero() {
                             selected={date}
                             onSelect={setDate}
                             className="rounded-md"
+                            disabled={(date) => {
+                              const today = new Date();
+                              today.setHours(0, 0, 0, 0);
+                              const isWeekend = date.getDay() === 0 || date.getDay() === 6;
+                              return date < today || isWeekend;
+                            }}
                           />
                         </div>
 
@@ -133,7 +138,7 @@ export function Hero() {
                             <Clock className="h-4 w-4 text-primary" /> Horarios disponibles
                           </label>
                           <div className="grid grid-cols-3 gap-2">
-                            {["10:00", "11:30", "15:00", "16:30", "18:00"].map((t) => (
+                            {["09:00", "11:00", "13:00", "15:00", "17:00"].map((t) => (
                               <button
                                 key={t}
                                 onClick={() => setTime(t)}
