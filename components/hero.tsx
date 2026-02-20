@@ -49,8 +49,9 @@ export function Hero() {
           </div>
 
           <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-7xl">
-            {"CRM, ERP, n8n, FastAPI, Grafana, Metabase y + en "}
-            <span className="text-primary">Piloto Automático</span>
+            {"CRM, ERP, n8n, FastAPI, Grafana, Metabase y "}
+            <br className="hidden sm:block" />
+            <span className="text-primary">+ en Piloto Automático</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground lg:text-xl font-medium">
