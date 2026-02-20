@@ -40,7 +40,7 @@ const nextConfig = {
         },
         {
           key: 'Content-Security-Policy',
-          value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercel.live https://assets.vercel.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://vercel.live https://assets.vercel.com https://analytics.vercel.com; frame-ancestors 'self';",
+          value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercel.live https://assets.vercel.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://vercel.live https://assets.vercel.com https://analytics.vercel.com; frame-src 'self' https://maps.google.com https://www.google.com; frame-ancestors 'self';",
         },
       ],
     },

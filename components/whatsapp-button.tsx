@@ -1,9 +1,11 @@
 "use client"
 
 export function WhatsappButton() {
+    const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "56979540471"
+
     return (
         <a
-            href="https://wa.me/56979540471?text=hola"
+            href={`https://wa.me/${phoneNumber}?text=hola`}
             target="_blank"
             rel="noopener noreferrer"
             className="fixed bottom-6 right-6 z-50 flex items-center justify-center p-3 sm:p-4 rounded-full bg-[#25D366] text-white shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.23)] hover:scale-110 transition-all duration-300"

@@ -34,37 +34,36 @@ export function Profile() {
                         </div>
 
                         <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                            {"El Rol del Traductor Técnico-Comercial"}
+                            La trampa de la "Escalabilidad Silenciosa"
                         </h2>
 
                         <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
                             <p>
-                                Como <span className="font-semibold text-foreground">Sales Engineer</span>, mi trabajo es actuar de "traductor" y acompañar al proceso comercial para asegurar que <span className="italic text-foreground">lo que se promete realmente se pueda cumplir</span>.
+                                Alguien puede vender 5 pasteles por WhatsApp usando solo sus manos. El problema viene cuando quiere vender <span className="font-semibold text-foreground">500</span>.
                             </p>
 
-                            <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
-                                <p className="mb-4 text-base font-medium text-foreground">
-                                    Mi enfoque:
-                                </p>
-                                <ul className="space-y-3 text-base">
-                                    <li className="flex items-start gap-3">
-                                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                                        <span>Arquitectura backend orientada a negocio.</span>
-                                    </li>
-                                    <li className="flex items-start gap-3">
-                                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                                        <span>Desarrollo de infraestructura para sistemas agénticos e IA aplicada.</span>
-                                    </li>
-                                    <li className="flex items-start gap-3">
-                                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                                        <span>Foco obsesivo en eficiencia operativa, seguridad y resultados medibles.</span>
-                                    </li>
-                                </ul>
-                            </div>
+                            <ul className="space-y-4">
+                                <li className="flex items-start gap-4 rounded-xl border border-border bg-card p-4">
+                                    <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-red-500" />
+                                    <span>
+                                        <strong>Sin tecnología, el crecimiento es lineal:</strong> más ventas = más agotamiento humano.
+                                    </span>
+                                </li>
+                                <li className="flex items-start gap-4 rounded-xl border border-primary/20 bg-primary/5 p-4 shadow-sm">
+                                    <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-emerald-500" />
+                                    <span>
+                                        <strong className="text-foreground">Con tecnología, el crecimiento es exponencial:</strong> el sistema trabaja igual para 1 que para 1,000.
+                                    </span>
+                                </li>
+                            </ul>
 
-                            <blockquote className="border-l-4 border-primary pl-6 text-xl font-medium italic text-foreground/80">
-                                "Ahora la IA propone una forma distinta de operar negocios digitales en Chile. 2026 es el año."
+                            <blockquote className="border-l-4 border-primary pl-6 text-xl font-medium italic text-foreground">
+                                "El punto de quiebre: El emprendedor analógico cree que para crecer solo necesita 'echarle ganas' o contratar más gente..."
                             </blockquote>
+
+                            <p className="rounded-lg bg-secondary/50 p-6 text-sm">
+                                ...Sin entender que un software de automatización (<strong className="text-primary">CRM</strong> o <strong className="text-primary">ERP</strong>) sustituye a diez empleados y elimina el error humano.
+                            </p>
                         </div>
                     </div>
                 </div>
