@@ -1,4 +1,4 @@
-import { Check, MessageSquare, Mail, Copy } from "lucide-react"
+import { Check, MessageSquare } from "lucide-react"
 
 const plans = [
     {
@@ -102,12 +102,14 @@ export function Pricing() {
                                 <button className="flex items-center gap-2 px-3 py-2 text-xs font-medium rounded-lg border border-zinc-200 bg-white text-zinc-700 hover:bg-zinc-50 transition-colors">
                                     <MessageSquare className="w-4 h-4" /> WhatsApp
                                 </button>
-                                <button className="flex items-center gap-2 px-3 py-2 text-xs font-medium rounded-lg border border-zinc-200 bg-white text-zinc-700 hover:bg-zinc-50 transition-colors">
-                                    <Mail className="w-4 h-4" /> Email
-                                </button>
-                                <button className="flex items-center gap-2 px-3 py-2 text-xs font-medium rounded-lg border border-zinc-200 bg-white text-zinc-700 hover:bg-zinc-50 transition-colors">
-                                    <Copy className="w-4 h-4" /> Copiar
-                                </button>
+                                <a
+                                    href="https://app.smarterbot.cl"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center gap-2 px-6 py-2 text-sm font-bold text-white bg-green-500 rounded-lg hover:bg-green-600 transition-colors shadow-sm"
+                                >
+                                    Comprar
+                                </a>
                             </div>
                         </div>
                     ))}
