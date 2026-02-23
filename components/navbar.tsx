@@ -35,15 +35,25 @@ export function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="https://mcpservers.org/servers/smartercl/smartermcp"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-lg bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            <Github className="h-4 w-4" />
-            GitHub
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://mcpservers.org/servers/smartercl/smartermcp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <Github className="h-4 w-4" />
+              GitHub
+            </a>
+            <a
+              href="https://flow.smarterbot.cl/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-lg bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              Código de Acceso
+            </a>
+          </div>
         </div>
 
         <button
@@ -72,9 +82,18 @@ export function Navbar() {
               href="https://github.com/SmarterCL/smarter.io"
               target="_blank"
               rel="noopener noreferrer"
+              className="mt-2 flex items-center justify-center gap-2 rounded-lg border border-border px-5 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+            >
+              <Github className="h-4 w-4" />
+              GitHub
+            </a>
+            <a
+              href="https://flow.smarterbot.cl/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-2 rounded-lg bg-primary px-5 py-2 text-center text-sm font-medium text-primary-foreground"
             >
-              GitHub
+              Código de Acceso
             </a>
           </div>
         </div>
