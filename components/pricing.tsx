@@ -1,6 +1,9 @@
-import { Check, MessageSquare, TrendingUp } from "lucide-react"
+"use client"
 
-const plans = [
+import { Check, MessageSquare, TrendingUp } from "lucide-react"
+import { useCatalog } from "@/hooks/use-catalog"
+
+const fallbackPlans = [
     {
         name: "Startup",
         slug: "startup",
@@ -59,6 +62,14 @@ const plans = [
 ]
 
 export function Pricing() {
+    const { data, loading, error } = useCatalog({
+        endpoint: "/v1/hub/catalog",
+        autoFetch: true,
+    })
+
+    // Usar datos del hub o fallback a estáticos
+    const plans = data?.products?.length ? data.products : fallbackPlans
+
     return (
         <section id="planes" className="py-24 bg-white text-zinc-900 px-6">
             <div className="max-w-7xl mx-auto">
@@ -76,70 +87,84 @@ export function Pricing() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-                    {plans.map((plan, index) => (
-                        <div
-                            key={index}
-                            className={`relative flex flex-col items-center p-8 rounded-3xl bg-white border transition-all duration-300 ${plan.highlighted ? "border-primary shadow-lg shadow-primary/10 mt-0 lg:-mt-4" : "border-zinc-200 mt-0"
-                                }`}
-                        >
-                            {plan.badge && (
-                                <div className="absolute -top-3 px-4 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full">
-                                    {plan.badge}
+                {loading && (
+                    <div className="text-center py-12">
+                        <p className="text-zinc-500">Cargando planes...</p>
+                    </div>
+                )}
+
+                {error && (
+                    <div className="text-center py-12">
+                        <p className="text-red-500 text-sm">Usando configuración local</p>
+                    </div>
+                )}
+
+                {!loading && (
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                        {plans.map((plan: any, index) => (
+                            <div
+                                key={plan.slug || index}
+                                className={`relative flex flex-col items-center p-8 rounded-3xl bg-white border transition-all duration-300 ${plan.highlighted ? "border-primary shadow-lg shadow-primary/10 mt-0 lg:-mt-4" : "border-zinc-200 mt-0"
+                                    }`}
+                            >
+                                {plan.badge && (
+                                    <div className="absolute -top-3 px-4 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full">
+                                        {plan.badge}
+                                    </div>
+                                )}
+
+                                <h3 className="text-2xl font-bold mt-4 text-zinc-900">{plan.name}</h3>
+                                <p className="text-zinc-500 text-sm mt-2 mb-6">{plan.description}</p>
+
+                                <div className="px-3 py-1 bg-green-500/10 text-green-500 text-xs font-semibold rounded-full mb-3">
+                                    {plan.discount}
                                 </div>
-                            )}
 
-                            <h3 className="text-2xl font-bold mt-4 text-zinc-900">{plan.name}</h3>
-                            <p className="text-zinc-500 text-sm mt-2 mb-6">{plan.description}</p>
+                                <div className="text-zinc-500 line-through text-sm">
+                                    {plan.originalPrice}
+                                </div>
 
-                            <div className="px-3 py-1 bg-green-500/10 text-green-500 text-xs font-semibold rounded-full mb-3">
-                                {plan.discount}
+                                <div className="flex items-end gap-1 mt-1 mb-2 text-zinc-900">
+                                    <span className="text-5xl font-black">{plan.price}</span>
+                                    <span className="text-zinc-500 mb-2">/mes + IVA</span>
+                                </div>
+
+                                {/* ROI indicator */}
+                                <div className="flex items-center gap-2 text-emerald-600 text-sm font-medium mb-4">
+                                    <TrendingUp className="w-4 h-4" />
+                                    {plan.roi}
+                                </div>
+
+                                <div className="text-primary font-bold text-sm mb-8">
+                                    {plan.commission}
+                                </div>
+
+                                <ul className="space-y-4 w-full mb-8 text-left">
+                                    {plan.features?.map((feature: string, idx: number) => (
+                                        <li key={idx} className="flex items-center gap-3">
+                                            <Check className="w-5 h-5 text-green-500 shrink-0" />
+                                            <span className="text-sm font-medium text-zinc-800">{feature}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+
+                                <div className="w-full flex justify-center gap-2 mt-auto pt-4">
+                                    <button className="flex items-center gap-2 px-3 py-2 text-xs font-medium rounded-lg border border-zinc-200 bg-white text-zinc-700 hover:bg-zinc-50 transition-colors">
+                                        <MessageSquare className="w-4 h-4" /> WhatsApp
+                                    </button>
+                                    <a
+                                        href={`https://app.smarterbot.cl/onboarding?plan=${plan.slug}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center justify-center gap-2 px-6 py-2 text-sm font-bold text-white bg-green-500 rounded-lg hover:bg-green-600 transition-colors shadow-sm"
+                                    >
+                                        Comprar
+                                    </a>
+                                </div>
                             </div>
-
-                            <div className="text-zinc-500 line-through text-sm">
-                                {plan.originalPrice}
-                            </div>
-
-                            <div className="flex items-end gap-1 mt-1 mb-2 text-zinc-900">
-                                <span className="text-5xl font-black">{plan.price}</span>
-                                <span className="text-zinc-500 mb-2">/mes + IVA</span>
-                            </div>
-
-                            {/* ROI indicator */}
-                            <div className="flex items-center gap-2 text-emerald-600 text-sm font-medium mb-4">
-                                <TrendingUp className="w-4 h-4" />
-                                {plan.roi}
-                            </div>
-
-                            <div className="text-primary font-bold text-sm mb-8">
-                                {plan.commission}
-                            </div>
-
-                            <ul className="space-y-4 w-full mb-8 text-left">
-                                {plan.features.map((feature, idx) => (
-                                    <li key={idx} className="flex items-center gap-3">
-                                        <Check className="w-5 h-5 text-green-500 shrink-0" />
-                                        <span className="text-sm font-medium text-zinc-800">{feature}</span>
-                                    </li>
-                                ))}
-                            </ul>
-
-                            <div className="w-full flex justify-center gap-2 mt-auto pt-4">
-                                <button className="flex items-center gap-2 px-3 py-2 text-xs font-medium rounded-lg border border-zinc-200 bg-white text-zinc-700 hover:bg-zinc-50 transition-colors">
-                                    <MessageSquare className="w-4 h-4" /> WhatsApp
-                                </button>
-                                <a
-                                    href={`https://app.smarterbot.cl/onboarding?plan=${plan.slug}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center gap-2 px-6 py-2 text-sm font-bold text-white bg-green-500 rounded-lg hover:bg-green-600 transition-colors shadow-sm"
-                                >
-                                    Comprar
-                                </a>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                )}
 
                 {/* Footer note */}
                 <div className="mt-12 text-center">
