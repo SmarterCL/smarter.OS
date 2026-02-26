@@ -82,14 +82,16 @@ export function StackDiagram() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-wider text-primary font-mono">
-            Arquitectura
+            🛡️ SmarterOS Antifraude
           </p>
           <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            Multi-tenant. Docker aislado. Firewall UFW.
+            Monitor de riesgo en tiempo real para e-commerce
           </h2>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Un solo núcleo, múltiples empresas. Separación lógica de datos. 
-            Esto da tranquilidad técnica a CTO e inversionistas.
+            Ofrecemos una asesoría de seguridad a grupos técnicos de manera híbrida o remota.
+          </p>
+          <p className="mt-2 text-sm text-muted-foreground/70">
+            webontrol.smarterbot.cl
           </p>
         </div>
 
