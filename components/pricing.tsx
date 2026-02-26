@@ -3,6 +3,7 @@ import { Check, MessageSquare, TrendingUp } from "lucide-react"
 const plans = [
     {
         name: "Startup",
+        slug: "startup",
         description: "Para emprendimientos",
         discount: "-15% descuento",
         originalPrice: "$29.000",
@@ -20,6 +21,7 @@ const plans = [
     },
     {
         name: "Comercio",
+        slug: "comercio",
         description: "Para operación completa",
         badge: "Más popular",
         discount: "-20% descuento",
@@ -38,6 +40,7 @@ const plans = [
     },
     {
         name: "Empresa",
+        slug: "empresa",
         description: "Para operación avanzada",
         discount: "-25% descuento",
         originalPrice: "$99.000",
@@ -126,7 +129,7 @@ export function Pricing() {
                                     <MessageSquare className="w-4 h-4" /> WhatsApp
                                 </button>
                                 <a
-                                    href="https://app.smarterbot.cl"
+                                    href={`https://app.smarterbot.cl/onboarding?plan=${plan.slug}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center justify-center gap-2 px-6 py-2 text-sm font-bold text-white bg-green-500 rounded-lg hover:bg-green-600 transition-colors shadow-sm"
