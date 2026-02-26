@@ -83,25 +83,6 @@ export function Hero() {
             </div>
           </div>
         </div>
-
-        {/* Stats strip - Technical credibility */}
-        <div className="mx-auto mt-24 grid max-w-4xl grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-3">
-          {[
-            { icon: Shield, label: "Seguridad", value: "Firewall UFW + Docker aislado" },
-            { icon: Layers, label: "Multi-tenant", value: "1 sistema, N clientes" },
-            { icon: Zap, label: "Automatizado", value: "Webhook a venta en minutos" },
-          ].map((stat) => (
-            <div key={stat.label} className="flex items-center gap-4 bg-card p-6">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                <stat.icon className="h-5 w-5 text-primary" />
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-foreground">{stat.label}</p>
-                <p className="text-xs text-muted-foreground">{stat.value}</p>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   )
