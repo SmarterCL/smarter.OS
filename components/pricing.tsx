@@ -19,7 +19,7 @@ const plans = [
         highlighted: false,
     },
     {
-        name: "Pro",
+        name: "Comercio",
         description: "Para operación completa",
         badge: "Más popular",
         discount: "-20% descuento",
