@@ -75,7 +75,7 @@ export function Hero() {
               </span>
               <span className="flex items-center gap-2 text-sm font-medium text-foreground bg-secondary/20 px-4 py-2 rounded-lg border border-border/30">
                 <Layers className="h-4 w-4 text-primary" />
-                CRM + ERP
+                CRM + ERP + Tienda
               </span>
               <span className="flex items-center gap-2 text-sm font-medium text-foreground bg-secondary/20 px-4 py-2 rounded-lg border border-border/30">
                 <Shield className="h-4 w-4 text-blue-500" />
