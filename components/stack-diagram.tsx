@@ -55,11 +55,11 @@ const layers = [
   {
     id: "capa-4",
     icon: Workflow,
-    name: "Automatización & Flujo",
+    name: "FastAPI",
     color: "from-rose-500/15 to-rose-500/5",
     borderColor: "border-rose-500/25",
     accentColor: "text-rose-400",
-    items: ["Webhook a Automatización", "Generación de link de pago", "Conversación a Venta", "Integración con ERP"],
+    items: ["Webhooks en tiempo real", "De webhook a venta en minutos", "Integración directa con medios de pago locales como Flow", "Sin conciliaciones manuales"],
     description: "Respuesta en minutos, no en horas.",
   },
   {
