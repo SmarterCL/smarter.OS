@@ -37,7 +37,7 @@ const plans = [
         highlighted: true,
     },
     {
-        name: "Enterprise",
+        name: "Empresa",
         description: "Para operación avanzada",
         discount: "-25% descuento",
         originalPrice: "$99.000",
