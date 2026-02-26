@@ -35,11 +35,11 @@ const layers = [
   {
     id: "capa-2",
     icon: Container,
-    name: "Aislamiento Docker",
+    name: "Supabase",
     color: "from-sky-500/15 to-sky-500/5",
     borderColor: "border-sky-500/25",
     accentColor: "text-sky-400",
-    items: ["Docker aislando procesos", "Red interna privada", "expose en vez de ports", "Caddy como único entrypoint"],
+    items: ["Docker", "Aislamiento de procesos", "Contenedores que garantizan separación lógica, escalabilidad y seguridad", "Infraestructura preparada para crecer"],
     description: "Servicios invisibles desde Internet.",
   },
   {
