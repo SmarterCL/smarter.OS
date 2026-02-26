@@ -11,7 +11,7 @@ export function RecomendacionSteps() {
                 </h2>
 
                 <p className="text-xl text-zinc-500 mb-16 max-w-2xl mx-auto">
-                    Tienda de hardware para tu emprendimiento, consulta con nosotros.
+                    Tienda de hardware y software para tu emprendimiento.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 w-full max-w-4xl">
