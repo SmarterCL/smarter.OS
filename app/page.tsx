@@ -1,5 +1,9 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
+import { WhySmarterOS } from "@/components/why-smarteros"
+import { StackDiagram } from "@/components/stack-diagram"
+import { TechStack } from "@/components/tech-stack"
+import { LayersSection } from "@/components/layers-section"
 import { Pricing } from "@/components/pricing"
 import { RecomendacionSteps } from "@/components/recomendacion-steps"
 import { TargetAudience } from "@/components/target-audience"
@@ -11,6 +15,10 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground">
       <Navbar />
       <Hero />
+      <WhySmarterOS />
+      <StackDiagram />
+      <TechStack />
+      <LayersSection />
       <Pricing />
       <RecomendacionSteps />
       <TargetAudience />

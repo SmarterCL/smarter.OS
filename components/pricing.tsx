@@ -1,4 +1,4 @@
-import { Check, MessageSquare } from "lucide-react"
+import { Check, MessageSquare, TrendingUp } from "lucide-react"
 
 const plans = [
     {
@@ -8,6 +8,7 @@ const plans = [
         originalPrice: "$29.000",
         price: "$25.000",
         commission: "Tu comisión: $38.000",
+        roi: "Ahorra 5hrs admin/mes",
         features: [
             "CRM básico",
             "Chat omnicanal",
@@ -25,6 +26,7 @@ const plans = [
         originalPrice: "$49.000",
         price: "$39.000",
         commission: "Tu comisión: $75.000",
+        roi: "Ahorra 15hrs admin/mes",
         features: [
             "WhatsApp Business + CRM",
             "Facturación electrónica",
@@ -41,6 +43,7 @@ const plans = [
         originalPrice: "$99.000",
         price: "$74.000",
         commission: "Tu comisión: $140.000",
+        roi: "Ahorra 40hrs admin/mes",
         features: [
             "Todo Plan Pro +",
             "ERP completo",
@@ -54,8 +57,22 @@ const plans = [
 
 export function Pricing() {
     return (
-        <section id="pricing" className="py-24 bg-white text-zinc-900 px-6">
+        <section id="planes" className="py-24 bg-white text-zinc-900 px-6">
             <div className="max-w-7xl mx-auto">
+                {/* Header */}
+                <div className="text-center mb-16">
+                    <p className="mb-3 text-sm font-medium uppercase tracking-wider text-primary font-mono">
+                        Planes
+                    </p>
+                    <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+                        El mensaje clave no es el precio. Es el ROI.
+                    </h2>
+                    <p className="mt-4 text-pretty text-lg leading-relaxed text-zinc-600 max-w-2xl mx-auto">
+                        Si automatizas facturación y cobranza, ahorras horas administrativas y reduces errores.
+                        Eso es valor tangible.
+                    </p>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
                     {plans.map((plan, index) => (
                         <div
@@ -80,9 +97,15 @@ export function Pricing() {
                                 {plan.originalPrice}
                             </div>
 
-                            <div className="flex items-end gap-1 mt-1 mb-4 text-zinc-900">
+                            <div className="flex items-end gap-1 mt-1 mb-2 text-zinc-900">
                                 <span className="text-5xl font-black">{plan.price}</span>
-                                <span className="text-zinc-500 mb-2">/mes</span>
+                                <span className="text-zinc-500 mb-2">/mes + IVA</span>
+                            </div>
+
+                            {/* ROI indicator */}
+                            <div className="flex items-center gap-2 text-emerald-600 text-sm font-medium mb-4">
+                                <TrendingUp className="w-4 h-4" />
+                                {plan.roi}
                             </div>
 
                             <div className="text-primary font-bold text-sm mb-8">
@@ -113,6 +136,13 @@ export function Pricing() {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                {/* Footer note */}
+                <div className="mt-12 text-center">
+                    <p className="text-sm text-zinc-500">
+                        Valores en pesos chilenos + IVA. Solo para empresas con RUT.
+                    </p>
                 </div>
             </div>
         </section>

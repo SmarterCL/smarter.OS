@@ -1,6 +1,6 @@
 "use client"
 
-import { Shield, Layers, Zap } from "lucide-react"
+import { Shield, Layers, Zap, ArrowRight } from "lucide-react"
 
 export function Hero() {
 
@@ -22,23 +22,32 @@ export function Hero() {
 
       <div className="relative mx-auto max-w-7xl px-6 pt-2 pb-12 lg:pt-4 lg:pb-20">
         <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/10 px-5 py-2">
-            <Zap className="h-4 w-4 text-primary" />
-            <span className="text-sm font-semibold text-primary tracking-wide">
-              SmarterOS
-            </span>
+          {/* Pain point header */}
+          <div className="mb-6 inline-flex flex-col items-center gap-2">
+            <div className="inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/10 px-5 py-2">
+              <Zap className="h-4 w-4 text-primary" />
+              <span className="text-sm font-semibold text-primary tracking-wide">
+                Sistema Operativo Empresarial para Chile
+              </span>
+            </div>
           </div>
 
-          <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-7xl">
-            {"Centraliza ventas,"}
+          {/* The WHY */}
+          <p className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground lg:text-lg">
+            SmarterOS existe porque en Chile vender es fácil, pero integrar ventas, gestión y cobros no lo es.
+          </p>
+
+          <h1 className="mt-6 text-balance text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-7xl">
+            Orquestación operativa
             <br />
-            <span className="text-primary">gestión y cobros</span>
+            <span className="text-primary">para empresas con RUT</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground lg:text-xl font-medium">
-            {"WhatsApp Business para ventas y soporte, CRM comercial, facturación electrónica, gestión de empresa y cobros por redes sociales. Todo integrado para operar en Chile."}
+            Centraliza ventas, gestión y cobros en un solo flujo: WhatsApp Business, CRM, facturación electrónica y cobros por redes sociales. Todo integrado para operar en Chile.
           </p>
 
+          {/* CTAs */}
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
               href="https://flow.smarterbot.cl/"
@@ -47,6 +56,7 @@ export function Hero() {
               className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-bold text-primary-foreground transition-all hover:opacity-90"
             >
               Activar ahora
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
               href="#recomendacion"
@@ -56,6 +66,7 @@ export function Hero() {
             </a>
           </div>
 
+          {/* Trust indicators */}
           <div className="mt-12 flex flex-col items-center justify-center space-y-4">
             <p className="text-sm text-muted-foreground max-w-lg mx-auto leading-relaxed">
               Sin formularios. Activación inmediata por WhatsApp o Email.<br />
@@ -78,7 +89,7 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Stats strip */}
+        {/* Stats strip - Technical credibility */}
         <div className="mx-auto mt-24 grid max-w-4xl grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-3">
           {[
             { icon: Shield, label: "Seguridad", value: "Firewall UFW + Docker aislado" },

@@ -4,10 +4,11 @@ import { useState } from "react"
 import { Menu, X, Github } from "lucide-react"
 
 const navLinks = [
+  { label: "Por Qué", href: "/#porque" },
   { label: "Arquitectura", href: "/#arquitectura" },
-  { label: "Stack", href: "/#propuesta" }, // Updated href to match new ID
+  { label: "Stack", href: "/#stack" },
   { label: "Capas", href: "/#capas" },
-  { label: "Contacto", href: "/#invitacion" }, // Updated href to match new ID
+  { label: "Planes", href: "/#planes" },
 ]
 
 export function Navbar() {
@@ -51,7 +52,7 @@ export function Navbar() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-lg bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
             >
-              Código de Acceso
+              Activar
             </a>
           </div>
         </div>
@@ -93,7 +94,7 @@ export function Navbar() {
               rel="noopener noreferrer"
               className="mt-2 rounded-lg bg-primary px-5 py-2 text-center text-sm font-medium text-primary-foreground"
             >
-              Código de Acceso
+              Activar
             </a>
           </div>
         </div>

@@ -15,51 +15,51 @@ const layers = [
   {
     id: "pan-superior",
     icon: Globe,
-    name: "Interfaz Publica",
+    name: "Infraestructura Base",
     color: "from-primary/20 to-primary/5",
     borderColor: "border-primary/30",
     accentColor: "text-primary",
-    items: ["Dominios .cl y .store", "HTTPS automatico con Caddy", "App movil conectada a Odoo", "Atencion omnicanal con Chatwoot"],
-    description: "Entrada limpia, segura y profesional.",
+    items: ["Mac mini M4 Pro", "Hasta 64GB RAM", "Neural Engine 16-core", "1TB-8TB SSD"],
+    description: "Sin base sólida no hay plataforma.",
   },
   {
     id: "capa-1",
     icon: Shield,
-    name: "Gateway & Seguridad",
+    name: "Seguridad Perimetral",
     color: "from-emerald-500/15 to-emerald-500/5",
     borderColor: "border-emerald-500/25",
     accentColor: "text-emerald-400",
-    items: ["Firewall UFW", "DOCKER-USER controlado", "Solo 80 / 443 publicos", "SSH restringido"],
-    description: "El perimetro manda. Docker obedece.",
+    items: ["Firewall UFW", "DOCKER-USER controlado", "Solo 80 / 443 públicos", "SSH restringido"],
+    description: "El perímetro manda. Docker obedece.",
   },
   {
     id: "capa-2",
     icon: Container,
-    name: "Orquestacion",
+    name: "Aislamiento Docker",
     color: "from-sky-500/15 to-sky-500/5",
     borderColor: "border-sky-500/25",
     accentColor: "text-sky-400",
-    items: ["Docker aislando procesos", "Red interna privada", "expose en vez de ports", "Caddy como unico entrypoint"],
+    items: ["Docker aislando procesos", "Red interna privada", "expose en vez de ports", "Caddy como único entrypoint"],
     description: "Servicios invisibles desde Internet.",
   },
   {
     id: "capa-3",
     icon: Server,
-    name: "Nucleo de Negocio",
+    name: "Multi-Tenant Real",
     color: "from-amber-500/15 to-amber-500/5",
     borderColor: "border-amber-500/25",
     accentColor: "text-amber-400",
-    items: ["ERP multi-tenant en Odoo V19", "Subdominio = Base de datos", "PostgreSQL unico, multiples DB", "CRM, ecommerce, pagos"],
-    description: "Cada cliente vive aislado dentro del mismo sistema.",
+    items: ["ERP multi-tenant en Odoo V19", "Subdominio = Base de datos", "PostgreSQL único, múltiples DB", "Aislamiento lógico por cliente"],
+    description: "Cada cliente vive aislado dentro del mismo sistema. 1 sistema, N clientes.",
   },
   {
     id: "capa-4",
     icon: Workflow,
-    name: "Automatizacion & Flujo",
+    name: "Automatización & Flujo",
     color: "from-rose-500/15 to-rose-500/5",
     borderColor: "border-rose-500/25",
     accentColor: "text-rose-400",
-    items: ["Webhook a Automatizacion", "Generacion de link de pago", "Conversacion a Venta", "Integracion con ERP"],
+    items: ["Webhook a Automatización", "Generación de link de pago", "Conversación a Venta", "Integración con ERP"],
     description: "Respuesta en minutos, no en horas.",
   },
   {
@@ -69,18 +69,8 @@ const layers = [
     color: "from-indigo-500/15 to-indigo-500/5",
     borderColor: "border-indigo-500/25",
     accentColor: "text-indigo-400",
-    items: ["Backups por base", "Reglas iptables persistentes", "Volumenes Docker definidos", "Logs auditables"],
+    items: ["Backups por base", "Reglas iptables persistentes", "Volúmenes Docker definidos", "Logs auditables"],
     description: "Nada depende de la suerte.",
-  },
-  {
-    id: "pan-inferior",
-    icon: HardDrive,
-    name: "Hardware",
-    color: "from-primary/20 to-primary/5",
-    borderColor: "border-primary/30",
-    accentColor: "text-primary",
-    items: ["Mac mini M4 Pro", "Hasta 64GB RAM", "Neural Engine 16-core", "1TB-8TB SSD"],
-    description: "Sin base solida no hay plataforma.",
   },
 ]
 
@@ -95,10 +85,11 @@ export function StackDiagram() {
             Arquitectura
           </p>
           <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            {"El total sobre el plato"}
+            Multi-tenant. Docker aislado. Firewall UFW.
           </h2>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-            {"Cada capa cumple una funcion. Cada capa esta documentada. Cada capa esta funcionando."}
+            Un solo núcleo, múltiples empresas. Separación lógica de datos. 
+            Esto da tranquilidad técnica a CTO e inversionistas.
           </p>
         </div>
 
