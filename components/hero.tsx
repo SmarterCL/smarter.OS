@@ -32,11 +32,6 @@ export function Hero() {
             </div>
           </div>
 
-          {/* The WHY */}
-          <p className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground lg:text-lg">
-            SmarterOS existe porque en Chile vender es fácil, pero integrar ventas, gestión y cobros no lo es.
-          </p>
-
           <h1 className="mt-6 text-balance text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-7xl">
             Orquestación operativa
             <br />
