@@ -285,6 +285,11 @@ export function InteractiveStack() {
                     <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-4">
                         Solución comercial todo en uno
                     </h2>
+                    <div className="mt-6 flex gap-4 justify-center">
+                        <img src="/hub_smarter.png" alt="Hub Smarter" className="max-w-xs rounded-lg shadow-lg" />
+                        <img src="/m4_notebook.jpeg" alt="M4 Notebook" className="max-w-xs rounded-lg shadow-lg" />
+                    </div>
+
                 </div>
 
                 {/* Mobile View: Sequential List */}
@@ -377,6 +382,6 @@ export function InteractiveStack() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
