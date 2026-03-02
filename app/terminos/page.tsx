@@ -12,14 +12,14 @@ export default function TerminosPage() {
                     <section>
                         <h2 className="text-xl font-semibold text-foreground mb-3">1. Uso del Servicio</h2>
                         <p>
-                            Al acceder a Smarter OS, usted acepta utilizar el sistema para fines comerciales legítimos y en cumplimiento con las regulaciones de proyectos Sercotec/Corfo cuando aplique.
+                            Al acceder a SmarterBOT, usted acepta utilizar el sistema para fines comerciales legítimos y en cumplimiento con las regulaciones de proyectos Sercotec/Corfo cuando aplique.
                         </p>
                     </section>
 
                     <section>
                         <h2 className="text-xl font-semibold text-foreground mb-3">2. Licencia</h2>
                         <p>
-                            Se otorga una licencia de software para el uso de Smarter OS bajo el stack "Exoesqueleto Comercial".
+                            Se otorga una licencia de software para el uso de SmarterBOT bajo el stack "Exoesqueleto Comercial".
                             Los módulos Open Source (Odoo, n8n) se rigen por sus respectivas licencias.
                             El código propietario "Smarter" es para uso exclusivo del cliente activo.
                         </p>

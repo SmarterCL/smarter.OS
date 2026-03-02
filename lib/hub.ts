@@ -1,5 +1,5 @@
 /**
- * Hub API utilities for SmarterOS
+ * Hub API utilities for SmarterBOT
  * 
  * Principles:
  * - Frontend does NOT decide prices or sources
@@ -14,7 +14,7 @@ export async function fetchFromHub<T>(
   options?: RequestInit
 ): Promise<T> {
   const url = `${HUB_BASE_URL}${endpoint}`
-  
+
   const response = await fetch(url, {
     ...options,
     headers: {

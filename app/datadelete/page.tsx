@@ -12,7 +12,7 @@ export default function DataDeletePage() {
                     <section>
                         <h2 className="text-xl font-semibold text-foreground mb-3">1. Política de Eliminación</h2>
                         <p>
-                            Sus datos son suyos. Smarter OS soporta la eliminación completa de datos comerciales a petición del cliente.
+                            Sus datos son suyos. SmarterBOT soporta la eliminación completa de datos comerciales a petición del cliente.
                         </p>
                     </section>
 

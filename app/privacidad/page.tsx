@@ -12,7 +12,7 @@ export default function PrivacidadPage() {
           <section>
             <h2 className="text-xl font-semibold text-foreground mb-3">1. Recopilación de Información</h2>
             <p>
-              En Smarter OS, recopilamos información mínima necesaria para operar nuestro sistema.
+              En SmarterBOT, recopilamos información mínima necesaria para operar nuestro sistema.
               Esto incluye datos básicos como RUT, nombre y correo electrónico utilizados para la gestión de proyectos Sercotec/Corfo.
             </p>
           </section>
@@ -24,7 +24,7 @@ export default function PrivacidadPage() {
             </p>
             <ul className="list-disc pl-6 mt-2 space-y-1">
               <li>Verificar elegibilidad en proyectos gubernamentales.</li>
-              <li>Proveer acceso a la plataforma Smarter OS.</li>
+              <li>Proveer acceso a la plataforma SmarterBOT.</li>
               <li>Comunicación sobre el estado de servicios.</li>
             </ul>
           </section>

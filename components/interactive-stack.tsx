@@ -239,7 +239,7 @@ const stackItems = [
                                     <ShoppingCart className="h-4 w-4 text-primary" />
                                 </div>
                                 <div className="text-left">
-                                    <div className="text-sm font-bold">Smarter OS Plan</div>
+                                    <div className="text-sm font-bold">SmarterBOT Plan</div>
                                     <div className="text-xs text-muted-foreground">Suscripción Mensual</div>
                                 </div>
                             </div>
@@ -279,7 +279,7 @@ export function InteractiveStack() {
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                         </span>
                         <span className="text-xs font-medium text-primary uppercase tracking-wider">
-                            Smarter OS
+                            SmarterBOT
                         </span>
                     </div>
                     <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-4">
@@ -375,7 +375,7 @@ export function InteractiveStack() {
 
                             {/* Footer/Decoration */}
                             <div className="px-8 py-4 bg-secondary/20 border-t border-border/50 text-xs font-mono text-muted-foreground flex justify-between uppercase tracking-widest">
-                                <span>Smarter OS Stack</span>
+                                <span>SmarterBOT Stack</span>
                                 <span>Module: {activeItem.id.toUpperCase()}</span>
                             </div>
                         </div>

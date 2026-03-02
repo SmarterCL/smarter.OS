@@ -33,9 +33,9 @@ export function Hero() {
           </div>
 
           <h1 className="mt-6 text-balance text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-7xl">
-            Orquestación operativa
+            Si tienes una Startup, Comercio o Empresa
             <br />
-            <span className="text-primary">para empresas con MCP</span>
+            <span className="text-primary">tienes ventaja incorporando Smarterbot</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground lg:text-xl font-medium">

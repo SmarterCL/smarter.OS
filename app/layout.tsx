@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import Script from 'next/script'
 import { WhatsappButton } from '@/components/whatsapp-button'
 import './globals.css'
 
@@ -8,24 +9,22 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
 
 export const metadata: Metadata = {
-  title: 'Smarter OS | Sistema Operativo Comercial para Chile',
-  description: 'Sistema Operativo Comercial para Chile. Preparado para Sercotec y SII. Infraestructura, seguridad y automatización.',
+  title: 'SmarterBOT | Sistema Operativo Comercial para Chile',
+  description: 'Automatización y centralización operativa para Pymes en Chile. WhatsApp Business, CRM, Facturación Electrónica SII y Cobros Integrados sin conciliaciones manuales.',
+  keywords: ['SmarterBOT', 'CRM Chile', 'ERP Chile', 'Facturación Electrónica SII', 'Automatización de ventas', 'WhatsApp Business API', 'Cobros Flow', 'Pymes Chile', 'Sercotec', 'Corfo', 'Software de gestión'],
+  authors: [{ name: 'Smarter SPA' }],
+  creator: 'Smarter SPA',
+  openGraph: {
+    title: 'SmarterBOT | Sistema Operativo Comercial para Chile',
+    description: 'Automatización y centralización operativa para Pymes en Chile. WhatsApp Business, CRM, Facturación Electrónica SII y Cobros Integrados.',
+    url: 'https://smarterbot.cl',
+    siteName: 'SmarterBOT',
+    locale: 'es_CL',
+    type: 'website',
+  },
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/icon.jpg',
+    apple: '/icon.jpg',
   },
 }
 
@@ -44,6 +43,23 @@ export default function RootLayout({
         {children}
         <WhatsappButton />
         <Analytics />
+        <Script id="chatwoot" strategy="afterInteractive" dangerouslySetInnerHTML={{
+          __html: `
+            (function(d,t) {
+              var BASE_URL="https://chat.smarterbot.cl";
+              var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+              g.src=BASE_URL+"/packs/js/sdk.js";
+              g.async = true;
+              s.parentNode.insertBefore(g,s);
+              g.onload=function(){
+                window.chatwootSDK.run({
+                  websiteToken: 'm4MrioCa5mCNzrsMHTMQrFsP',
+                  baseUrl: BASE_URL
+                })
+              }
+            })(document,"script");
+          `
+        }} />
       </body>
     </html>
   )

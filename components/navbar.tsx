@@ -18,11 +18,11 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="/" className="flex items-center gap-3">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-            <span className="text-sm font-bold text-primary-foreground font-mono">S</span>
+          <div className="flex h-9 w-9 overflow-hidden rounded-lg">
+            <img src="/icon.jpg" alt="SmarterBOT Logo" className="h-full w-full object-cover" />
           </div>
           <span className="text-lg font-bold tracking-tight text-foreground">
-            {"Smarter"}<span className="text-primary">{"OS"}</span>
+            {"Smarter"}<span className="text-primary">{"BOT"}</span>
           </span>
         </a>
 

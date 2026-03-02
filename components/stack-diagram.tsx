@@ -82,7 +82,7 @@ export function StackDiagram() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-wider text-primary font-mono">
-            🛡️ SmarterOS Antifraude
+            🛡️ SmarterBOT Antifraude
           </p>
           <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Monitor de riesgo en tiempo real para e-commerce

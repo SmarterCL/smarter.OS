@@ -16,7 +16,7 @@ export function WhySmarterOS() {
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center mb-16">
           <p className="mb-3 text-sm font-medium uppercase tracking-wider text-primary font-mono">
-            Por Qué SmarterOS
+            Por Qué SmarterBOT
           </p>
           <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             La diferencia es profunda
@@ -29,22 +29,21 @@ export function WhySmarterOS() {
           <div>
             <div className="mb-8">
               <h3 className="text-xl font-bold text-foreground mb-4">
-                Un CRM es una herramienta.
+                CRM y CHAT es lo mismo porque ahi viven los "Contactos"
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Un ERP es una herramienta. WhatsApp Business es un canal. Por separado, 
-                crean silos, duplican trabajo y generan fricción administrativa.
+                vamos a configurar tu "Startup", "Comercio" o "Empresa" para que responda, venda y de soporte al cliente todos los días.
               </p>
             </div>
 
             <div className="mb-8">
               <h3 className="text-xl font-bold text-foreground mb-4">
-                SmarterOS los convierte en un flujo operativo único.
+                SmarterBOT los convierte en un flujo operativo único.
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                No es software. Es sistema operativo empresarial para Chile. 
-                Centralización operativa para empresas con RUT. Facturación electrónica real. 
-                Integración con medios de pago locales como Flow sin conciliaciones manuales.
+                El BOT y el Chatbot para empresas que hablan con clientes con "RUT Empresa" consultan a diario por: facturas, pagos, retiros de locales, conciliaciones manuales y miles de consultas más.
+                <br /><br />
+                La respuesta llega inmediatamente, sin descanso desde la empresa y con sus datos.
               </p>
             </div>
 
@@ -53,8 +52,7 @@ export function WhySmarterOS() {
                 Esto es arquitectura
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Y eso hay que explicarlo arriba, antes de los planes. Porque la infraestructura 
-                digital para pymes chilenas no es opcional: es lo que transforma visión en flujo de caja.
+                Y eso hay que explicarlo arriba, antes de los planes. Porque la infraestructura digital para pymes chilenas no es opcional: es lo que transforma visión en flujo de caja.
               </p>
             </div>
           </div>
@@ -65,7 +63,7 @@ export function WhySmarterOS() {
               {/* Flow diagram */}
               <div className="relative rounded-2xl border border-border bg-card/50 p-8 backdrop-blur-sm">
                 <div className="absolute -top-3 -right-3 px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-xs font-medium text-primary">
-                  Flujo SmarterOS
+                  Flujo SmarterBOT
                 </div>
 
                 {/* Workflow steps */}
@@ -101,8 +99,8 @@ export function WhySmarterOS() {
         <div className="mx-auto max-w-4xl text-center">
           <div className="rounded-2xl border border-border bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 p-8 lg:p-12">
             <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed italic">
-              "SmarterOS no controla empresas.<br />
-              <span className="text-primary font-semibold">SmarterOS elimina fricción administrativa.</span>"
+              "SmarterBOT no controla empresas.<br />
+              <span className="text-primary font-semibold">SmarterBOT elimina fricción administrativa.</span>"
             </p>
           </div>
         </div>

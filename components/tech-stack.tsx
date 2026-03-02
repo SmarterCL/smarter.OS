@@ -42,7 +42,7 @@ export function TechStack() {
                 No es PowerPoint. Es infraestructura real.
               </h2>
               <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-                Herramientas probadas que demuestran que esto no es marketing inflado. 
+                Herramientas probadas que demuestran que esto no es marketing inflado.
                 Credibilidad técnica que respalda la promesa.
               </p>
             </div>
@@ -80,7 +80,7 @@ export function TechStack() {
               <div className="h-full w-full p-6 flex items-center justify-center">
                 <img
                   src="/smarter_burguer.png"
-                  alt="Smarter OS Software Stack"
+                  alt="SmarterBOT Software Stack"
                   className="max-h-full max-w-full object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-110"
                 />
               </div>

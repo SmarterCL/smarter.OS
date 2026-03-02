@@ -41,7 +41,7 @@ export function CodePreview() {
               <span className="ml-3 text-xs text-muted-foreground font-mono">docker-compose.yml</span>
             </div>
             <div className="p-5 font-mono text-sm leading-relaxed">
-              <div className="text-muted-foreground">{"# Smarter OS — Stack operativo"}</div>
+              <div className="text-muted-foreground">{"# SmarterBOT — Stack operativo"}</div>
               <div className="mt-2">
                 <span className="text-primary">{"services"}</span>
                 <span className="text-muted-foreground">{":"}</span>
