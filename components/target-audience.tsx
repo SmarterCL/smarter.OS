@@ -1,6 +1,25 @@
+"use client"
+
 import { Briefcase, Store, BarChart, Palette, Code, Coins } from "lucide-react"
 
 export function TargetAudience() {
+    const handleSelection = async (audienceTitle: string) => {
+        try {
+            await fetch('http://localhost:3051/v1/leads/track', { // Tu endpoint de SmarterOS
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    source: "landing_page",
+                    segment: audienceTitle,
+                    timestamp: new Date().toISOString()
+                })
+            });
+            console.log(`Interés registrado: ${audienceTitle}`);
+        } catch (error) {
+            console.error("Error conectando con SmarterOS:", error);
+        }
+    };
+
     const audiences = [
         {
             icon: Briefcase,
@@ -47,7 +66,8 @@ export function TargetAudience() {
                         return (
                             <div
                                 key={idx}
-                                className="group flex flex-col items-start p-8 rounded-2xl bg-white border border-zinc-200 transition-all hover:border-primary/50 text-left hover:shadow-lg hover:shadow-zinc-100"
+                                onClick={() => handleSelection(item.title)}
+                                className="group cursor-pointer flex flex-col items-start p-8 rounded-2xl bg-white border border-zinc-200 transition-all hover:border-primary/50 text-left hover:shadow-lg hover:shadow-zinc-100"
                             >
                                 <div className="p-3 bg-primary/10 rounded-xl mb-6">
                                     <Icon className="w-6 h-6 text-primary" strokeWidth={2} />
