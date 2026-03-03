@@ -2,7 +2,6 @@ import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { WhySmarterOS } from "@/components/why-smarteros"
 import { StackDiagram } from "@/components/stack-diagram"
-import { TechStack } from "@/components/tech-stack"
 import { LayersSection } from "@/components/layers-section"
 import { Pricing } from "@/components/pricing"
 import { RecomendacionSteps } from "@/components/recomendacion-steps"
@@ -17,7 +16,6 @@ export default function Home() {
       <Hero />
       <WhySmarterOS />
       <StackDiagram />
-      <TechStack />
       <LayersSection />
       <Pricing />
       <RecomendacionSteps />

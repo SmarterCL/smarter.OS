@@ -1,156 +1,100 @@
-"use client"
-
-import { useState } from "react"
-import {
-  Globe,
-  Shield,
-  Container,
-  Server,
-  Workflow,
-  Database,
-  HardDrive,
-} from "lucide-react"
-
-const layers = [
-  {
-    id: "pan-superior",
-    icon: Globe,
-    name: "Infraestructura Base",
-    color: "from-primary/20 to-primary/5",
-    borderColor: "border-primary/30",
-    accentColor: "text-primary",
-    items: ["Mac mini M4 Pro", "Hasta 64GB RAM", "Neural Engine 16-core", "1TB-8TB SSD"],
-    description: "Sin base sólida no hay plataforma.",
-  },
-  {
-    id: "capa-1",
-    icon: Shield,
-    name: "Seguridad Perimetral",
-    color: "from-emerald-500/15 to-emerald-500/5",
-    borderColor: "border-emerald-500/25",
-    accentColor: "text-emerald-400",
-    items: ["Firewall UFW", "DOCKER-USER controlado", "Solo 80 / 443 públicos", "SSH restringido"],
-    description: "El perímetro manda. Docker obedece.",
-  },
-  {
-    id: "capa-2",
-    icon: Container,
-    name: "Supabase",
-    color: "from-sky-500/15 to-sky-500/5",
-    borderColor: "border-sky-500/25",
-    accentColor: "text-sky-400",
-    items: ["Docker", "Aislamiento de procesos", "Contenedores que garantizan separación lógica, escalabilidad y seguridad", "Infraestructura preparada para crecer"],
-    description: "Servicios invisibles desde Internet.",
-  },
-  {
-    id: "capa-3",
-    icon: Server,
-    name: "Multi-Tenant Real",
-    color: "from-amber-500/15 to-amber-500/5",
-    borderColor: "border-amber-500/25",
-    accentColor: "text-amber-400",
-    items: ["ERP multi-tenant en Odoo V19", "Subdominio = Base de datos", "PostgreSQL único, múltiples DB", "Aislamiento lógico por cliente"],
-    description: "Cada cliente vive aislado dentro del mismo sistema. 1 sistema, N clientes.",
-  },
-  {
-    id: "capa-4",
-    icon: Workflow,
-    name: "FastAPI",
-    color: "from-rose-500/15 to-rose-500/5",
-    borderColor: "border-rose-500/25",
-    accentColor: "text-rose-400",
-    items: ["Webhooks en tiempo real", "De webhook a venta en minutos", "Integración directa con medios de pago locales como Flow", "Sin conciliaciones manuales"],
-    description: "Respuesta en minutos, no en horas.",
-  },
-  {
-    id: "capa-5",
-    icon: Database,
-    name: "Persistencia & Datos",
-    color: "from-indigo-500/15 to-indigo-500/5",
-    borderColor: "border-indigo-500/25",
-    accentColor: "text-indigo-400",
-    items: ["Backups por base", "Reglas iptables persistentes", "Volúmenes Docker definidos", "Logs auditables"],
-    description: "Nada depende de la suerte.",
-  },
-]
+import { ExternalLink, ShieldCheck, Cpu, HardDrive } from "lucide-react"
 
 export function StackDiagram() {
-  const [activeLayer, setActiveLayer] = useState<string | null>(null)
+  const products = [
+    {
+      tier: "Startup",
+      name: "Mac Mini",
+      specs: "24 GB RAM",
+      description: "El punto de partida perfecto. Computador con sistema operativo comercial integrado a tu facturación, contabilidad y RRHH. Operación segura 24x7.",
+      image: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop",
+      buttonText: "Comprar en MercadoLibre",
+    },
+    {
+      tier: "Comercio",
+      name: "Mac Mini",
+      specs: "32 GB RAM",
+      description: "Para negocios con mayor volumen procesando ventas diarias. Conectado a tu ecosistema operativo con máxima seguridad y respuesta inmediata.",
+      image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop",
+      buttonText: "Comprar en MercadoLibre",
+    },
+    {
+      tier: "Empresa",
+      name: "Mac Mini",
+      specs: "64 GB RAM",
+      description: "Servidor Enterprise. Múltiples agentes operando 24x7, conciliación automatizada masiva y bases de datos aisladas bajo estándar de máxima disponibilidad.",
+      image: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&w=800&auto=format&fit=crop",
+      buttonText: "Comprar en MercadoLibre",
+    }
+  ]
 
   return (
-    <section id="arquitectura" className="relative py-24 lg:py-32">
+    <section id="tienda" className="relative border-t border-border py-24 lg:py-32 bg-white">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mx-auto mb-16 max-w-2xl text-center">
+        <div className="mx-auto max-w-4xl text-center mb-20">
           <p className="mb-3 text-sm font-medium uppercase tracking-wider text-primary font-mono">
-            🛡️ SmarterBOT Antifraude
+            Hardware & Software Integrado
           </p>
-          <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            Monitor de riesgo en tiempo real para e-commerce
+          <h2 className="text-balance text-4xl font-black tracking-tight text-zinc-900 sm:text-5xl mb-6">
+            Adquiere tu Nodo Operativo
           </h2>
-          <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Ofrecemos una asesoría de seguridad a grupos técnicos de manera híbrida o remota.
-          </p>
-          <p className="mt-2 text-sm text-muted-foreground/70">
-            webontrol.smarterbot.cl
+          <p className="text-lg lg:text-xl text-zinc-600 leading-relaxed max-w-3xl mx-auto">
+            Puedes comprar el computador con el sistema operativo comercial directamente de acuerdo a tu tamaño. Todos se integran a tu facturación, contabilidad y RRHH de manera segura para que los agentes lo puedan operar 24x7.
           </p>
         </div>
 
-        <div className="mx-auto flex max-w-3xl flex-col gap-3">
-          {layers.map((layer, index) => {
-            const isActive = activeLayer === layer.id
-            const Icon = layer.icon
-
-            return (
-              <button
-                key={layer.id}
-                onClick={() => setActiveLayer(isActive ? null : layer.id)}
-                className={`group relative overflow-hidden rounded-xl border text-left transition-all duration-300 ${isActive
-                  ? `${layer.borderColor} bg-gradient-to-r ${layer.color}`
-                  : "border-border bg-card hover:border-border/80 hover:bg-secondary/30"
-                  }`}
-              >
-                {/* Layer number indicators */}
-                {index > 0 && index < layers.length - 1 && (
-                  <div className={`absolute top-3 right-4 text-xs font-mono ${isActive ? layer.accentColor : "text-muted-foreground/40"}`}>
-                    {"Capa "}{index}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {products.map((item, idx) => (
+            <div key={idx} className="flex flex-col rounded-3xl border border-zinc-200 bg-zinc-50 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-64 w-full bg-zinc-200">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-zinc-900 border border-zinc-200">
+                  {item.tier}
+                </div>
+              </div>
+              <div className="p-8 flex flex-col flex-grow">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-zinc-900">{item.name}</h3>
                   </div>
-                )}
-
-                <div className="flex items-center gap-4 p-5">
-                  <div
-                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition-colors ${isActive ? `bg-background/20 ${layer.accentColor}` : "bg-secondary text-muted-foreground"
-                      }`}
-                  >
-                    <Icon className="h-5 w-5" />
+                  <div className="bg-zinc-200 text-zinc-800 px-3 py-1 rounded-lg font-bold text-sm">
+                    {item.specs}
                   </div>
-                  <div className="flex-1">
-                    <h3 className={`font-semibold transition-colors ${isActive ? "text-foreground" : "text-foreground/80"}`}>
-                      {layer.name}
-                    </h3>
-                    <p className={`mt-0.5 text-sm ${isActive ? layer.accentColor : "text-muted-foreground"}`}>
-                      {layer.description}
-                    </p>
+                </div>
+                <p className="text-zinc-600 mb-8 flex-grow leading-relaxed">
+                  {item.description}
+                </p>
+
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-center gap-3 text-sm text-zinc-700 font-medium">
+                    <ShieldCheck className="w-5 h-5 text-emerald-500" />
+                    Operación Segura 24x7
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-zinc-700 font-medium">
+                    <HardDrive className="w-5 h-5 text-indigo-500" />
+                    Integración ERP Nativa
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-zinc-700 font-medium">
+                    <Cpu className="w-5 h-5 text-amber-500" />
+                    Bases aisladas (Multi-Tenant)
                   </div>
                 </div>
 
-                {isActive && (
-                  <div className="border-t border-border/30 px-5 pb-5 pt-4">
-                    <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                      {layer.items.map((item) => (
-                        <div
-                          key={item}
-                          className="flex items-center gap-2 rounded-lg bg-background/30 px-3 py-2"
-                        >
-                          <span className={`h-1.5 w-1.5 rounded-full ${layer.accentColor} bg-current`} />
-                          <span className="text-sm text-foreground/90 font-mono">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </button>
-            )
-          })}
+                <a
+                  href="#"
+                  className="w-full py-4 rounded-xl bg-[#FFE600] text-[#2D3277] hover:bg-[#FFD100] transition-colors font-bold text-sm lg:text-base flex items-center justify-center gap-2 shadow-sm"
+                >
+                  {item.buttonText}
+                  <ExternalLink className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

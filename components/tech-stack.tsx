@@ -32,7 +32,6 @@ export function TechStack() {
     <section id="stack" className="relative border-t border-border bg-card/30 py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start">
-          {/* Left Column: Text and Grid */}
           <div className="flex-1">
             <div className="mb-12 max-w-2xl">
               <p className="mb-3 text-sm font-medium uppercase tracking-wider text-primary font-mono">
@@ -67,40 +66,6 @@ export function TechStack() {
                   </p>
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* Right Column: Visuals */}
-          <div className="flex flex-col gap-6 lg:w-1/3">
-            {/* Software Visualization - Smarter Burger */}
-            <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-border bg-secondary/30">
-              <div className="absolute top-3 left-3 z-10 rounded-full bg-background/80 px-3 py-1 text-[10px] font-medium text-foreground backdrop-blur-md border border-border">
-                Integración en Tiempo Real
-              </div>
-              <div className="h-full w-full p-6 flex items-center justify-center">
-                <img
-                  src="/smarter_burguer.png"
-                  alt="SmarterBOT Software Stack"
-                  className="max-h-full max-w-full object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-110"
-                />
-              </div>
-            </div>
-
-            {/* Architecture diagram placeholder */}
-            <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-primary/10 via-card/30 to-primary/10">
-              <div className="absolute top-3 left-3 z-10 rounded-full bg-background/80 px-3 py-1 text-[10px] font-medium text-foreground backdrop-blur-md border border-border">
-                Infraestructura
-              </div>
-              <div className="h-full w-full p-6 flex flex-col items-center justify-center text-center">
-                <div className="space-y-2">
-                  <div className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono border border-emerald-500/20">
-                    Escalable
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Preparado para crecer sin fricción técnica
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
