@@ -1,7 +1,13 @@
 "use client"
 
-import { Check, MessageSquare, TrendingUp, Factory } from "lucide-react"
+import { Check, MessageSquare, TrendingUp, Factory, type LucideIcon } from "lucide-react"
 import { useCatalog } from "@/hooks/use-catalog"
+
+const ICON_MAP: Record<string, LucideIcon> = {
+    MessageSquare,
+    TrendingUp,
+    Factory,
+}
 
 const fallbackPlans = [
     {
@@ -107,13 +113,13 @@ export function Pricing() {
                 {!loading && (
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
                         {plans.map((plan: any, index: number) => {
-                            const Icon = plan.icon || TrendingUp
+                            const Icon = (typeof plan.icon === "string" ? ICON_MAP[plan.icon] : plan.icon) || TrendingUp
                             return (
                                 <div
                                     key={plan.slug || index}
                                     className={`relative flex flex-col items-center p-8 rounded-3xl bg-white border transition-all duration-300 ${plan.highlighted
-                                            ? "border-primary shadow-lg shadow-primary/10 mt-0 lg:-mt-4"
-                                            : "border-zinc-200 mt-0"
+                                        ? "border-primary shadow-lg shadow-primary/10 mt-0 lg:-mt-4"
+                                        : "border-zinc-200 mt-0"
                                         }`}
                                 >
                                     {plan.badge && (
@@ -170,8 +176,8 @@ export function Pricing() {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className={`w-full flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold rounded-xl transition-colors ${plan.highlighted
-                                                    ? "bg-primary text-primary-foreground hover:opacity-90 shadow-md shadow-primary/20"
-                                                    : "border border-zinc-200 bg-white text-zinc-800 hover:bg-zinc-50"
+                                                ? "bg-primary text-primary-foreground hover:opacity-90 shadow-md shadow-primary/20"
+                                                : "border border-zinc-200 bg-white text-zinc-800 hover:bg-zinc-50"
                                                 }`}
                                         >
                                             Activar ahora
