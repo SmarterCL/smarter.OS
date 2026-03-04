@@ -5,8 +5,8 @@ import { Menu, X, Github } from "lucide-react"
 
 const navLinks = [
   { label: "Por Qué", href: "/#porque" },
-  { label: "Arquitectura", href: "/#arquitectura" },
-  { label: "Stack", href: "/#stack" },
+  { label: "Studio IA", href: "/#studio" },
+  { label: "Hardware", href: "/#tienda" },
   { label: "Capas", href: "/#capas" },
   { label: "Planes", href: "/#planes" },
 ]

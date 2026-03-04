@@ -39,8 +39,9 @@ export function Hero() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground lg:text-xl font-medium">
-            Centraliza ventas, gestión y cobros en un solo flujo
-            WhatsApp Business, CRM, facturación electrónica y cobros por redes sociales.
+            Centraliza ventas, gestión y cobros en un solo flujo.
+            WhatsApp Business, CRM, facturación electrónica y ahora,{" "}
+            <span className="text-foreground font-semibold">Catálogo IA Automático</span>.
           </p>
 
           {/* CTAs */}

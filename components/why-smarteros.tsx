@@ -1,44 +1,44 @@
 export function WhySmarterOS() {
   const steps = [
     {
-      icon: "📥",
-      title: "1. Venta (CRM & Chat)",
-      description: "El origen de todo. En SmarterBOT, el CRM y el Chat son lo mismo porque ahí viven tus contactos. Ya sea por WhatsApp o Telegram, cada interacción es una oportunidad de negocio que entra directamente a tu flujo.",
+      icon: "💬",
+      title: "1. Venta (WhatsApp & Telegram)",
+      description: "Los leads de WhatsApp y Telegram entran automáticamente al CRM. Cada interacción es una oportunidad de negocio capturada sin intervención manual.",
       bgColor: "bg-blue-500/10",
       borderColor: "border-blue-500/20",
     },
     {
       icon: "📝",
-      title: "2. Registro (ERP & RRHH)",
-      description: "Configuramos tu Startup o Comercio. No es solo un chat; es el registro automático en tu ERP. Los datos del cliente y la intención de compra se asientan sin intervención manual.",
+      title: "2. Registro (Odoo Automático)",
+      description: "Odoo crea el cliente y la orden sin tocar un formulario. Los datos de la conversación se asientan directamente en el ERP con cero fricción.",
       bgColor: "bg-indigo-500/10",
       borderColor: "border-indigo-500/20",
     },
     {
       icon: "🧾",
-      title: "3. Facturación (MELI & SII)",
-      description: 'Respuestas con datos reales. El bot para empresas con "RUT Empresa" no solo saluda: emite facturas y gestiona ventas de Mercado Libre. La respuesta llega inmediatamente, con los datos que el cliente necesita.',
+      title: "3. Facturación (SII Integrado)",
+      description: "Emisión de boleta o factura electrónica integrada con el SII de Chile. El bot para RUT Empresa genera la documentación legal automáticamente.",
       bgColor: "bg-purple-500/10",
       borderColor: "border-purple-500/20",
     },
     {
       icon: "💳",
-      title: "4. Cobro (Pasarelas de Pago)",
-      description: "Transformamos visión en flujo de caja. Integramos el proceso de pago en la misma conversación. El cliente consulta por sus cuotas o deudas y puede pagar ahí mismo, sin descanso, todos los días.",
+      title: "4. Cobro (Flow / Transbank)",
+      description: "Link de pago generado en la misma conversación de WhatsApp. El cliente paga sin salir del chat. Cobros disponibles 24/7, todos los días.",
       bgColor: "bg-emerald-500/10",
       borderColor: "border-emerald-500/20",
     },
     {
-      icon: "✅",
-      title: "5. Conciliación (N8N & Automatización)",
-      description: "Adiós a las tareas manuales. Gracias a nuestra arquitectura con N8N, las conciliaciones bancarias y de pagos se ejecutan en segundo plano. Cero errores, cero pérdida de tiempo.",
+      icon: "📦",
+      title: "5. Despacho (Stock & Etiquetas)",
+      description: "Tu nodo gestiona la etiqueta logística y descuenta el stock en tiempo real. El resto del flujo: conciliación y reporte en segundo plano.",
       bgColor: "bg-amber-500/10",
       borderColor: "border-amber-500/20",
     },
     {
       icon: "📊",
       title: "6. Reporte (KPI & BI)",
-      description: "Decisiones basadas en hardware y software. Cerramos el flujo con Fast API y Business Intelligence. Visualiza tu operación completa en un solo dashboard. Un solo flujo. Cero fricción.",
+      description: "Dashboard con indicadores de operación completa. Decisiones basadas en datos reales. Un solo flujo. Una sola verdad. Cero fricción.",
       bgColor: "bg-rose-500/10",
       borderColor: "border-rose-500/20",
     }
@@ -49,12 +49,14 @@ export function WhySmarterOS() {
       <div className="mx-auto max-w-7xl px-6 relative z-10">
         <div className="mx-auto max-w-3xl text-center mb-20">
           <h2 className="text-balance text-4xl font-black tracking-tight text-foreground sm:text-5xl lg:text-6xl mb-8">
-            Más que un Chatbot: <span className="text-primary block mt-2">Tu Infraestructura Digital</span>
+            El Flujo Smarter:{" "}
+            <span className="text-primary block mt-2">Cero Fricción</span>
           </h2>
           <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 inline-block">
             <p className="text-xl lg:text-2xl text-foreground font-medium leading-relaxed italic">
-              "SmarterBOT no controla empresas.<br className="hidden sm:block" />
-              SmarterBOT <span className="text-primary font-bold">elimina</span> la fricción administrativa."
+              "Un sistema elimina la burocracia administrativa.<br className="hidden sm:block" />
+              Un solo flujo. Una sola{" "}
+              <span className="text-primary font-bold">verdad</span>."
             </p>
           </div>
         </div>
@@ -72,6 +74,17 @@ export function WhySmarterOS() {
               <p className="text-muted-foreground leading-relaxed flex-grow">{step.description}</p>
             </div>
           ))}
+        </div>
+
+        {/* Flow summary */}
+        <div className="mt-16 text-center">
+          <div className="inline-block rounded-xl border border-border bg-card/30 px-8 py-5">
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              <span className="font-semibold text-primary">Venta → Registro → Facturación → Cobro → Despacho → Reporte</span>
+              <br />
+              Automatización completa. Sin silos. Sin fricción.
+            </p>
+          </div>
         </div>
       </div>
 

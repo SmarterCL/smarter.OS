@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { WhySmarterOS } from "@/components/why-smarteros"
+import { SmarterStudio } from "@/components/smarter-studio"
 import { StackDiagram } from "@/components/stack-diagram"
 import { LayersSection } from "@/components/layers-section"
 import { Pricing } from "@/components/pricing"
@@ -15,6 +16,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <WhySmarterOS />
+      <SmarterStudio />
       <StackDiagram />
       <LayersSection />
       <Pricing />
