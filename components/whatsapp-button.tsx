@@ -5,7 +5,7 @@ export function WhatsappButton() {
 
     return (
         <a
-            href={`https://wa.me/${phoneNumber}?text=hola`}
+            href={`https://wa.me/${phoneNumber}?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20SmarterOS%20y%20Elia%20IA`}
             target="_blank"
             rel="noopener noreferrer"
             className="fixed bottom-6 right-6 z-50 flex items-center justify-center p-3 sm:p-4 rounded-full bg-[#25D366] text-white shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.23)] hover:scale-110 transition-all duration-300"

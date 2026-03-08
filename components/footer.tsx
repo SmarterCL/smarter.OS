@@ -9,7 +9,7 @@ export function Footer() {
                 <img src="/icon.jpg" alt="SmarterBOT Logo" className="h-full w-full object-cover" />
               </div>
               <span className="text-sm font-semibold text-foreground">
-                {"Smarter"}<span className="text-primary">{"BOT"}</span>
+                {"Smarter"}<span className="text-primary">{"OS"}</span>
               </span>
             </div>
 

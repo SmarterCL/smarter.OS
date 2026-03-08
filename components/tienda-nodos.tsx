@@ -49,7 +49,7 @@ const products = [
     ],
     highlight: false,
     buttonText: "Comprar en MercadoLibre",
-    link: "#",
+    link: "https://www.mercadolibre.cl/perfil/SMARTER+SPA",
     isWhatsApp: false,
   },
   {
@@ -62,18 +62,18 @@ const products = [
     specs: "32 GB RAM",
     specBg: "bg-primary/10 text-primary",
     description:
-      "Mayor capacidad para procesar catálogos masivos con Smarter Studio y gestionar alto volumen de ventas. ComfyUI corre fluido para transformar fotos de bodega en fichas ML-ready.",
+      "Mayor capacidad para procesar catálogos masivos con Elia Studio y gestionar alto volumen de ventas. ComfyUI corre fluido para transformar fotos de bodega en fichas ML-ready.",
     image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop",
     iconColor: "text-primary",
     features: [
-      "Motor ComfyUI (Smarter Studio)",
+      "Motor ComfyUI (Elia Studio)",
       "CRM + ERP de alto volumen",
       "Facturación SII multi-empresa",
       "Multi-agente paralelo",
     ],
     highlight: true,
     buttonText: "Comprar en MercadoLibre",
-    link: "#",
+    link: "https://www.mercadolibre.cl/perfil/SMARTER+SPA",
     isWhatsApp: false,
   },
   {
@@ -97,12 +97,12 @@ const products = [
     ],
     highlight: false,
     buttonText: "Comprar en MercadoLibre",
-    link: "#",
+    link: "https://www.mercadolibre.cl/perfil/SMARTER+SPA",
     isWhatsApp: false,
   },
 ]
 
-export function StackDiagram() {
+export function TiendaNodos() {
   return (
     <section id="tienda" className="relative border-t border-border py-24 lg:py-32 bg-white">
       <div className="mx-auto max-w-7xl px-6">
@@ -203,8 +203,8 @@ export function StackDiagram() {
               <div
                 key={item.id}
                 className={`flex flex-col rounded-3xl border overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ${item.highlight
-                    ? "border-primary shadow-lg shadow-primary/10 bg-white"
-                    : "border-zinc-200 bg-zinc-50"
+                  ? "border-primary shadow-lg shadow-primary/10 bg-white"
+                  : "border-zinc-200 bg-zinc-50"
                   }`}
               >
                 <div className="relative h-44">
@@ -248,8 +248,8 @@ export function StackDiagram() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`w-full py-3 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 transition-colors ${item.highlight
-                        ? "bg-[#FFE600] text-[#2D3277] hover:bg-[#FFD100]"
-                        : "bg-[#FFE600] text-[#2D3277] hover:bg-[#FFD100]"
+                      ? "bg-[#FFE600] text-[#2D3277] hover:bg-[#FFD100]"
+                      : "bg-[#FFE600] text-[#2D3277] hover:bg-[#FFD100]"
                       } shadow-sm`}
                   >
                     {item.buttonText}

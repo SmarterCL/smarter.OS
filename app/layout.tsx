@@ -9,16 +9,16 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
 
 export const metadata: Metadata = {
-  title: 'SmarterBOT | Sistema Operativo Comercial para Chile',
-  description: 'Automatización y centralización operativa para Pymes en Chile. WhatsApp Business, CRM, Facturación Electrónica SII y Cobros Integrados sin conciliaciones manuales.',
-  keywords: ['SmarterBOT', 'CRM Chile', 'ERP Chile', 'Facturación Electrónica SII', 'Automatización de ventas', 'WhatsApp Business API', 'Cobros Flow', 'Pymes Chile', 'Sercotec', 'Corfo', 'Software de gestión'],
+  title: 'SmarterOS | Sistema Operativo Comercial para Chile',
+  description: 'Automatización y centralización operativa para Pymes en Chile. WhatsApp Business, CRM, Elia IA, Facturación Electrónica SII y Cobros Integrados.',
+  keywords: ['SmarterOS', 'Elia IA', 'CRM Chile', 'ERP Chile', 'Facturación Electrónica SII', 'Automatización de ventas', 'WhatsApp Business API', 'Cobros Flow', 'Pymes Chile', 'Sercotec', 'Corfo', 'Software de gestión'],
   authors: [{ name: 'Smarter SPA' }],
   creator: 'Smarter SPA',
   openGraph: {
-    title: 'SmarterBOT | Sistema Operativo Comercial para Chile',
-    description: 'Automatización y centralización operativa para Pymes en Chile. WhatsApp Business, CRM, Facturación Electrónica SII y Cobros Integrados.',
-    url: 'https://smarterbot.cl',
-    siteName: 'SmarterBOT',
+    title: 'SmarterOS | Sistema Operativo Comercial para Chile',
+    description: 'Automatización y centralización operativa para Pymes en Chile. WhatsApp Business, CRM, Elia IA, Facturación Electrónica SII y Cobros Integrados.',
+    url: 'https://smarteros.cl',
+    siteName: 'SmarterOS',
     locale: 'es_CL',
     type: 'website',
   },

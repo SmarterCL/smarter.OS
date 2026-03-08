@@ -2,21 +2,21 @@
 
 import { Bot, CheckCircle2, Clock, Zap, Shield, ExternalLink } from "lucide-react"
 
-export function SercotecChat() {
+export function EliaAsistente() {
     return (
-        <section className="border-t border-border bg-background py-24">
+        <section id="elia" className="border-t border-border bg-background py-24">
             <div className="mx-auto max-w-5xl px-6">
                 {/* Header */}
                 <div className="mx-auto max-w-3xl text-center mb-12">
                     <p className="mb-3 text-sm font-medium uppercase tracking-wider text-primary font-mono">
-                        IA para tu Negocio
+                        Asistente Virtual 24/7
                     </p>
                     <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                        Tu negocio atendido por IA en menos de 48h
+                        Elia - Tu Asistente IA
                     </h2>
                     <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-                        Atiende y vende 24/7 en tu web con asistentes de chat y voz con IA.
-                        Elia aprende de tu negocio y responde a tus clientes al instante. Tu equipo se centra en vender más mientras Elia resuelve lo repetitivo.
+                        Elia se entrena con la información de tu negocio y responde preguntas frecuentes,
+                        toma pedidos, agenda citas y guía a tus clientes en el proceso de compra.
                     </p>
                 </div>
 
@@ -62,7 +62,7 @@ export function SercotecChat() {
                     {/* CTA Cards */}
                     <div className="flex flex-col gap-4">
                         <a
-                            href="https://app.smarterbot.cl/demo"
+                            href="https://app.smarteros.cl/demo"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group flex flex-col items-center justify-center gap-3 rounded-2xl border border-primary/30 bg-primary/10 p-8 text-center transition-all hover:bg-primary/15 hover:shadow-lg hover:shadow-primary/10"
@@ -78,7 +78,7 @@ export function SercotecChat() {
                         </a>
 
                         <a
-                            href="https://app.smarterbot.cl/onboarding?plan=elia"
+                            href="https://app.smarteros.cl/onboarding?plan=elia"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group flex flex-col items-center justify-center gap-3 rounded-2xl border border-border bg-card p-8 text-center transition-all hover:bg-secondary/30 hover:shadow-md"

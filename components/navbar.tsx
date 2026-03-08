@@ -4,10 +4,11 @@ import { useState } from "react"
 import { Menu, X, Github } from "lucide-react"
 
 const navLinks = [
-  { label: "Por Qué", href: "/#porque" },
-  { label: "Studio IA", href: "/#studio" },
-  { label: "Hardware", href: "/#tienda" },
-  { label: "Capas", href: "/#capas" },
+  { label: "El Flujo", href: "/#porque" },
+  { label: "SmarterOS Box", href: "/#box" },
+  { label: "Elia Studio", href: "/#studio" },
+  { label: "Tienda", href: "/#tienda" },
+  { label: "Asistente", href: "/#elia" },
   { label: "Planes", href: "/#planes" },
 ]
 
@@ -15,15 +16,18 @@ export function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl transition-all duration-300">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <a href="/" className="flex items-center gap-3">
-          <div className="flex h-9 w-9 overflow-hidden rounded-lg">
-            <img src="/icon.jpg" alt="SmarterBOT Logo" className="h-full w-full object-cover" />
+        <a href="/" className="flex items-center gap-3 group">
+          <div className="flex h-10 w-10 overflow-hidden rounded-xl border border-border/50 transition-transform group-hover:scale-105">
+            <img src="/icon.jpg" alt="SmarterOS Logo" className="h-full w-full object-cover" />
           </div>
-          <span className="text-lg font-bold tracking-tight text-foreground">
-            {"Smarter"}<span className="text-primary">{"BOT"}</span>
-          </span>
+          <div className="flex flex-col">
+            <span className="text-lg font-bold leading-none tracking-tight text-foreground">
+              {"Smarter"}<span className="text-primary">{"OS"}</span>
+            </span>
+            <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-medium">BORN TO RUN</span>
+          </div>
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -31,74 +35,70 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
             >
               {link.label}
             </a>
           ))}
           <div className="flex items-center gap-4">
             <a
-              href="https://mcpservers.org/servers/smartercl/smartermcp"
+              href="https://flow.smarteros.cl/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="flex items-center gap-2 rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 hover:opacity-90 active:scale-95"
             >
-              <Github className="h-4 w-4" />
-              GitHub
-            </a>
-            <a
-              href="https://flow.smarterbot.cl/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-lg bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-            >
-              Activar
+              Activar Box
             </a>
           </div>
         </div>
 
         <button
           onClick={() => setOpen(!open)}
-          className="text-foreground md:hidden"
+          className="relative z-50 flex h-10 w-10 items-center justify-center rounded-xl bg-secondary/50 text-foreground transition-all hover:bg-secondary md:hidden"
           aria-label={open ? "Cerrar menu" : "Abrir menu"}
         >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
-      {open && (
-        <div className="border-t border-border/50 bg-background px-6 pb-6 md:hidden">
-          <div className="flex flex-col gap-4 pt-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {link.label}
-              </a>
-            ))}
+      {/* Mobile Menu */}
+      <div
+        className={`fixed inset-0 z-40 bg-background/95 backdrop-blur-2xl transition-all duration-500 md:hidden ${open ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+          }`}
+      >
+        <div className="flex h-full flex-col items-center justify-center gap-8 px-6">
+          {navLinks.map((link, idx) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="text-2xl font-bold text-foreground transition-all hover:text-primary active:scale-90"
+              style={{ transitionDelay: `${idx * 50}ms` }}
+            >
+              {link.label}
+            </a>
+          ))}
+          <div className="mt-8 flex flex-col items-center gap-6 w-full">
+            <a
+              href="https://flow.smarteros.cl/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full max-w-xs rounded-2xl bg-primary px-8 py-4 text-center text-lg font-bold text-primary-foreground shadow-xl shadow-primary/20"
+            >
+              Activar SmarterOS Box
+            </a>
             <a
               href="https://github.com/SmarterCL/smarter.io"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 flex items-center justify-center gap-2 rounded-lg border border-border px-5 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+              className="flex items-center gap-3 text-sm font-medium text-muted-foreground"
             >
-              <Github className="h-4 w-4" />
-              GitHub
-            </a>
-            <a
-              href="https://flow.smarterbot.cl/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 rounded-lg bg-primary px-5 py-2 text-center text-sm font-medium text-primary-foreground"
-            >
-              Activar
+              <Github className="h-5 w-5" />
+              SmarterOS Source
             </a>
           </div>
         </div>
-      )}
+      </div>
     </nav>
   )
 }

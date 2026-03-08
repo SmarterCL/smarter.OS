@@ -11,6 +11,7 @@ const steps = [
         color: "text-violet-400",
         bg: "from-violet-500/20 to-violet-500/5",
         border: "border-violet-500/25",
+        link: "https://wa.me/56979540471?text=Quiero%20probar%20Elia%20Studio%2C%20env%C3%ADo%20una%20foto"
     },
     {
         icon: Wand2,
@@ -48,7 +49,7 @@ const outputs = [
     { label: "Odoo Sync", subtitle: "Publicado en segundos", emoji: "⚡" },
 ]
 
-export function SmarterStudio() {
+export function EliaStudio() {
     return (
         <section id="studio" className="relative border-t border-border py-24 lg:py-32 overflow-hidden">
             {/* Background effects */}
@@ -60,7 +61,7 @@ export function SmarterStudio() {
                 <div className="mx-auto max-w-3xl text-center mb-16">
                     <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-1.5">
                         <Sparkles className="h-3.5 w-3.5 text-violet-400" />
-                        <span className="text-xs font-semibold text-violet-400 uppercase tracking-widest">Smarter Studio IA</span>
+                        <span className="text-xs font-semibold text-violet-400 uppercase tracking-widest">Elia Studio IA</span>
                     </div>
                     <h2 className="text-balance text-4xl font-black tracking-tight text-foreground sm:text-5xl lg:text-6xl mb-6">
                         Del Bit al{" "}
@@ -89,8 +90,21 @@ export function SmarterStudio() {
 
                 {/* Steps */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-                    {steps.map((s, idx) => {
+                    {steps.map((s: any, idx) => {
                         const Icon = s.icon
+                        const StepContent = (
+                            <div className={`flex flex-col p-6 rounded-2xl border bg-card/40 ${s.border} hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full`}>
+                                <div className="flex items-start gap-4 mb-4">
+                                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${s.bg} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                                        <Icon className={`h-5 w-5 ${s.color}`} />
+                                    </div>
+                                    <span className="text-4xl font-black text-border/30 leading-none">{s.step}</span>
+                                </div>
+                                <h3 className="text-base font-bold text-foreground mb-2">{s.title}</h3>
+                                <p className="text-sm text-muted-foreground leading-relaxed flex-grow">{s.description}</p>
+                            </div>
+                        )
+
                         return (
                             <div key={idx} className="relative group">
                                 {/* Connector line */}
@@ -99,16 +113,11 @@ export function SmarterStudio() {
                                         <ArrowRight className="absolute -top-2 right-0 h-4 w-4 text-border" />
                                     </div>
                                 )}
-                                <div className={`flex flex-col p-6 rounded-2xl border bg-card/40 ${s.border} hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full`}>
-                                    <div className="flex items-start gap-4 mb-4">
-                                        <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${s.bg} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300`}>
-                                            <Icon className={`h-5 w-5 ${s.color}`} />
-                                        </div>
-                                        <span className="text-4xl font-black text-border/30 leading-none">{s.step}</span>
-                                    </div>
-                                    <h3 className="text-base font-bold text-foreground mb-2">{s.title}</h3>
-                                    <p className="text-sm text-muted-foreground leading-relaxed flex-grow">{s.description}</p>
-                                </div>
+                                {s.link ? (
+                                    <a href={s.link} target="_blank" rel="noopener noreferrer" className="block h-full">
+                                        {StepContent}
+                                    </a>
+                                ) : StepContent}
                             </div>
                         )
                     })}
@@ -128,7 +137,7 @@ export function SmarterStudio() {
                 {/* CTA */}
                 <div className="text-center">
                     <a
-                        href={`https://wa.me/56979540471?text=Quiero%20probar%20Smarter%20Studio%2C%20env%C3%ADo%20una%20foto`}
+                        href={`https://wa.me/56979540471?text=Quiero%20probar%20Elia%20Studio%2C%20env%C3%ADo%20una%20foto`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group inline-flex items-center gap-3 rounded-xl bg-primary px-8 py-4 text-primary-foreground font-bold text-base hover:opacity-90 transition-all shadow-lg shadow-primary/25"
