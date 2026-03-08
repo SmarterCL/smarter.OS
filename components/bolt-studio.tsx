@@ -11,7 +11,7 @@ const steps = [
         color: "text-violet-400",
         bg: "from-violet-500/20 to-violet-500/5",
         border: "border-violet-500/25",
-        link: "https://wa.me/56979540471?text=Quiero%20probar%20Elia%20Studio%2C%20env%C3%ADo%20una%20foto"
+        link: "https://wa.me/56979540471?text=Quiero%20probar%20Bolt%20Studio%2C%20env%C3%ADo%20una%20foto"
     },
     {
         icon: Wand2,
@@ -49,7 +49,7 @@ const outputs = [
     { label: "Odoo Sync", subtitle: "Publicado en segundos", emoji: "⚡" },
 ]
 
-export function EliaStudio() {
+export function BoltStudio() {
     return (
         <section id="studio" className="relative border-t border-border py-24 lg:py-32 overflow-hidden">
             {/* Background effects */}
@@ -61,7 +61,7 @@ export function EliaStudio() {
                 <div className="mx-auto max-w-3xl text-center mb-16">
                     <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-1.5">
                         <Sparkles className="h-3.5 w-3.5 text-violet-400" />
-                        <span className="text-xs font-semibold text-violet-400 uppercase tracking-widest">Elia Studio IA</span>
+                        <span className="text-xs font-semibold text-violet-400 uppercase tracking-widest">Bolt Studio IA</span>
                     </div>
                     <h2 className="text-balance text-4xl font-black tracking-tight text-foreground sm:text-5xl lg:text-6xl mb-6">
                         Del Bit al{" "}
@@ -137,7 +137,7 @@ export function EliaStudio() {
                 {/* CTA */}
                 <div className="text-center">
                     <a
-                        href={`https://wa.me/56979540471?text=Quiero%20probar%20Elia%20Studio%2C%20env%C3%ADo%20una%20foto`}
+                        href={`https://wa.me/56979540471?text=Quiero%20probar%20Bolt%20Studio%2C%20env%C3%ADo%20una%20foto`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group inline-flex items-center gap-3 rounded-xl bg-primary px-8 py-4 text-primary-foreground font-bold text-base hover:opacity-90 transition-all shadow-lg shadow-primary/25"

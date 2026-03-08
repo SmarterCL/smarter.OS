@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { WhySmarterOS } from "@/components/why-smarteros"
-import { EliaStudio } from "@/components/elia-studio"
+import { BoltStudio } from "@/components/bolt-studio"
 import { SmarterOSBox } from "@/components/smarteros-box"
 import { TiendaNodos } from "@/components/tienda-nodos"
 import { LayersSection } from "@/components/layers-section"
@@ -18,7 +18,7 @@ export default function Home() {
       <Hero />
       <WhySmarterOS />
       <SmarterOSBox />
-      <EliaStudio />
+      <BoltStudio />
       <TiendaNodos />
       <LayersSection />
       <Pricing />

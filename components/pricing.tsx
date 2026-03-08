@@ -35,7 +35,7 @@ const fallbackPlans = [
     {
         name: "Comercio",
         slug: "comercio",
-        description: "ERP + Facturación + Smarter Studio IA",
+        description: "ERP + Facturación + Bolt Studio IA",
         icon: TrendingUp,
         iconColor: "text-primary",
         iconBg: "from-primary/20 to-primary/5",
@@ -49,7 +49,7 @@ const fallbackPlans = [
             "WhatsApp Business + CRM completo",
             "Facturación electrónica SII",
             "Cobros por Flow / Transbank",
-            "Smarter Studio IA incluido",
+            "Bolt Studio IA incluido",
             "Conciliación automática",
         ],
         highlighted: true,

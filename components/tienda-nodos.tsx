@@ -38,13 +38,13 @@ const products = [
     specs: "24 GB RAM",
     specBg: "bg-sky-100 text-sky-800",
     description:
-      "Ideal para estudios contables, startups y comercios en crecimiento. Odoo v19 + agente CLAW + Smarter Studio corriendo 24/7 en tu oficina. Sin nube de terceros.",
+      "Ideal para estudios contables, startups y comercios en crecimiento. Odoo v19 + agente CLAW + Bolt Studio corriendo 24/7 en tu oficina. Sin nube de terceros.",
     image: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop",
     iconColor: "text-sky-500",
     features: [
       "Odoo v19 pre-instalado",
       "Agente CLAW activo",
-      "Smarter Studio IA incluido",
+      "Bolt Studio IA incluido",
       "Operación segura 24x7",
     ],
     highlight: false,
@@ -62,11 +62,11 @@ const products = [
     specs: "32 GB RAM",
     specBg: "bg-primary/10 text-primary",
     description:
-      "Mayor capacidad para procesar catálogos masivos con Elia Studio y gestionar alto volumen de ventas. ComfyUI corre fluido para transformar fotos de bodega en fichas ML-ready.",
+      "Mayor capacidad para procesar catálogos masivos con Bolt Studio y gestionar alto volumen de ventas. ComfyUI corre fluido para transformar fotos de bodega en fichas ML-ready.",
     image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop",
     iconColor: "text-primary",
     features: [
-      "Motor ComfyUI (Elia Studio)",
+      "Motor ComfyUI (Bolt Studio)",
       "CRM + ERP de alto volumen",
       "Facturación SII multi-empresa",
       "Multi-agente paralelo",
