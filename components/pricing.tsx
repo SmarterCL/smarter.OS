@@ -172,7 +172,7 @@ export function Pricing() {
 
                                     <div className="w-full mt-auto">
                                         <a
-                                            href={`https://app.smarteros.cl/onboarding?plan=${plan.slug}`}
+                                            href={`https://app.smarterbot.cl/onboarding?plan=${plan.slug}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className={`w-full flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold rounded-xl transition-colors ${plan.highlighted

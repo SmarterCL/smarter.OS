@@ -47,7 +47,7 @@ export function Hero() {
           {/* CTAs */}
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="https://flow.smarteros.cl/"
+              href="https://flow.smarterbot.cl/"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-bold text-primary-foreground transition-all hover:opacity-90"

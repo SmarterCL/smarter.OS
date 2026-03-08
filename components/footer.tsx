@@ -14,7 +14,7 @@ export function Footer() {
             </div>
 
             <div className="flex items-center gap-4 text-sm text-muted-foreground flex-wrap justify-center md:justify-start">
-              <a href="mailto:contacto@smarter.cl" className="transition-colors hover:text-foreground">contacto@smarter.cl</a>
+              <a href="mailto:hola@smarterbot.cl" className="transition-colors hover:text-foreground">hola@smarterbot.cl</a>
               <span className="text-border hidden md:inline">{"/"}</span>
               <a href="https://wa.me/56979540471" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">+56 9 7954 0471</a>
               <span className="text-border hidden md:inline">{"/"}</span>

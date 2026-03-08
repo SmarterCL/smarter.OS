@@ -62,7 +62,7 @@ export function SmarterBolt() {
                     {/* CTA Cards */}
                     <div className="flex flex-col gap-4">
                         <a
-                            href="https://app.smarteros.cl/demo"
+                            href="https://app.smarterbot.cl/demo"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group flex flex-col items-center justify-center gap-3 rounded-2xl border border-primary/30 bg-primary/10 p-8 text-center transition-all hover:bg-primary/15 hover:shadow-lg hover:shadow-primary/10"
@@ -78,7 +78,7 @@ export function SmarterBolt() {
                         </a>
 
                         <a
-                            href="https://app.smarteros.cl/onboarding?plan=bolt"
+                            href="https://app.smarterbot.cl/onboarding?plan=bolt"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group flex flex-col items-center justify-center gap-3 rounded-2xl border border-border bg-card p-8 text-center transition-all hover:bg-secondary/30 hover:shadow-md"
