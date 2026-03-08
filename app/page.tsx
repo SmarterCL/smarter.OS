@@ -3,12 +3,10 @@ import { Hero } from "@/components/hero"
 import { WhySmarterOS } from "@/components/why-smarteros"
 import { BoltStudio } from "@/components/bolt-studio"
 import { SmarterOSBox } from "@/components/smarteros-box"
-import { TiendaNodos } from "@/components/tienda-nodos"
 import { LayersSection } from "@/components/layers-section"
 import { Pricing } from "@/components/pricing"
 import { RecomendacionSteps } from "@/components/recomendacion-steps"
-import { TargetAudience } from "@/components/target-audience"
-import { EliaAsistente } from "@/components/elia-asistente"
+import { SmarterBolt } from "@/components/smarter-bolt"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -19,12 +17,10 @@ export default function Home() {
       <WhySmarterOS />
       <SmarterOSBox />
       <BoltStudio />
-      <TiendaNodos />
       <LayersSection />
       <Pricing />
       <RecomendacionSteps />
-      <TargetAudience />
-      <EliaAsistente />
+      <SmarterBolt />
       <Footer />
     </main>
   )

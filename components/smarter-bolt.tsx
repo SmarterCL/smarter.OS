@@ -2,9 +2,9 @@
 
 import { Bot, CheckCircle2, Clock, Zap, Shield, ExternalLink } from "lucide-react"
 
-export function EliaAsistente() {
+export function SmarterBolt() {
     return (
-        <section id="elia" className="border-t border-border bg-background py-24">
+        <section id="bolt" className="border-t border-border bg-background py-24">
             <div className="mx-auto max-w-5xl px-6">
                 {/* Header */}
                 <div className="mx-auto max-w-3xl text-center mb-12">
@@ -12,10 +12,10 @@ export function EliaAsistente() {
                         Asistente Virtual 24/7
                     </p>
                     <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                        Elia - Tu Asistente IA
+                        Smarter Bolt
                     </h2>
                     <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-                        Elia se entrena con la información de tu negocio y responde preguntas frecuentes,
+                        Smarter Bolt se entrena con la información de tu negocio y responde preguntas frecuentes,
                         toma pedidos, agenda citas y guía a tus clientes en el proceso de compra.
                     </p>
                 </div>
@@ -28,10 +28,10 @@ export function EliaAsistente() {
                                 <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
                                     <Bot className="h-5 w-5 text-primary" />
                                 </div>
-                                <h3 className="text-xl font-bold text-foreground">Elia - Tu Asistente IA</h3>
+                                <h3 className="text-xl font-bold text-foreground">Smarter Bolt</h3>
                             </div>
                             <p className="text-muted-foreground leading-relaxed">
-                                Elia se entrena con la información de tu negocio y responde preguntas frecuentes, toma pedidos, agenda citas y guía a tus clientes en el proceso de compra.
+                                Smarter Bolt se entrena con la información de tu negocio y responde preguntas frecuentes, toma pedidos, agenda citas y guía a tus clientes en el proceso de compra.
                             </p>
                         </div>
 
@@ -70,7 +70,7 @@ export function EliaAsistente() {
                             <Bot className="h-12 w-12 text-primary transition-transform group-hover:scale-110" />
                             <div>
                                 <h3 className="text-xl font-bold text-foreground">Pruébalo ahora</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Demo interactiva con Elia</p>
+                                <p className="text-sm text-muted-foreground mt-1">Demo interactiva con Smarter Bolt</p>
                             </div>
                             <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary">
                                 Iniciar demo <ExternalLink className="h-4 w-4" />
@@ -78,7 +78,7 @@ export function EliaAsistente() {
                         </a>
 
                         <a
-                            href="https://app.smarteros.cl/onboarding?plan=elia"
+                            href="https://app.smarteros.cl/onboarding?plan=bolt"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group flex flex-col items-center justify-center gap-3 rounded-2xl border border-border bg-card p-8 text-center transition-all hover:bg-secondary/30 hover:shadow-md"
@@ -95,7 +95,7 @@ export function EliaAsistente() {
 
                         <div className="rounded-xl bg-secondary/40 p-4 text-xs text-muted-foreground border border-border">
                             <p>
-                                * Elia se integra con tu sitio web actual. Compatible con WordPress, Shopify, WooCommerce y sitios custom.
+                                * Smarter Bolt se integra con tu sitio web actual. Compatible con WordPress, Shopify, WooCommerce y sitios custom.
                             </p>
                         </div>
                     </div>

@@ -40,7 +40,7 @@ export function Hero() {
 
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground lg:text-xl font-medium">
             Centraliza ventas, gestión y cobros en un solo flujo.
-            Ahora con <span className="text-foreground font-semibold">SmarterOS Box</span> y <span className="text-foreground font-semibold">Elia</span>:
+            Ahora con <span className="text-foreground font-semibold">SmarterOS Box</span> y <span className="text-foreground font-semibold">Smarter Bolt</span>:
             tu cerebro digital local y tu asistente IA siempre activa para facturar.
           </p>
 

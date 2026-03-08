@@ -24,7 +24,7 @@ const products = [
       "4G LTE Backup (opcional)",
     ],
     highlight: false,
-    buttonText: "Consultar con Elia",
+    buttonText: "Consultar con Smarter Bolt",
     link: `https://wa.me/56979540471?text=Quiero%20info%20del%20PicoClaw`,
     isWhatsApp: true,
   },
