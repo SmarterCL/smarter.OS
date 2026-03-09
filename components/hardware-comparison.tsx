@@ -8,47 +8,53 @@ const comparisonData = [
         icon: <Cpu className="h-5 w-5" />,
         raspberry: "Broadcom BCM2712 (4 núcleos)",
         orange: "RK3588 (8 núcleos: 4xA76 + 4xA55)",
-        impact: "Mayor capacidad de multitarea para agentes (Mimax + n8n + FastAPI).",
-        winner: "orange"
+        macmini: "10 o 14 núcleos (Arquitectura M4)",
+        impact: "El M4 duplica la potencia por núcleo del A76. Los agentes OpenClaw responden instantáneamente.",
+        winner: "macmini"
     },
     {
-        feature: "NPU (IA)",
+        feature: "IA / NPU",
         icon: <Brain className="h-5 w-5" />,
-        raspberry: "No tiene (requiere módulo HAT+)",
-        orange: "Integrada 6 TOPS",
-        impact: "Crítico: Permite correr YOLO y visión espacial de OpenClaw localmente.",
-        winner: "orange"
+        raspberry: "No tiene (requiere HAT+)",
+        orange: "6 TOPS (Integrada)",
+        macmini: "38 TOPS (Neural Engine)",
+        impact: "Visión Pro: El Neural Engine es ~6 veces más potente que la NPU del RK3588 para YOLO.",
+        winner: "macmini"
     },
     {
         feature: "RAM Máxima",
         icon: <Zap className="h-5 w-5" />,
         raspberry: "8 GB LPDDR4X",
-        orange: "16 GB / 32 GB LPDDR4X",
-        impact: "Necesario si quieres correr bases de datos vectoriales (Supabase/Postgres) y Odoo v19 juntos.",
-        winner: "orange"
+        orange: "Hasta 32 GB LPDDR4X",
+        macmini: "Hasta 64 GB (Memoria Unificada)",
+        impact: "Súper Integración: Permite correr Odoo, Supabase, n8n y LLMs locales simultáneamente.",
+        winner: "macmini"
     },
     {
         feature: "Almacenamiento",
         icon: <HardDrive className="h-5 w-5" />,
-        raspberry: "MicroSD (SDR104) / NVMe via HAT",
-        orange: "eMMC Socket + Slot M.2 NVMe nativo",
-        impact: "Velocidad de lectura/escritura muy superior para logs y memoria de agentes.",
-        winner: "orange"
-    },
-    {
-        feature: "Video",
-        icon: <Monitor className="h-5 w-5" />,
-        raspberry: "2x Micro HDMI (4K60)",
-        orange: "2x HDMI Out (8K) + 1x HDMI In",
-        impact: "El HDMI In permite capturar video de otras cámaras o sistemas para análisis de IA.",
-        winner: "orange"
+        raspberry: "MicroSD / NVMe via HAT",
+        orange: "Slot M.2 NVMe (Gen 3)",
+        macmini: "SSD Integrado (Gen 4/5)",
+        impact: "Velocidad de Logs: Acceso a disco ultra-rápido, crítico para bases vectoriales.",
+        winner: "macmini"
     },
     {
         feature: "Red",
         icon: <Globe className="h-5 w-5" />,
         raspberry: "1x Gigabit Ethernet",
         orange: "2x 2.5 Gigabit Ethernet",
-        impact: "Ideal para actuar como gateway/firewall avanzado en tu empresa.",
+        macmini: "1x 10 Gigabit (Opcional)",
+        impact: "Gateway de Datos: Superior para mover grandes volúmenes de video de cámaras IP.",
+        winner: "macmini"
+    },
+    {
+        feature: "Video In",
+        icon: <Monitor className="h-5 w-5" />,
+        raspberry: "No tiene",
+        orange: "1x HDMI In (Ventaja nativa)",
+        macmini: "No tiene (Requiere dongle)",
+        impact: "La Orange Pi destaca en captura de video directa sin hardware adicional.",
         winner: "orange"
     }
 ]

@@ -112,8 +112,8 @@ export function SmarterOSBox() {
                             <div
                                 key={model.title}
                                 className={`relative rounded-3xl border p-8 transition-all hover:shadow-lg ${model.status === 'popular'
-                                        ? 'border-primary/50 bg-primary/5 shadow-primary/10 scale-105 z-10'
-                                        : 'border-border bg-card hover:border-border/80'
+                                    ? 'border-primary/50 bg-primary/5 shadow-primary/10 scale-105 z-10'
+                                    : 'border-border bg-card hover:border-border/80'
                                     }`}
                             >
                                 {model.status === 'popular' && (
@@ -161,56 +161,8 @@ export function SmarterOSBox() {
                     </div>
                 </div>
 
-                {/* Prep Section */}
-                <div className="mt-24 rounded-3xl border border-border/50 bg-card p-8 lg:p-12 overflow-hidden relative">
-                    <div className="absolute top-0 right-0 -mr-16 -mt-16 h-64 w-64 rounded-full bg-primary/5 blur-3xl" />
-                    <div className="relative z-10 grid grid-cols-1 gap-12 lg:grid-cols-2">
-                        <div>
-                            <h2 className="text-2xl font-bold text-foreground">Cómo lo preparamos por ti</h2>
-                            <p className="mt-4 text-muted-foreground">
-                                Cada SmarterOS Box pasa por un riguroso proceso de preparación antes de llegar a tus manos.
-                            </p>
-                            <div className="mt-8 space-y-6">
-                                {[
-                                    { title: "Grabar Imagen", desc: "Instalación del kernel optimizado en NVMe de alta velocidad." },
-                                    { title: "Configurar Stack", desc: "Docker, n8n, Node.js y SmarterOS Services pre-configurados." },
-                                    { title: "Tests Críticos", desc: "Pruebas de red, latencia de dashboard y pasarela de pagos." },
-                                    { title: "Empaquetado", desc: "Seguridad y manuales listos para el cliente final." },
-                                ].map((step, idx) => (
-                                    <div key={idx} className="flex gap-4">
-                                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/20 font-bold text-primary">{idx + 1}</div>
-                                        <div>
-                                            <h4 className="font-bold text-foreground">{step.title}</h4>
-                                            <p className="text-sm text-muted-foreground">{step.desc}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="flex items-center justify-center">
-                            <div className="relative w-full max-w-sm rounded-2xl border border-border/50 bg-background p-8 shadow-xl">
-                                <div className="flex items-center justify-between border-b border-border/50 pb-4 mb-4">
-                                    <div className="flex items-center gap-2">
-                                        <div className="h-3 w-3 rounded-full bg-red-500/50" />
-                                        <div className="h-3 w-3 rounded-full bg-yellow-500/50" />
-                                        <div className="h-3 w-3 rounded-full bg-green-500/50" />
-                                    </div>
-                                    <span className="text-[10px] font-mono text-muted-foreground">smarteros-deploy.sh</span>
-                                </div>
-                                <div className="space-y-2 font-mono text-[11px]">
-                                    <p className="text-primary"># Iniciando despliegue SmarterOS Box...</p>
-                                    <p className="text-foreground/70">Checking NVMe health... [OK]</p>
-                                    <p className="text-foreground/70">Installing Linux Kernel... Done</p>
-                                    <p className="text-foreground/70">Pulling Docker images... 100%</p>
-                                    <p className="text-foreground/70">n8n core status: enabled</p>
-                                    <p className="text-foreground/70">Identity Engine: secured</p>
-                                    <p className="text-primary animate-pulse">Ready for packaging.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </section>
+        </div>
+        </section >
     )
 }
