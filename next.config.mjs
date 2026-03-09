@@ -4,7 +4,13 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    // Enabled image optimization for better performance (AVIF/WebP support)
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'rjfcmmzjlguiititkmyh.supabase.co',
+      },
+    ],
   },
   headers: async () => [
     {

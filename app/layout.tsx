@@ -9,9 +9,27 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
 
 export const metadata: Metadata = {
-  title: 'SmarterOS | Sistema Operativo Comercial para Chile',
-  description: 'Automatización y centralización operativa para Pymes en Chile. WhatsApp Business, CRM, Elia IA, Facturación Electrónica SII y Cobros Integrados.',
-  keywords: ['SmarterOS', 'Elia IA', 'CRM Chile', 'ERP Chile', 'Facturación Electrónica SII', 'Automatización de ventas', 'WhatsApp Business API', 'Cobros Flow', 'Pymes Chile', 'Sercotec', 'Corfo', 'Software de gestión'],
+  title: 'SmarterOS | Sistema Operativo Comercial para Chile 2026',
+  description: 'Automatización y centralización operativa integral para Pymes en Chile. WhatsApp Business API, CRM inteligente, Bolt Studio, Facturación Electrónica SII y Terminales de Pago.',
+  keywords: [
+    'SmarterOS', 
+    'Smarter Bolt', 
+    'SmarterOS Box', 
+    'Bolt Studio', 
+    'CRM Chile', 
+    'ERP Chile', 
+    'Facturación Electrónica SII', 
+    'Automatización de ventas', 
+    'WhatsApp Business API', 
+    'Cobros Flow', 
+    'Pymes Chile', 
+    'Sercotec 2026', 
+    'Corfo Digitaliza', 
+    'Software de gestión inteligente',
+    'Hardware para Pymes',
+    'Picolaw',
+    'OpenClaw'
+  ],
   authors: [{ name: 'Smarter SPA' }],
   creator: 'Smarter SPA',
   openGraph: {
@@ -25,8 +43,10 @@ export const metadata: Metadata = {
   icons: {
     icon: '/icon.jpg',
     apple: '/icon.jpg',
+    shortcut: '/icon.jpg',
   },
 }
+
 
 export const viewport: Viewport = {
   themeColor: '#1a2332',

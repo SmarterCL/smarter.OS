@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /v1/hub/catalog/
 
+# Sitemaps
 Sitemap: https://smarterbot.cl/sitemap.xml
