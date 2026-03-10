@@ -217,32 +217,41 @@ function BoxDetail({ board, processor, currentConfig, setSelectedConfig }: { boa
                     </div>
 
                     <div className="mt-10 pt-8 border-t border-primary/10 flex flex-col gap-4">
-                        <p className="text-[11px] text-center text-muted-foreground italic mb-2">
+                        <p className="text-[11px] text-center text-muted-foreground italic mb-4">
                             *Hardware configurado con {processor}. Optimizado para Chile 2026.
                         </p>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <a
+                            href="https://www.mercadolibre.cl/" // User requested Mercado Libre link
+                            target="_blank"
+                            className="w-full flex items-center justify-center gap-3 rounded-2xl bg-[#009EE3] px-8 py-5 text-lg font-black text-white shadow-xl shadow-blue-500/20 transition-all hover:translate-y-[-2px] hover:shadow-blue-500/40 active:scale-95"
+                        >
+                            <CreditCard className="h-6 w-6" />
+                            PAGAR CON MERCADO PAGO
+                        </a>
+
+                        <div className="grid grid-cols-2 gap-3">
                             <a
                                 href="https://wa.me/569XXXXXXXX?text=Hola,%20busco%20información%20del%20SmarterOS%20Box%20Modelo%20"
                                 target="_blank"
-                                className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-4 text-sm font-black text-white shadow-xl shadow-green-500/10 transition-all hover:scale-[1.02] active:scale-95"
+                                className="flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-background/50 py-3 text-[10px] font-bold text-foreground transition-all hover:bg-white hover:text-[#25D366] hover:border-[#25D366]/30 uppercase tracking-widest"
                             >
-                                <MessageCircle className="h-5 w-5" />
-                                WHATSAPP
+                                <MessageCircle className="h-4 w-4" />
+                                WhatsApp
                             </a>
                             <a
                                 href="https://t.me/SmarterOSBot"
                                 target="_blank"
-                                className="flex items-center justify-center gap-2 rounded-xl bg-[#0088cc] px-6 py-4 text-sm font-black text-white shadow-xl shadow-blue-500/10 transition-all hover:scale-[1.02] active:scale-95"
+                                className="flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-background/50 py-3 text-[10px] font-bold text-foreground transition-all hover:bg-white hover:text-[#0088cc] hover:border-[#0088cc]/30 uppercase tracking-widest"
                             >
-                                <Send className="h-5 w-5" />
-                                TELEGRAM
+                                <Send className="h-4 w-4" />
+                                Telegram
                             </a>
                         </div>
 
-                        <button className="w-full flex items-center justify-center gap-2 rounded-xl border-2 border-primary/30 bg-primary/5 py-4 text-xs font-black text-primary hover:bg-primary/10 transition-all uppercase tracking-widest mt-2">
-                            <FileDown className="h-4 w-4" />
-                            Descargar Invoice Proforma (PDF)
+                        <button className="w-full flex items-center justify-center gap-2 py-2 text-[10px] font-bold text-muted-foreground hover:text-primary transition-all uppercase tracking-tighter opacity-60 hover:opacity-100">
+                            <FileDown className="h-3 w-3" />
+                            Descargar Invoice Proforma
                         </button>
                     </div>
                 </div>
