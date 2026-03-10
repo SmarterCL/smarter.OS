@@ -249,13 +249,87 @@ function BoxDetail({ board, processor, currentConfig, setSelectedConfig }: { boa
                             </a>
                         </div>
 
-                        <button className="w-full flex items-center justify-center gap-2 py-2 text-[10px] font-bold text-muted-foreground hover:text-primary transition-all uppercase tracking-tighter opacity-60 hover:opacity-100">
-                            <FileDown className="h-3 w-3" />
-                            Descargar Invoice Proforma
+                        <button
+                            onClick={() => window.print()}
+                            className="w-full flex items-center justify-center gap-2 py-3 rounded-xl border border-primary/20 bg-primary/5 text-[10px] font-black text-primary hover:bg-primary/10 transition-all uppercase tracking-widest mt-2"
+                        >
+                            <FileText className="h-4 w-4" />
+                            Descargar Ficha Técnica (PDF)
                         </button>
                     </div>
                 </div>
             </div>
+
+            {/* AREA IMPRIMIBLE (OCULTA EN PANTALLA) */}
+            <div className="hidden print:block fixed inset-0 bg-white p-12 text-black z-[9999]">
+                <div className="max-w-4xl mx-auto border-b-2 border-primary pb-8 mb-8">
+                    <h1 className="text-4xl font-black uppercase italic tracking-tighter text-primary">SmarterOS Technical Analysis</h1>
+                    <p className="text-xl font-bold mt-2">Hardware Specification: {board} ({processor})</p>
+                </div>
+
+                <div className="grid grid-cols-1 gap-12">
+                    <div>
+                        <h2 className="text-2xl font-black uppercase mb-6 flex items-center gap-3">
+                            <Cpu className="h-6 w-6 text-primary" />
+                            Orange Pi 5 Plus vs. Raspberry Pi 5
+                        </h2>
+                        <p className="text-lg leading-relaxed mb-8 italic">
+                            ¿Por qué elegimos el chip RK3588 para alimentar el núcleo de SmarterOS y OpenClaw?
+                        </p>
+
+                        <table className="w-full border-collapse border border-zinc-200">
+                            <thead>
+                                <tr className="bg-zinc-100">
+                                    <th className="border border-zinc-200 p-4 text-left font-black uppercase text-xs">Característica</th>
+                                    <th className="border border-zinc-200 p-4 text-left font-black uppercase text-xs">Raspberry Pi 5</th>
+                                    <th className="border border-zinc-200 p-4 text-left font-black uppercase text-xs">Orange Pi 5 Plus</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {[
+                                    { f: "CPU", r: "Broadcom BCM2712 (4 núcleos)", o: "RK3588 (8 núcleos: 4xA76 + 4xA55)", i: "Arquitectura de servidor. Respuesta en milisegundos." },
+                                    { f: "IA / NPU", r: "No tiene", o: "6 TOPS (Integrada)", i: "Visión Pro nativa." },
+                                    { f: "RAM", r: "8 GB", o: "Hasta 32 GB", i: "Súper Integración: LLMs locales." },
+                                    { f: "Network", r: "1x Gigabit", o: "2x 2.5 Gigabit", i: "Gateway de Datos masivo." }
+                                ].map((row) => (
+                                    <tr key={row.f}>
+                                        <td className="border border-zinc-200 p-4 font-bold text-xs uppercase">{row.f}</td>
+                                        <td className="border border-zinc-200 p-4 text-xs">{row.r}</td>
+                                        <td className="border border-zinc-200 p-4 text-xs font-bold">{row.o}<br /><span className="text-[10px] font-normal italic opacity-60">{row.i}</span></td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div className="p-8 border-2 border-primary/20 bg-primary/5 rounded-3xl">
+                        <h3 className="text-xl font-black uppercase tracking-tight flex items-center gap-3 mb-4">
+                            <Brain className="h-6 w-6 text-primary" />
+                            Veredicto Tecnológico
+                        </h3>
+                        <p className="text-sm leading-relaxed mb-4 font-medium">
+                            Mientras que la Raspberry Pi 5 es una excelente placa educativa, el RK3588 ofrece una arquitectura de servidor para el mundo real.
+                            Su NPU integrada permite que OpenClaw procese visión computacional y flujos de n8n simultáneamente sin cuellos de botella.
+                        </p>
+                        <div className="flex items-center gap-4 pt-6 border-t border-primary/20">
+                            <span className="text-4xl font-black text-primary">92%</span>
+                            <span className="text-xs font-bold uppercase tracking-widest text-zinc-500">AI Efficiency<br />Increase for Bolt Studio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="mt-24 pt-8 border-t border-zinc-200 text-center">
+                    <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">© 2026 SmarterOS - Confidential Technical Document</p>
+                </div>
+            </div>
+
+            <style jsx>{`
+                @media print {
+                    body > *:not(.print-container) {
+                        display: none !important;
+                    }
+                }
+            `}</style>
         </div>
     )
 }
