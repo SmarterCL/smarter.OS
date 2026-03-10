@@ -32,11 +32,17 @@ export function Hero() {
             </div>
           </div>
 
-          <h1 className="mt-6 text-balance text-4xl font-black leading-tight tracking-tight text-foreground sm:text-5xl lg:text-7xl">
+          <h1 className="mt-6 text-balance text-4xl font-black leading-tight tracking-tight text-foreground sm:text-6xl lg:text-8xl">
             Si tienes una Startup, Comercio o Empresa,
             <br />
-            <span className="text-primary mt-4 block">no necesitas saber de tecnología</span>
+            <span className="text-muted-foreground mt-4 block text-3xl sm:text-4xl lg:text-5xl font-bold">
+              no necesitas saber de tecnología.
+            </span>
           </h1>
+
+          <p className="mx-auto mt-8 max-w-2xl text-pretty text-2xl leading-relaxed text-primary lg:text-3xl font-black uppercase tracking-tighter italic">
+            Solo necesitas que sea Smarter
+          </p>
 
           {/* CTAs */}
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
