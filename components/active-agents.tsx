@@ -15,9 +15,9 @@ interface AgentTask {
 const INITIAL_TASKS: AgentTask[] = [
     {
         id: "1",
-        agent: "PicoClaw",
-        task: "Auditando flujo de caja Nunex...",
-        status: "success",
+        agent: "Bolt IA",
+        task: "Optimizando base de datos...",
+        status: "working",
         icon: <Cpu className="h-4 w-4" />,
         color: "text-emerald-400"
     },
@@ -31,9 +31,9 @@ const INITIAL_TASKS: AgentTask[] = [
     },
     {
         id: "3",
-        agent: "Caddy",
-        task: "Certificado SSL renovado para cl1.smarterbot.cl",
-        status: "success",
+        agent: "PicoClaw",
+        task: "Validando RUT de nuevo cliente...",
+        status: "working",
         icon: <Globe className="h-4 w-4" />,
         color: "text-purple-400"
     },
@@ -100,11 +100,6 @@ export function ActiveAgents() {
         <section className="relative -mt-16 pb-24 z-20">
             <div className="mx-auto max-w-7xl px-6">
                 <div className="flex flex-col items-center">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-background/50 px-4 py-1.5 backdrop-blur-md mb-8">
-                        <Terminal className="h-3 w-3 text-muted-foreground" />
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">SmarterOS Runtime: Agentes Activos</span>
-                        <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse ml-1" />
-                    </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 w-full">
                         {tasks.map((task) => (
