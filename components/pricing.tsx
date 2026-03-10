@@ -55,8 +55,8 @@ const fallbackPlans = [
         highlighted: true,
     },
     {
-        name: "Empresa",
-        slug: "empresa",
+        name: "Industria",
+        slug: "industria",
         description: "Full Control Industrial + IA Avanzada",
         icon: Factory,
         iconColor: "text-emerald-400",
