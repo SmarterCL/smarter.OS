@@ -36,7 +36,6 @@ export function Hero() {
             Si tienes una Startup, Comercio o Empresa,
             <br />
             <span className="text-primary mt-4 block">no necesitas saber de tecnología</span>
-            <span className="text-primary mt-2 block">¡solo de tu marca o proyecto!</span>
           </h1>
 
           {/* CTAs */}
