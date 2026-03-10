@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
+import { ActiveAgents } from "@/components/active-agents"
 import { BoltStudio } from "@/components/bolt-studio"
 import { SmarterOSBox } from "@/components/smarteros-box"
 import { Pricing } from "@/components/pricing"
@@ -13,6 +14,7 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground">
       <Navbar />
       <Hero />
+      <ActiveAgents />
       <SmarterOSBox />
       <HardwareComparison />
       <BoltStudio />
