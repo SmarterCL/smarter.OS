@@ -4,7 +4,6 @@ import { useState } from "react"
 import { Menu, X, Github } from "lucide-react"
 
 const navLinks = [
-  { label: "El Flujo", href: "/#porque" },
   { label: "SmarterOS Box", href: "/#box" },
   { label: "Bolt Studio", href: "/#studio" },
   { label: "Asistente", href: "/#bolt" },
@@ -84,7 +83,7 @@ export function Navbar() {
               rel="noopener noreferrer"
               className="w-full max-w-xs rounded-2xl bg-primary px-8 py-4 text-center text-lg font-bold text-primary-foreground shadow-xl shadow-primary/20"
             >
-              Activar SmarterOS Box
+              Activar Box
             </a>
             <a
               href="https://github.com/SmarterCL/smarter.io"

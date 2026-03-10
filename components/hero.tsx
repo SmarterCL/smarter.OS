@@ -33,16 +33,11 @@ export function Hero() {
           </div>
 
           <h1 className="mt-6 text-balance text-4xl font-black leading-tight tracking-tight text-foreground sm:text-5xl lg:text-7xl">
-            Si tienes una Startup, Comercio o Empresa
+            Si tienes una Startup, Comercio o Empresa,
             <br />
-            <span className="text-primary mt-2 block">tienes ventaja con SmarterOS</span>
+            <span className="text-primary mt-4 block">no necesitas saber de tecnología</span>
+            <span className="text-primary mt-2 block">¡solo de tu marca o proyecto!</span>
           </h1>
-
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground lg:text-xl font-medium">
-            Centraliza ventas, gestión y cobros en un solo flujo.
-            Ahora con <span className="text-foreground font-semibold">SmarterOS Box</span> y <span className="text-foreground font-semibold">Smarter Bolt</span>:
-            tu cerebro digital local y tu asistente IA siempre activa para facturar.
-          </p>
 
           {/* CTAs */}
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

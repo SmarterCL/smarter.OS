@@ -14,11 +14,11 @@ export default function Home() {
       <Navbar />
       <Hero />
       <SmarterOSBox />
+      <HardwareComparison />
       <BoltStudio />
+      <SmarterBolt />
       <Pricing />
       <RecomendacionSteps />
-      <HardwareComparison />
-      <SmarterBolt />
       <Footer />
     </main>
   )
