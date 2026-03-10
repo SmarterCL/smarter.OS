@@ -160,9 +160,7 @@ export function SmarterOSBox() {
                         ))}
                     </div>
                 </div>
-
             </div>
-        </div>
-        </section >
+        </section>
     )
 }
