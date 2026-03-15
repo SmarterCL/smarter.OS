@@ -1,24 +1,25 @@
 "use client"
 
-import { Server, CreditCard, Shield, Globe, Zap, ArrowUpRight, Check, TrendingUp, Calculator } from "lucide-react"
+import { Server, CreditCard, Shield, Globe, Zap, ArrowUpRight, Check, TrendingUp, Calculator, Tag } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
-// Precios en EUR
+// Precios en EUR - Plan 24 meses
 const eurToClp = 1050 // Tipo de cambio aproximado
 const ivaRate = 0.19
 
 const pricingItems = [
     {
         name: "Plan KVM 2",
-        period: "Periodo de 12 meses",
-        eur: 101.88,
+        period: "Periodo de 24 meses",
+        eur: 153.41,
         icon: <Server className="h-5 w-5" />,
-        featured: true
+        featured: true,
+        original: 527.76
     },
     {
-        name: "Nexos AI Credits 100",
+        name: "Nexos AI Credits 5",
         period: "Créditos para IA (OpenAI, Anthropic, etc.)",
-        eur: 119.99,
+        eur: 5.99,
         icon: <Zap className="h-5 w-5" />,
         featured: false
     },
@@ -31,17 +32,22 @@ const pricingItems = [
         original: 59.99
     },
     {
-        name: "Oxylabs Credits 1000",
-        period: "Web Scraping credits",
+        name: "Protección de Privacidad",
+        period: "WHOIS Privacy incluido",
         eur: 0.00,
         icon: <Shield className="h-5 w-5" />,
         featured: false,
-        original: 6.99
+        original: 0.00
     }
 ]
 
+// Cálculos en EUR
+const subtotalEUR = pricingItems.reduce((acc, item) => acc + item.eur, 0)
+const referralDiscount = subtotalEUR * 0.20 // -20% REFERRALDISCOUNT
+const totalEUR = subtotalEUR - referralDiscount
+
 // Cálculos en CLP
-const subtotalCLP = pricingItems.reduce((acc, item) => acc + (item.eur * eurToClp), 0)
+const subtotalCLP = subtotalEUR * eurToClp
 const ivaCLP = subtotalCLP * ivaRate
 const totalCLP = subtotalCLP + ivaCLP
 
@@ -50,6 +56,13 @@ const formatCLP = (amount: number) => {
         minimumFractionDigits: 0,
         maximumFractionDigits: 0
     }).format(Math.round(amount))
+}
+
+const formatEUR = (amount: number) => {
+    return new Intl.NumberFormat('es-ES', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    }).format(amount)
 }
 
 export function HostingerOpenClaw() {
@@ -87,7 +100,7 @@ export function HostingerOpenClaw() {
                         <div className="flex items-center justify-between mb-8">
                             <h3 className="text-2xl font-black text-white uppercase italic">Resumen del Pedido</h3>
                             <Badge className="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-bold">
-                                AHORRO 51%
+                                REFERRALDISCOUNT -20%
                             </Badge>
                         </div>
 
@@ -117,13 +130,13 @@ export function HostingerOpenClaw() {
                                         </div>
                                     </div>
                                     <div className="text-right">
-                                        {item.original && (
+                                        {item.original && item.original > 0 && (
                                             <p className="text-xs text-zinc-500 line-through">
-                                                €{item.original.toFixed(2)}
+                                                €{formatEUR(item.original)}
                                             </p>
                                         )}
                                         <p className={`text-lg font-black ${item.eur === 0 ? "text-emerald-400" : "text-white"}`}>
-                                            {item.eur === 0 ? "GRATIS" : `$${formatCLP(item.eur * eurToClp)}`}
+                                            {item.eur === 0 ? "GRATIS" : `€${formatEUR(item.eur)}`}
                                         </p>
                                     </div>
                                 </div>
@@ -133,20 +146,36 @@ export function HostingerOpenClaw() {
                         {/* Totals */}
                         <div className="border-t border-zinc-700 pt-6 space-y-3">
                             <div className="flex justify-between text-sm">
-                                <span className="text-zinc-400">Subtotal (sin IVA)</span>
-                                <span className="font-bold text-white">$ {formatCLP(subtotalCLP)}</span>
+                                <span className="text-zinc-400">Subtotal EUR</span>
+                                <span className="font-bold text-white">€{formatEUR(subtotalEUR)}</span>
                             </div>
                             <div className="flex justify-between text-sm items-center">
-                                <span className="text-zinc-400">IVA (19%)</span>
-                                <span className="font-bold text-white">+ $ {formatCLP(ivaCLP)}</span>
+                                <span className="text-zinc-400">REFERRALDISCOUNT (-20%)</span>
+                                <span className="font-bold text-emerald-400">- €{formatEUR(referralDiscount)}</span>
+                            </div>
+                            <div className="flex justify-between items-center py-3 bg-emerald-500/10 rounded-xl px-4 border border-emerald-500/20">
+                                <div className="flex items-center gap-2">
+                                    <Tag className="h-4 w-4 text-emerald-400" />
+                                    <span className="text-sm font-bold text-emerald-400">Total con Descuento</span>
+                                </div>
+                                <span className="text-xl font-black text-emerald-400">€{formatEUR(totalEUR)}</span>
+                            </div>
+                            <div className="border-t border-zinc-700 pt-4 space-y-2">
+                                <div className="flex justify-between text-xs">
+                                    <span className="text-zinc-500">Subtotal (sin IVA)</span>
+                                    <span className="font-medium text-zinc-300">$ {formatCLP(subtotalCLP)}</span>
+                                </div>
+                                <div className="flex justify-between text-xs">
+                                    <span className="text-zinc-500">IVA (19%)</span>
+                                    <span className="font-medium text-zinc-300">$ {formatCLP(ivaCLP)}</span>
+                                </div>
                             </div>
                             <div className="flex justify-between items-center pt-4 border-t border-zinc-700">
                                 <div>
-                                    <p className="text-sm font-bold text-zinc-400">Total USD</p>
-                                    <p className="text-xs text-zinc-500">~1.000 USD</p>
+                                    <p className="text-xs font-bold text-zinc-400">Total CLP + IVA</p>
+                                    <p className="text-[10px] text-zinc-500">Tipo de cambio: 1 EUR = $ {formatCLP(eurToClp)}</p>
                                 </div>
                                 <div className="text-right">
-                                    <p className="text-sm font-bold text-zinc-400">Total CLP + IVA</p>
                                     <p className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
                                         $ {formatCLP(totalCLP)}
                                     </p>
@@ -154,27 +183,22 @@ export function HostingerOpenClaw() {
                             </div>
                         </div>
 
-                        {/* CTA Buttons */}
-                        <div className="mt-8 grid grid-cols-1 gap-4">
+                        {/* CTA Button - Single with Referral */}
+                        <div className="mt-8">
                             <a
-                                href="https://www.hostinger.com/es?REFERRALCODE=SMARTER"
+                                href="https://cart.hostinger.com/pay/bfbc22a2-789f-4ef3-8a86-f40af5f2326a?_ga=GA1.1.686974759.1763658354&_ga_73N1QWLEMH=GS2.1.s1773615754%24o52%24g1%24t1773618248%24j53%24l0%24h978034236%24dloW2derTtzknWgL0J0xlIFSFArFReNQ6hA&session_id=1773615754&device_id=a2f48c23-6f6f-4712-86aa-866f67100041&from=websites"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-5 text-base font-black text-white transition-all hover:scale-[1.02] hover:shadow-2xl hover:shadow-orange-500/25 active:scale-[0.98]"
+                                className="group flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-6 text-base font-black text-white transition-all hover:scale-[1.02] hover:shadow-2xl hover:shadow-orange-500/25 active:scale-[0.98] w-full"
                             >
-                                <CreditCard className="h-5 w-5" />
-                                Adquirir Plan Hostinger
+                                <CreditCard className="h-6 w-6" />
+                                Adquirir con REFERRALDISCOUNT -20%
                                 <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                             </a>
-                            <a
-                                href="https://www.hostinger.com/es/vps/openclaw-hosting/1"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center justify-center gap-2 rounded-2xl border border-zinc-700 bg-zinc-800/50 px-8 py-4 text-sm font-bold text-zinc-300 transition-all hover:bg-zinc-800 hover:border-zinc-600"
-                            >
-                                <Server className="h-4 w-4" />
-                                Ver Plan KVM 2 OpenClaw
-                            </a>
+                            <p className="text-center text-xs text-zinc-500 mt-3">
+                                <Tag className="h-3 w-3 inline mr-1" />
+                                Descuento aplicado automáticamente en el checkout
+                            </p>
                         </div>
 
                         {/* Exchange Rate Note */}
@@ -208,9 +232,9 @@ export function HostingerOpenClaw() {
 
                             <div className="space-y-4">
                                 {[
-                                    { label: "Ahorro inicial", value: "51%", color: "text-emerald-400" },
-                                    { label: "Periodo de contrato", value: "12 meses", color: "text-white" },
-                                    { label: "Créditos IA incluidos", value: `$${formatCLP(119.99 * eurToClp)}`, color: "text-primary" },
+                                    { label: "Ahorro con REFERRAL", value: "-20%", color: "text-emerald-400" },
+                                    { label: "Periodo de contrato", value: "24 meses", color: "text-white" },
+                                    { label: "Créditos IA incluidos", value: `€${formatEUR(5.99)}`, color: "text-primary" },
                                     { label: "Dominio + Privacidad", value: "GRATIS", color: "text-emerald-400" }
                                 ].map((stat) => (
                                     <div key={stat.label} className="flex justify-between items-center p-4 rounded-xl bg-zinc-800/30 border border-zinc-700/50">
