@@ -4,20 +4,17 @@ import { useState } from "react"
 import { Menu, X, Github } from "lucide-react"
 
 const navLinks = [
-  { label: "Infraestructura", href: "/#tienda" },
   { label: "Hostinger", href: "/#hostinger" },
-  { label: "Bolt Studio", href: "/#studio" },
-  { label: "Asistente", href: "/#bolt" },
 ]
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl transition-all duration-300">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="/" className="flex items-center gap-3 group">
-          <div className="flex h-10 w-10 overflow-hidden rounded-xl border border-border/50 transition-transform group-hover:scale-105">
+          <div className="flex h-10 w-10 overflow-hidden rounded-xl border border-border transition-transform group-hover:scale-105">
             <img src="/icon.jpg" alt="OpenClaw Logo" className="h-full w-full object-cover" />
           </div>
           <div className="flex flex-col">
@@ -33,7 +30,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
             </a>
@@ -41,7 +38,7 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <a
               href="https://origin.smarterbot.cl/"
-              className="flex items-center gap-2 rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 hover:opacity-90 active:scale-95"
+              className="flex items-center gap-2 rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-primary-foreground transition-all hover:opacity-90"
             >
               Ingresar al Sistema
             </a>
@@ -50,7 +47,7 @@ export function Navbar() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="relative z-50 flex h-10 w-10 items-center justify-center rounded-xl bg-secondary/50 text-foreground transition-all hover:bg-secondary md:hidden"
+          className="relative z-50 flex h-10 w-10 items-center justify-center rounded-xl bg-secondary text-foreground transition-all hover:bg-secondary/80 md:hidden"
           aria-label={open ? "Cerrar menu" : "Abrir menu"}
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -59,7 +56,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-background/95 backdrop-blur-2xl transition-all duration-500 md:hidden ${open ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+        className={`fixed inset-0 z-40 bg-background backdrop-blur-xl transition-all duration-300 md:hidden ${open ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
           }`}
       >
         <div className="flex h-full flex-col items-center justify-center gap-8 px-6">
@@ -68,7 +65,7 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="text-2xl font-bold text-foreground transition-all hover:text-primary active:scale-90"
+              className="text-2xl font-bold text-foreground transition-all hover:text-primary"
               style={{ transitionDelay: `${idx * 50}ms` }}
             >
               {link.label}
@@ -77,7 +74,7 @@ export function Navbar() {
           <div className="mt-8 flex flex-col items-center gap-6 w-full">
             <a
               href="https://origin.smarterbot.cl/"
-              className="w-full max-w-xs rounded-2xl bg-primary px-8 py-4 text-center text-lg font-bold text-primary-foreground shadow-xl shadow-primary/20"
+              className="w-full max-w-xs rounded-2xl bg-primary px-8 py-4 text-center text-lg font-bold text-primary-foreground"
             >
               Ingresar al Sistema
             </a>
