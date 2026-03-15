@@ -255,7 +255,7 @@ export function InteractiveStack() {
                 <div className="mx-auto mb-8 max-w-3xl text-center">
                     <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 mb-4">
                         <span className="text-xs font-medium text-primary uppercase tracking-wider">
-                            Smarter OS
+                            OpenClaw
                         </span>
                     </div>
                     <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-4">
@@ -339,7 +339,7 @@ export function InteractiveStack() {
                             </div>
 
                             <div className="px-8 py-4 bg-secondary/20 border-t border-border/50 text-xs font-mono text-muted-foreground flex justify-between uppercase tracking-widest">
-                                <span>Smarter OS Stack</span>
+                                <span>OpenClaw Stack</span>
                                 <span>Module: {activeItem.id.toUpperCase()}</span>
                             </div>
                         </div>

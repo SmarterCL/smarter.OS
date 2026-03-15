@@ -5,7 +5,7 @@ import { Briefcase, Store, BarChart, Palette, Code, Coins } from "lucide-react"
 export function TargetAudience() {
     const handleSelection = async (audienceTitle: string) => {
         try {
-            await fetch('http://localhost:3051/v1/leads/track', { // Tu endpoint de Smarter OS
+            await fetch('http://localhost:3051/v1/leads/track', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -16,7 +16,7 @@ export function TargetAudience() {
             });
             console.log(`Interés registrado: ${audienceTitle}`);
         } catch (error) {
-            console.error("Error conectando con Smarter OS:", error);
+            console.error("Error conectando con el sistema:", error);
         }
     };
 
@@ -57,7 +57,7 @@ export function TargetAudience() {
         <section className="py-24 bg-white text-zinc-900 px-6">
             <div className="max-w-6xl mx-auto text-center">
                 <h2 className="text-2xl font-medium tracking-tight sm:text-3xl mb-16 text-zinc-500 leading-relaxed max-w-4xl mx-auto">
-                    Si tu negocio opera en Chile y necesita integrar ventas, gestion y cobros, <span className="text-zinc-900 font-bold">Smarter OS es para ti.</span>
+                    Si tu negocio opera en Chile y necesita integrar ventas, gestion y cobros, <span className="text-zinc-900 font-bold">OpenClaw es para ti.</span>
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

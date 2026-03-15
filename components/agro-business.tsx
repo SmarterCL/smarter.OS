@@ -54,7 +54,7 @@ export function AgroBusiness() {
             <div className="absolute -bottom-8 -right-8 p-6 rounded-3xl bg-white text-zinc-900 shadow-2xl max-w-[240px] hidden md:block border border-zinc-100 italic transition-transform group-hover:translate-y-[-10px]">
                 <TrendingUp className="w-8 h-8 text-primary mb-2" />
                 <p className="text-sm font-bold leading-tight">"La inversión en IA para el Agro es la más rentable de la década por eficiencia hídrica."</p>
-                <p className="mt-3 text-[10px] font-black uppercase text-zinc-400 tracking-widest">— Nunex Lat Group</p>
+                <p className="mt-3 text-[10px] font-black uppercase text-zinc-400 tracking-widest">— Cortical Labs</p>
             </div>
           </div>
 

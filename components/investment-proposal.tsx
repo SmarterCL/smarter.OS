@@ -35,7 +35,7 @@ export function InvestmentProposal() {
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
                     <Badge variant="outline" className="mb-4 border-primary/50 text-primary px-4 py-1 uppercase tracking-widest bg-primary/5">
-                        Propuesta nunex.lat
+                        OpenClaw Infrastructure
                     </Badge>
                     <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase italic mb-6">
                         AI Operating Stack <span className="text-primary italic">Empresarial</span>

@@ -6,10 +6,10 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex items-center gap-3">
               <div className="flex h-8 w-8 overflow-hidden rounded-lg">
-                <img src="/icon.jpg" alt="Smarter OS Logo" className="h-full w-full object-cover" />
+                <img src="/icon.jpg" alt="OpenClaw Logo" className="h-full w-full object-cover" />
               </div>
               <span className="text-sm font-semibold text-foreground">
-                {"Smarter"}<span className="text-primary">{" OS"}</span>
+                {"Open"}<span className="text-primary">{"Claw"}</span>
               </span>
             </div>
 
@@ -29,7 +29,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="transition-colors hover:text-foreground"
             >
-              GitHub Smarter OS Source
+              GitHub OpenClaw Source
             </a>
           </div>
         </div>

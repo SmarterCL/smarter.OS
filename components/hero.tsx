@@ -27,21 +27,21 @@ export function Hero() {
             <div className="inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/10 px-5 py-2">
               <Zap className="h-4 w-4 text-primary" />
               <span className="text-sm font-semibold text-primary tracking-wide">
-                Smarter Labs by Nunex Lat Group
+                OpenClaw by Cortical Labs
               </span>
             </div>
           </div>
 
           <h1 className="mt-6 text-balance text-4xl font-black leading-tight tracking-tight text-foreground sm:text-6xl lg:text-7xl italic uppercase">
-            Smarter OS
-            <br />
+            Inteligencia de <br />
             <span className="text-primary mt-4 block">
-              Inteligencia de Negocios by Cortical Labs
+              Negocios Distribuida
             </span>
           </h1>
 
           <p className="mx-auto mt-8 max-w-2xl text-pretty text-2xl leading-relaxed text-muted-foreground lg:text-3xl font-bold tracking-tighter">
-            Presentando <span className="text-foreground border-b-2 border-primary">OpenClaw</span>: Tu infraestructura de capital e inteligencia distribuida.
+            Tu infraestructura de capital e inteligencia distribuida en <span className="text-foreground border-b-2 border-primary">4 niveles</span>.
+            Conectando Chile, Suiza, Australia y la nube global.
           </p>
 
           {/* CTAs */}
@@ -57,7 +57,7 @@ export function Hero() {
               href="#labs"
               className="flex items-center gap-2 rounded-lg border border-muted-foreground/30 bg-secondary/30 px-8 py-4 text-sm font-bold text-foreground transition-colors hover:bg-secondary/50 uppercase"
             >
-              Explorar Labs
+              Explorar Infraestructura
             </a>
           </div>
 

@@ -63,7 +63,7 @@ export function TelcoArchitecture() {
                         Capas de Servicio Inteligente
                     </p>
                     <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                        En Smarter OS, no vemos la tecnología como una sola "caja". La dividimos por capas para entender dónde ocurre la magia.
+                        En OpenClaw, no vemos la tecnología como una sola "caja". La dividimos por capas para entender dónde ocurre la magia.
                     </p>
                 </div>
 
@@ -85,7 +85,7 @@ export function TelcoArchitecture() {
                                     <strong className="text-foreground">Qué es:</strong> {layer.description}
                                 </p>
                                 <p className="text-xs leading-relaxed border-t border-border/50 pt-4">
-                                    <strong className="text-primary font-bold uppercase tracking-widest text-[10px]">Rol en Smarter OS:</strong><br />
+                                    <strong className="text-primary font-bold uppercase tracking-widest text-[10px]">Rol en OpenClaw:</strong><br />
                                     {layer.role}
                                 </p>
                             </div>
@@ -101,7 +101,7 @@ export function TelcoArchitecture() {
                             </div>
                             <h3 className="text-2xl font-black text-foreground uppercase italic tracking-tighter">La Analogía del Edificio</h3>
                             <p className="mt-4 text-muted-foreground leading-relaxed">
-                                Si Smarter OS fuera una estructura física, así se distribuirían las responsabilidades de sus componentes.
+                                Si OpenClaw fuera una estructura física, así se distribuirían las responsabilidades de sus componentes.
                             </p>
                         </div>
 

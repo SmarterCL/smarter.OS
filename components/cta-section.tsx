@@ -19,14 +19,14 @@ export function CTASection() {
               </p>
               <div className="mt-4 flex items-center justify-center gap-2 text-foreground font-medium">
                 <MapPin className="h-5 w-5 text-primary" />
-                <span>Centro de Operaciones Nunex Lat Group</span>
+                <span>Santiago, Chile</span>
               </div>
               <p className="mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
                 {"Pasa la tarjeta, entra en demo y deja que el sistema trabaje por ti 24/7."}
               </p>
 
               <div className="mt-[5px] text-xl font-bold text-primary">
-                {"Smarter OS – Inteligencia de Negocios by Cortical Labs"}
+                {"OpenClaw – Inteligencia de Negocios by Cortical Labs"}
               </div>
 
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -77,7 +77,7 @@ export function CTASection() {
                   GitHub: SmarterMCP
                 </a>
                 <div className="text-xs text-muted-foreground/50">
-                  Propuesta basada en la infraestructura de Smarter SPA (RUT: 78.233.417-4).
+                  Infraestructura distribuida por Cortical Labs.
                 </div>
               </div>
             </div>
