@@ -5,6 +5,7 @@ import { Menu, X, Github } from "lucide-react"
 
 const navLinks = [
   { label: "Infraestructura", href: "/#tienda" },
+  { label: "Hostinger", href: "/#hostinger" },
   { label: "Bolt Studio", href: "/#studio" },
   { label: "Asistente", href: "/#bolt" },
 ]

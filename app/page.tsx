@@ -12,6 +12,7 @@ import { TiendaNodos } from "@/components/tienda-nodos"
 import { SmarterServices } from "@/components/smarter-services"
 import { NeuroRights } from "@/components/neuro-rights"
 import { AgroBusiness } from "@/components/agro-business"
+import { HostingerOpenClaw } from "@/components/hostinger-openclaw"
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <SmarterServices />
       <BoltStudio />
       <SmarterBolt />
+      <HostingerOpenClaw />
 
       <Footer />
     </main>
