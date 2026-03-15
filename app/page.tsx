@@ -1,18 +1,12 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { ActiveAgents } from "@/components/active-agents"
-import { BoltStudio } from "@/components/bolt-studio"
-import { SmarterOSBox } from "@/components/smarteros-box"
 import { GlobalInfrastructure } from "@/components/global-infrastructure"
-
-import { SmarterBolt } from "@/components/smarter-bolt"
+import { HostingerOpenClaw } from "@/components/hostinger-openclaw"
 import { Footer } from "@/components/footer"
 
-import { TiendaNodos } from "@/components/tienda-nodos"
-import { SmarterServices } from "@/components/smarter-services"
 import { NeuroRights } from "@/components/neuro-rights"
 import { AgroBusiness } from "@/components/agro-business"
-import { HostingerOpenClaw } from "@/components/hostinger-openclaw"
 
 export default function Home() {
   return (
@@ -24,11 +18,6 @@ export default function Home() {
       <AgroBusiness />
       <NeuroRights />
       <ActiveAgents />
-      <SmarterOSBox />
-      <TiendaNodos />
-      <SmarterServices />
-      <BoltStudio />
-      <SmarterBolt />
       <HostingerOpenClaw />
 
       <Footer />
