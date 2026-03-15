@@ -19,14 +19,14 @@ export function CTASection() {
               </p>
               <div className="mt-4 flex items-center justify-center gap-2 text-foreground font-medium">
                 <MapPin className="h-5 w-5 text-primary" />
-                <span>Hub Metropolitano San Isidro 85 (A pasos del Metro Santa Lucía)</span>
+                <span>Centro de Operaciones Nunex Lat Group</span>
               </div>
               <p className="mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
                 {"Pasa la tarjeta, entra en demo y deja que el sistema trabaje por ti 24/7."}
               </p>
 
               <div className="mt-[5px] text-xl font-bold text-primary">
-                {"SmarterBot – Inteligencia Real. Resultados Reales."}
+                {"Smarter OS – Inteligencia de Negocios by Cortical Labs"}
               </div>
 
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

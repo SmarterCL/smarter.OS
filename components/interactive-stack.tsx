@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
+import { useState } from "react"
 import { Database, HardDrive, Cpu, Shield, Layers, Smartphone, Repeat, Lock, Zap, ShoppingCart, LineChart } from "lucide-react"
 
 const stackItems = [
@@ -57,42 +57,36 @@ const stackItems = [
         content: (
             <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                    <h3 className="text-2xl font-bold">Mac mini M4 Pro</h3>
+                    <h3 className="text-2xl font-bold">Orange Pi 6 Plus</h3>
                     <div className="hidden sm:inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono border border-emerald-500/20">
-                        referencia real: ≈ $2.9M CLP (64GB / 1TB)
+                        Configuración Enterprise
                     </div>
                 </div>
                 <p className="text-muted-foreground text-lg">
                     Setup con 64GB RAM para procesar tu propia IA sin depender de la nube. Control total de tus datos y latencia cero.
                 </p>
+                <p className="text-[10px] text-emerald-500/70 italic">Nuestra arquitectura de IA Local (Jetson/Orange Pi) garantiza que el procesamiento ocurra dentro de tus dependencias.</p>
                 <div className="relative mt-4 mb-6 w-full rounded-xl overflow-hidden border border-border/50 bg-black/20 aspect-video flex items-center justify-center">
-                    {/* The generated image will be placed here */}
-                    <img src="/mac-m4-pro.png" alt="Mac mini M4 Pro Server" className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity" />
+                    <img src="/Users/mac/.gemini/antigravity/brain/c1fe47ba-8b59-466e-94dc-2a9a2e92701a/media__1773603076449.jpg" alt="Orange Pi 6 Plus" className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity" />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent pointer-events-none"></div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-muted-foreground mt-4">
                     <div className="flex flex-col gap-1 p-3 rounded-lg bg-card/50 border border-border/50">
                         <span className="font-semibold text-foreground">Chip</span>
-                        <span>M4 Pro (12 o 14 CPU / 16–20 GPU)</span>
+                        <span>RK3588 Octa-core</span>
                     </div>
                     <div className="flex flex-col gap-1 p-3 rounded-lg bg-card/50 border border-border/50">
                         <span className="font-semibold text-foreground">RAM</span>
-                        <span>hasta 64 GB unificada</span>
+                        <span>64 GB LPDDR5</span>
                     </div>
                     <div className="flex flex-col gap-1 p-3 rounded-lg bg-card/50 border border-border/50">
                         <span className="font-semibold text-foreground">SSD</span>
-                        <span>1TB–8TB</span>
+                        <span>1TB NVMe</span>
                     </div>
                     <div className="flex flex-col gap-1 p-3 rounded-lg bg-card/50 border border-border/50">
-                        <span className="font-semibold text-foreground">Neural Engine</span>
-                        <span>16-core (IA local)</span>
+                        <span className="font-semibold text-foreground">Puertos</span>
+                        <span>HDMI 2.1, 2.5G Eth, GPIO</span>
                     </div>
-                </div>
-                <div className="sm:hidden mt-2 inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono border border-emerald-500/20">
-                    💰 En Chile: ≈ $2.9M CLP (64GB / 1TB)
-                </div>
-                <div className="mt-2 text-xs text-muted-foreground">
-                    <span className="font-semibold text-foreground">Puertos:</span> Thunderbolt 5, HDMI, Ethernet, USB-C
                 </div>
             </div>
         )
@@ -179,25 +173,16 @@ const stackItems = [
                                 <tr className="group transition-colors hover:bg-secondary/20">
                                     <td className="px-4 py-3 font-mono text-xs text-rose-400">ai.smarterbot.cl</td>
                                     <td className="px-4 py-3 font-semibold">Grafana</td>
-                                    <td className="px-4 py-3 text-muted-foreground">Dashboards de IA (Prometheus)</td>
-                                </tr>
-                                <tr className="group transition-colors hover:bg-secondary/20">
-                                    <td className="px-4 py-3 font-mono text-xs text-rose-400">ia.smarterbot.cl</td>
-                                    <td className="px-4 py-3 font-semibold">Grafana</td>
-                                    <td className="px-4 py-3 text-muted-foreground">Dashboards de IA (Alias)</td>
+                                    <td className="px-4 py-3 text-muted-foreground">Dashboards de IA</td>
                                 </tr>
                                 <tr className="group transition-colors hover:bg-secondary/20">
                                     <td className="px-4 py-3 font-mono text-xs text-blue-400">kpi.smarterbot.cl</td>
                                     <td className="px-4 py-3 font-semibold">Metabase</td>
-                                    <td className="px-4 py-3 text-muted-foreground">Análisis de Datos (Supabase)</td>
+                                    <td className="px-4 py-3 text-muted-foreground">Análisis de Datos</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                </div>
-                <div className="flex gap-2 text-xs text-muted-foreground font-mono bg-secondary/30 p-2 rounded border border-border/50">
-                    <span className="text-rose-400">Note:</span>
-                    <span>kpi.smarterbot.cl redirige a tu instancia privada de Metabase.</span>
                 </div>
             </div>
         )
@@ -250,10 +235,6 @@ const stackItems = [
                         </div>
                     </div>
                 </div>
-
-                <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20">
-                    Estado: LISTO PARA VENDER
-                </div>
             </div>
         )
     }
@@ -265,7 +246,6 @@ export function InteractiveStack() {
 
     return (
         <section id="propuesta" className="py-8 lg:py-16 relative overflow-hidden">
-            {/* Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-[20%] right-[10%] w-[300px] h-[300px] bg-primary/5 rounded-full blur-[100px]" />
                 <div className="absolute bottom-[10%] left-[5%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]" />
@@ -274,25 +254,18 @@ export function InteractiveStack() {
             <div className="mx-auto max-w-7xl px-6 relative z-10">
                 <div className="mx-auto mb-8 max-w-3xl text-center">
                     <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 mb-4">
-                        <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                        </span>
                         <span className="text-xs font-medium text-primary uppercase tracking-wider">
-                            SmarterBOT
+                            Smarter OS
                         </span>
                     </div>
                     <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-4">
                         Solución comercial todo en uno
                     </h2>
-                    <div className="mt-6 flex gap-4 justify-center">
-                        <img src="/hub_smarter.png" alt="Hub Smarter" className="max-w-xs rounded-lg shadow-lg" />
-                        <img src="/m4_notebook.jpeg" alt="M4 Notebook" className="max-w-xs rounded-lg shadow-lg" />
+                    <div className="mt-8 flex gap-4 justify-center">
+                        <img src="/Users/mac/.gemini/antigravity/brain/c1fe47ba-8b59-466e-94dc-2a9a2e92701a/media__1773595606095.jpg" alt="Hardware Placa" className="max-w-xs rounded-lg shadow-lg" />
                     </div>
-
                 </div>
 
-                {/* Mobile View: Sequential List */}
                 <div className="flex flex-col gap-6 lg:hidden">
                     {stackItems.map((item) => {
                         const Icon = item.icon
@@ -315,9 +288,7 @@ export function InteractiveStack() {
                     })}
                 </div>
 
-                {/* Desktop View: Interactive Grid */}
                 <div className="hidden lg:grid grid-cols-12 gap-12 items-start">
-                    {/* Navigation (The Stack Layers) */}
                     <div className="lg:col-span-4 flex flex-col gap-3">
                         {stackItems.map((item) => {
                             const isActive = activeId === item.id
@@ -343,18 +314,13 @@ export function InteractiveStack() {
                                             {item.subtitle}
                                         </span>
                                     </div>
-                                    {isActive && (
-                                        <div className="ml-auto w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                                    )}
                                 </button>
                             )
                         })}
                     </div>
 
-                    {/* Active Content Area */}
                     <div className="lg:col-span-8">
                         <div className="relative overflow-hidden rounded-3xl border border-border bg-card/50 backdrop-blur-sm min-h-[500px] flex flex-col">
-                            {/* Header of the card */}
                             <div className={`px-8 py-6 border-b border-border/50 flex items-center gap-4 ${activeItem.bg}`}>
                                 {(() => {
                                     const Icon = activeItem.icon
@@ -366,16 +332,14 @@ export function InteractiveStack() {
                                 </div>
                             </div>
 
-                            {/* Body */}
                             <div className="p-8 flex-1 flex flex-col justify-center">
                                 <div key={activeId} className="animate-in fade-in slide-in-from-right-4 duration-500">
                                     {activeItem.content}
                                 </div>
                             </div>
 
-                            {/* Footer/Decoration */}
                             <div className="px-8 py-4 bg-secondary/20 border-t border-border/50 text-xs font-mono text-muted-foreground flex justify-between uppercase tracking-widest">
-                                <span>SmarterBOT Stack</span>
+                                <span>Smarter OS Stack</span>
                                 <span>Module: {activeItem.id.toUpperCase()}</span>
                             </div>
                         </div>

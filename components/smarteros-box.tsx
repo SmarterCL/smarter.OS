@@ -249,7 +249,7 @@ function BoxDetail({ board, processor, imageUrl, price, currentConfig, setSelect
 
                         <div className="grid grid-cols-2 gap-3">
                             <a
-                                href="https://wa.me/569XXXXXXXX?text=Hola,%20busco%20información%20del%20SmarterOS%20Box%20Modelo%20"
+                                href="https://wa.me/56979540471?text=Hola,%20busco%20información%20del%20Smarter%20OS%20Box%20Modelo%20"
                                 target="_blank"
                                 className="flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-background/50 py-3 text-[10px] font-bold text-foreground transition-all hover:bg-white hover:text-[#25D366] hover:border-[#25D366]/30 uppercase tracking-widest"
                             >

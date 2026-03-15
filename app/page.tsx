@@ -4,7 +4,7 @@ import { ActiveAgents } from "@/components/active-agents"
 import { BoltStudio } from "@/components/bolt-studio"
 import { SmarterOSBox } from "@/components/smarteros-box"
 import { GlobalInfrastructure } from "@/components/global-infrastructure"
-import { RecomendacionSteps } from "@/components/recomendacion-steps"
+
 import { SmarterBolt } from "@/components/smarter-bolt"
 import { Footer } from "@/components/footer"
 
@@ -28,7 +28,7 @@ export default function Home() {
       <SmarterServices />
       <BoltStudio />
       <SmarterBolt />
-      <RecomendacionSteps />
+
       <Footer />
     </main>
   )

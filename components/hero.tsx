@@ -32,11 +32,11 @@ export function Hero() {
             </div>
           </div>
 
-          <h1 className="mt-6 text-balance text-4xl font-black leading-tight tracking-tight text-foreground sm:text-6xl lg:text-8xl italic uppercase">
-            Inteligencia Privada,
+          <h1 className="mt-6 text-balance text-4xl font-black leading-tight tracking-tight text-foreground sm:text-6xl lg:text-7xl italic uppercase">
+            Smarter OS
             <br />
             <span className="text-primary mt-4 block">
-              Soberanía Total.
+              Inteligencia de Negocios by Cortical Labs
             </span>
           </h1>
 

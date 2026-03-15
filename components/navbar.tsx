@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Menu, X, Github } from "lucide-react"
 
 const navLinks = [
-  { label: "SmarterOS Box", href: "/#box" },
+  { label: "Smarter OS", href: "/#tienda" },
   { label: "Bolt Studio", href: "/#studio" },
   { label: "Asistente", href: "/#bolt" },
 ]
@@ -17,13 +17,13 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="/" className="flex items-center gap-3 group">
           <div className="flex h-10 w-10 overflow-hidden rounded-xl border border-border/50 transition-transform group-hover:scale-105">
-            <img src="/icon.jpg" alt="Smarter Labs Logo" className="h-full w-full object-cover" />
+            <img src="/icon.jpg" alt="Smarter OS Logo" className="h-full w-full object-cover" />
           </div>
           <div className="flex flex-col">
             <span className="text-lg font-bold leading-none tracking-tight text-foreground">
-              {"Smarter"}<span className="text-primary">{" Labs"}</span>
+              {"Smarter"}<span className="text-primary">{" OS"}</span>
             </span>
-            <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-medium">by Nunex Lat Group</span>
+            <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-medium">by Cortical Labs</span>
           </div>
         </a>
 
@@ -87,7 +87,7 @@ export function Navbar() {
               className="flex items-center gap-3 text-sm font-medium text-muted-foreground"
             >
               <Github className="h-5 w-5" />
-              SmarterOS Source
+              Smarter OS Source
             </a>
           </div>
         </div>
