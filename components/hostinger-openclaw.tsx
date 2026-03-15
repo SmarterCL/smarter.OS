@@ -1,47 +1,56 @@
 "use client"
 
-import { Server, CreditCard, Shield, Globe, Zap, ArrowUpRight, Check, TrendingUp } from "lucide-react"
+import { Server, CreditCard, Shield, Globe, Zap, ArrowUpRight, Check, TrendingUp, Calculator } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
+
+// Precios en EUR
+const eurToClp = 1050 // Tipo de cambio aproximado
+const ivaRate = 0.19
 
 const pricingItems = [
     {
         name: "Plan KVM 2",
         period: "Periodo de 12 meses",
-        original: 263.88,
-        final: 101.88,
+        eur: 101.88,
         icon: <Server className="h-5 w-5" />,
         featured: true
     },
     {
         name: "Nexos AI Credits 100",
         period: "Créditos para IA (OpenAI, Anthropic, etc.)",
-        original: 119.99,
-        final: 119.99,
+        eur: 119.99,
         icon: <Zap className="h-5 w-5" />,
         featured: false
     },
     {
         name: "Nombre de Dominio",
         period: "Dominio personalizado incluido",
-        original: 59.99,
-        final: 0.00,
+        eur: 0.00,
         icon: <Globe className="h-5 w-5" />,
-        featured: false
+        featured: false,
+        original: 59.99
     },
     {
         name: "Oxylabs Credits 1000",
         period: "Web Scraping credits",
-        original: 6.99,
-        final: 0.00,
+        eur: 0.00,
         icon: <Shield className="h-5 w-5" />,
-        featured: false
+        featured: false,
+        original: 6.99
     }
 ]
 
-const subtotal = 221.87
-const ivaRate = 0.19
-const iva = subtotal * ivaRate
-const total = subtotal + iva
+// Cálculos en CLP
+const subtotalCLP = pricingItems.reduce((acc, item) => acc + (item.eur * eurToClp), 0)
+const ivaCLP = subtotalCLP * ivaRate
+const totalCLP = subtotalCLP + ivaCLP
+
+const formatCLP = (amount: number) => {
+    return new Intl.NumberFormat('es-CL', {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+    }).format(Math.round(amount))
+}
 
 export function HostingerOpenClaw() {
     return (
@@ -108,13 +117,13 @@ export function HostingerOpenClaw() {
                                         </div>
                                     </div>
                                     <div className="text-right">
-                                        {item.original > item.final && (
+                                        {item.original && (
                                             <p className="text-xs text-zinc-500 line-through">
                                                 €{item.original.toFixed(2)}
                                             </p>
                                         )}
-                                        <p className={`text-lg font-black ${item.final === 0 ? "text-emerald-400" : "text-white"}`}>
-                                            {item.final === 0 ? "GRATIS" : `€${item.final.toFixed(2)}`}
+                                        <p className={`text-lg font-black ${item.eur === 0 ? "text-emerald-400" : "text-white"}`}>
+                                            {item.eur === 0 ? "GRATIS" : `$${formatCLP(item.eur * eurToClp)}`}
                                         </p>
                                     </div>
                                 </div>
@@ -124,12 +133,12 @@ export function HostingerOpenClaw() {
                         {/* Totals */}
                         <div className="border-t border-zinc-700 pt-6 space-y-3">
                             <div className="flex justify-between text-sm">
-                                <span className="text-zinc-400">Subtotal</span>
-                                <span className="font-bold text-white">€{subtotal.toFixed(2)}</span>
+                                <span className="text-zinc-400">Subtotal (sin IVA)</span>
+                                <span className="font-bold text-white">$ {formatCLP(subtotalCLP)}</span>
                             </div>
-                            <div className="flex justify-between text-sm">
+                            <div className="flex justify-between text-sm items-center">
                                 <span className="text-zinc-400">IVA (19%)</span>
-                                <span className="font-bold text-white">€{iva.toFixed(2)}</span>
+                                <span className="font-bold text-white">+ $ {formatCLP(ivaCLP)}</span>
                             </div>
                             <div className="flex justify-between items-center pt-4 border-t border-zinc-700">
                                 <div>
@@ -137,9 +146,9 @@ export function HostingerOpenClaw() {
                                     <p className="text-xs text-zinc-500">~1.000 USD</p>
                                 </div>
                                 <div className="text-right">
-                                    <p className="text-sm font-bold text-zinc-400">Total EUR</p>
+                                    <p className="text-sm font-bold text-zinc-400">Total CLP + IVA</p>
                                     <p className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
-                                        €{total.toFixed(2)}
+                                        $ {formatCLP(totalCLP)}
                                     </p>
                                 </div>
                             </div>
@@ -167,6 +176,20 @@ export function HostingerOpenClaw() {
                                 Ver Plan KVM 2 OpenClaw
                             </a>
                         </div>
+
+                        {/* Exchange Rate Note */}
+                        <div className="mt-6 flex items-start gap-3 rounded-xl bg-zinc-800/30 border border-zinc-700/50 p-4">
+                            <Calculator className="h-5 w-5 text-zinc-500 shrink-0 mt-0.5" />
+                            <div>
+                                <p className="text-xs text-zinc-400 font-medium">
+                                    <span className="text-zinc-300 font-bold">Tipo de cambio referencial: </span>
+                                    1 EUR = $ {formatCLP(eurToClp)} CLP
+                                </p>
+                                <p className="text-[10px] text-zinc-500 mt-1">
+                                    Precios sujetos a variación según tipo de cambio del día. Pago en Hostinger puede ser en EUR o USD.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Features & Benefits */}
@@ -187,7 +210,7 @@ export function HostingerOpenClaw() {
                                 {[
                                     { label: "Ahorro inicial", value: "51%", color: "text-emerald-400" },
                                     { label: "Periodo de contrato", value: "12 meses", color: "text-white" },
-                                    { label: "Créditos IA incluidos", value: "$120 USD", color: "text-primary" },
+                                    { label: "Créditos IA incluidos", value: `$${formatCLP(119.99 * eurToClp)}`, color: "text-primary" },
                                     { label: "Dominio + Privacidad", value: "GRATIS", color: "text-emerald-400" }
                                 ].map((stat) => (
                                     <div key={stat.label} className="flex justify-between items-center p-4 rounded-xl bg-zinc-800/30 border border-zinc-700/50">
