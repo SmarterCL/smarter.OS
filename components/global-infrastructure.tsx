@@ -97,7 +97,7 @@ export function GlobalInfrastructure() {
                     <div className="relative z-10 max-w-2xl mx-auto">
                         <h3 className="text-2xl font-black text-foreground uppercase italic mb-6">El Guión de Nunex Capital Group</h3>
                         <blockquote className="text-xl md:text-2xl font-medium text-foreground leading-relaxed italic">
-                            "Smarterbot.cl es la interfaz; Smarter Labs es el motor. A través de Nunex Capital Group, traremos a Latinoamérica el poder del Silicio suizo para la gestión exacta y el Hardware Cortical australiano para el futuro de la IA biológica."
+                            "Smarterbot.cl es la interfaz; Smarter Labs es el motor. A través de Nunex Capital Group, traemos a Latinoamérica el poder del Silicio suizo para la gestión exacta y el Hardware Cortical australiano para el futuro de la IA biológica."
                         </blockquote>
                         <p className="mt-8 text-primary font-bold tracking-widest uppercase text-sm">
                             Arquitectura LightRAG &bull; Costo Operativo Eficiente
