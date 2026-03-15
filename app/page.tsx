@@ -9,6 +9,7 @@ import { SmarterBolt } from "@/components/smarter-bolt"
 import { Footer } from "@/components/footer"
 import { TelcoArchitecture } from "@/components/telco-architecture"
 import { GlobalInfrastructure } from "@/components/global-infrastructure"
+import { InvestmentProposal } from "@/components/investment-proposal"
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <GlobalInfrastructure />
+      <InvestmentProposal />
       <ActiveAgents />
       <SmarterOSBox />
       <BoltStudio />
