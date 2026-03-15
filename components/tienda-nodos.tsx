@@ -4,6 +4,32 @@ import { ShieldCheck, HardDrive, Zap, Wifi, Server, ExternalLink, Package } from
 
 const products = [
   {
+    id: "jetson-orin",
+    tier: "Super · AI Frontier",
+    badge: "🟢 Jetson Orin Nano",
+    badgeBg: "bg-emerald-500/10 text-emerald-600 border-emerald-500/20",
+    name: "Jetson Orin Nano",
+    tagline: "Super Developer Kit 8GB",
+    specs: "66 TOPS AI",
+    specBg: "bg-emerald-100 text-emerald-800",
+    description:
+      "La frontera de la IA generativa en el borde. 1024 núcleos CUDA para correr LLMs, Vision Transformers y agentes autónomos 100% locales con rendimiento industrial. El cerebro definitivo para centros de datos compactos.",
+    image: "/Users/mac/.gemini/antigravity/brain/c1fe47ba-8b59-466e-94dc-2a9a2e92701a/nvidia_jetson_orin_nano_smarterbox_1773594885931.png",
+    iconColor: "text-emerald-600",
+    features: [
+      "40-66 TOPS · IA Generativa Local",
+      "GPU NVIDIA Ampere (1024 CUDA)",
+      "8GB LPDDR5 · 68 GB/s",
+      "Soporte para LLMs & Vision",
+      "Directo desde MCI Santiago",
+    ],
+    highlight: true,
+    price: "$1.099.000",
+    buttonText: "Comprar en MCI Electronics",
+    link: `https://mcielectronics.cl/shop/product/kit-de-desarrollo-nvidia-jetson-nano-orin/?gad_source=4&gad_campaignid=21444224314&gbraid=0AAAAADijL1XCJWD-epo6R14WnTX91jYsF&gclid=Cj0KCQjwsdnNBhC4ARIsAA_3hegAWn6VA8GAy4BEPYu7KTS0ZDJpG8pk_XLiW2tHHdcTZ_o2maISKN4aAp5VEALw_wcB`,
+    isWhatsApp: false,
+  },
+  {
     id: "picoclaw",
     tier: "Edge · Industrial",
     badge: "🟢 PicoClaw",
@@ -13,7 +39,7 @@ const products = [
     specs: "NPU 6 TOPS",
     specBg: "bg-emerald-100 text-emerald-800",
     description:
-      "El nodo que se envía por correo a Arica o Punta Arenas. El cliente conecta el cable de red y el chorro de servicios empieza a correr. NPU dedicada para IA local, montaje en Riel DIN, alimentación 12–24V DC industrial.",
+      "El nodo que se envía por correo a Arica o Punta Arenas. El cliente conecta el cable de red y el chorro de servicios empieza a correr. NPU dedicada para IA local.",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
     iconColor: "text-emerald-600",
     features: [
@@ -21,7 +47,6 @@ const products = [
       "Riel DIN · 12-24V DC industrial",
       "RS485 / CAN Bus (máquinas reales)",
       "NVMe SSD + doble 2.5G Ethernet",
-      "4G LTE Backup (opcional)",
     ],
     highlight: false,
     buttonText: "Consultar con Smarter Bolt",
@@ -38,7 +63,7 @@ const products = [
     specs: "24 GB RAM",
     specBg: "bg-sky-100 text-sky-800",
     description:
-      "Ideal para estudios contables, startups y comercios en crecimiento. Odoo v19 + agente CLAW + Bolt Studio corriendo 24/7 en tu oficina. Sin nube de terceros.",
+      "Ideal para estudios contables, startups y comercios en crecimiento. Odoo v19 + agente CLAW + Bolt Studio corriendo 24/7 en tu oficina.",
     image: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop",
     iconColor: "text-sky-500",
     features: [
@@ -53,30 +78,6 @@ const products = [
     isWhatsApp: false,
   },
   {
-    id: "openclaw32",
-    tier: "Comercio · Alto Volumen",
-    badge: "🟠 OpenClaw 32",
-    badgeBg: "bg-primary/10 text-primary border-primary/20",
-    name: "Mac Mini M4",
-    tagline: "Motor de catálogos IA",
-    specs: "32 GB RAM",
-    specBg: "bg-primary/10 text-primary",
-    description:
-      "Mayor capacidad para procesar catálogos masivos con Bolt Studio y gestionar alto volumen de ventas. ComfyUI corre fluido para transformar fotos de bodega en fichas ML-ready.",
-    image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop",
-    iconColor: "text-primary",
-    features: [
-      "Motor ComfyUI (Bolt Studio)",
-      "CRM + ERP de alto volumen",
-      "Facturación SII multi-empresa",
-      "Multi-agente paralelo",
-    ],
-    highlight: true,
-    buttonText: "Comprar en MercadoLibre",
-    link: "https://www.mercadolibre.cl/perfil/SMARTER+SPA",
-    isWhatsApp: false,
-  },
-  {
     id: "openclaw64",
     tier: "Empresa · Enterprise",
     badge: "🔵 OpenClaw 64",
@@ -86,7 +87,7 @@ const products = [
     specs: "64 GB RAM",
     specBg: "bg-indigo-100 text-indigo-800",
     description:
-      "Servidor de alta disponibilidad multi-tenant. Múltiples agentes en paralelo, conciliación masiva y bases de datos aisladas por cliente. Para operaciones que no se pueden detener.",
+      "Servidor de alta disponibilidad multi-tenant. Múltiples agentes en paralelo, conciliación masiva y bases de datos aisladas por cliente.",
     image: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&w=800&auto=format&fit=crop",
     iconColor: "text-indigo-500",
     features: [
@@ -171,7 +172,13 @@ export function TiendaNodos() {
                 <div className="p-6 flex flex-col flex-grow">
                   <p className="text-xs font-mono text-emerald-400 uppercase tracking-widest mb-1">{item.tier}</p>
                   <h3 className="text-xl font-black text-white mb-0.5">{item.name}</h3>
-                  <p className="text-xs text-emerald-400 font-semibold mb-4">{item.tagline}</p>
+                  <p className="text-xs text-emerald-400 font-semibold mb-2">{item.tagline}</p>
+                  {item.price && (
+                    <div className="mb-4">
+                      <span className="text-2xl font-black text-white">{item.price}</span>
+                      <span className="text-[10px] text-zinc-500 ml-2 uppercase font-bold tracking-widest">CLP + IVA</span>
+                    </div>
+                  )}
                   <p className="text-zinc-400 text-xs leading-relaxed mb-5 flex-grow">{item.description}</p>
 
                   <ul className="space-y-1.5 mb-5">
@@ -231,7 +238,13 @@ export function TiendaNodos() {
                     <h3 className="text-lg font-bold text-zinc-900">{item.name}</h3>
                     <span className={`px-2 py-0.5 rounded text-xs font-bold ${item.specBg}`}>{item.specs}</span>
                   </div>
-                  <p className="text-xs font-semibold text-primary mb-3">{item.tagline}</p>
+                  <p className="text-xs font-semibold text-primary mb-2">{item.tagline}</p>
+                  {item.price && (
+                    <div className="mb-3">
+                      <span className="text-xl font-black text-zinc-900">{item.price}</span>
+                      <span className="text-[8px] text-zinc-400 ml-1 uppercase font-bold tracking-tighter italic">CLP</span>
+                    </div>
+                  )}
                   <p className="text-zinc-500 text-xs leading-relaxed mb-4 flex-grow">{item.description}</p>
 
                   <ul className="space-y-1.5 mb-5">

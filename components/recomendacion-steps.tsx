@@ -2,16 +2,16 @@ export function RecomendacionSteps() {
     return (
         <section id="recomendacion" className="py-24 bg-zinc-50 text-zinc-900 px-6 border-t border-zinc-200">
             <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
-                <div className="inline-flex items-center rounded-full border border-yellow-400 bg-yellow-400/10 px-3 py-1 text-sm font-medium text-yellow-600 mb-6 font-semibold uppercase tracking-wider">
-                    Sercotec
+                <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-6 font-semibold uppercase tracking-wider">
+                    Software & Hardware
                 </div>
 
                 <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl mb-6 text-zinc-900 max-w-4xl leading-tight">
-                    Si estás en Sercotec puedes comprar con nosotros <span className="text-yellow-500">CRM Chatwoot</span> y <span className="text-yellow-500">ERP Odoo v19</span> OpenSource
+                    Optimiza tu negocio con <span className="text-primary">CRM Chatwoot</span> y <span className="text-primary">ERP Odoo v19</span> OpenSource
                 </h2>
 
                 <p className="text-xl text-zinc-500 mb-16 max-w-2xl mx-auto">
-                    Tienda de hardware y software para tu emprendimiento.
+                    La mejor combinación de hardware y software para escalar tu emprendimiento.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 w-full max-w-4xl">

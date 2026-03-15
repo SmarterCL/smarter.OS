@@ -85,17 +85,31 @@ export function SmarterOSBox() {
                             <TabsTrigger value="5plus" className="rounded-xl px-8 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all font-bold">
                                 Orange Pi 5 Plus
                             </TabsTrigger>
-                            <TabsTrigger value="6plus" className="rounded-xl px-8 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all font-bold">
-                                Orange Pi 6 Plus
+                            <TabsTrigger value="jetson" className="rounded-xl px-8 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all font-bold">
+                                NVIDIA Jetson Orin Nano
                             </TabsTrigger>
                         </TabsList>
                     </div>
 
                     <TabsContent value="5plus" className="mt-0 focus-visible:outline-none">
-                        <BoxDetail board="Orange Pi 5 Plus" processor="RK3588 (8 núcleos)" currentConfig={currentConfig} setSelectedConfig={setSelectedConfig} />
+                        <BoxDetail
+                            board="Orange Pi 5 Plus"
+                            processor="RK3588 (8 núcleos)"
+                            imageUrl="/Users/mac/.gemini/antigravity/brain/84ad6398-f213-47bf-80ee-cb5f67a5777a/orangepi_hardware_mockup_1773590543542.png"
+                            price="$0" // Placeholder, Price is per configuration
+                            currentConfig={currentConfig}
+                            setSelectedConfig={setSelectedConfig}
+                        />
                     </TabsContent>
-                    <TabsContent value="6plus" className="mt-0 focus-visible:outline-none">
-                        <BoxDetail board="Orange Pi 6 Plus" processor="RK3599 (12 núcleos)" currentConfig={currentConfig} setSelectedConfig={setSelectedConfig} />
+                    <TabsContent value="jetson" className="mt-0 focus-visible:outline-none">
+                        <BoxDetail
+                            board="NVIDIA Jetson Orin Nano"
+                            processor="66 TOPS AI"
+                            imageUrl="/Users/mac/.gemini/antigravity/brain/c1fe47ba-8b59-466e-94dc-2a9a2e92701a/nvidia_jetson_orin_nano_smarterbox_1773594885931.png"
+                            price="$1.099.000"
+                            currentConfig={currentConfig}
+                            setSelectedConfig={setSelectedConfig}
+                        />
                     </TabsContent>
                 </Tabs>
             </div>
@@ -103,7 +117,7 @@ export function SmarterOSBox() {
     )
 }
 
-function BoxDetail({ board, processor, currentConfig, setSelectedConfig }: { board: string, processor: string, currentConfig: typeof configurations[0], setSelectedConfig: (id: string) => void }) {
+function BoxDetail({ board, processor, imageUrl, price, currentConfig, setSelectedConfig }: { board: string, processor: string, imageUrl: string, price?: string, currentConfig: typeof configurations[0], setSelectedConfig: (id: string) => void }) {
     return (
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
             {/* VISTA DEL PRODUCTO / HARDWARE */}
@@ -111,8 +125,8 @@ function BoxDetail({ board, processor, currentConfig, setSelectedConfig }: { boa
                 <div className="relative group">
                     <div className="relative overflow-hidden rounded-3xl border border-border/50 bg-gradient-to-b from-card/50 to-background p-2 shadow-2xl transition-all group-hover:shadow-primary/5">
                         <img
-                            src="/Users/mac/.gemini/antigravity/brain/84ad6398-f213-47bf-80ee-cb5f67a5777a/orangepi_hardware_mockup_1773590543542.png"
-                            alt="Orange Pi Hardware Mockup"
+                            src={imageUrl}
+                            alt={`${board} Hardware Mockup`}
                             className="w-full rounded-2xl object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
@@ -222,12 +236,15 @@ function BoxDetail({ board, processor, currentConfig, setSelectedConfig }: { boa
                         </p>
 
                         <a
-                            href="https://www.mercadolibre.cl/" // User requested Mercado Libre link
+                            href={board.includes("Jetson") ? "https://mcielectronics.cl/shop/product/kit-de-desarrollo-nvidia-jetson-nano-orin/?gad_source=4&gad_campaignid=21444224314&gbraid=0AAAAADijL1XCJWD-epo6R14WnTX91jYsF&gclid=Cj0KCQjwsdnNBhC4ARIsAA_3hegAWn6VA8GAy4BEPYu7KTS0ZDJpG8pk_XLiW2tHHdcTZ_o2maISKN4aAp5VEALw_wcB" : "https://www.mercadolibre.cl/"}
                             target="_blank"
-                            className="w-full flex items-center justify-center gap-3 rounded-2xl bg-[#009EE3] px-8 py-5 text-lg font-black text-white shadow-xl shadow-blue-500/20 transition-all hover:translate-y-[-2px] hover:shadow-blue-500/40 active:scale-95"
+                            className={`w-full flex flex-col items-center justify-center gap-1 rounded-2xl ${board.includes("Jetson") ? "bg-[#76B900]" : "bg-[#009EE3]"} px-8 py-5 text-lg font-black text-white shadow-xl transition-all hover:translate-y-[-2px] active:scale-95`}
                         >
-                            <CreditCard className="h-6 w-6" />
-                            PAGAR CON MERCADO PAGO
+                            <div className="flex items-center gap-3">
+                                <CreditCard className="h-6 w-6" />
+                                {board.includes("Jetson") ? `PAGAR EN MCI ELECTRONICS` : "PAGAR CON MERCADO PAGO"}
+                            </div>
+                            {price && <span className="text-xl opacity-90">{price}</span>}
                         </a>
 
                         <div className="grid grid-cols-2 gap-3">
@@ -271,7 +288,7 @@ function BoxDetail({ board, processor, currentConfig, setSelectedConfig }: { boa
                     <div>
                         <h2 className="text-2xl font-black uppercase mb-6 flex items-center gap-3">
                             <Cpu className="h-6 w-6 text-primary" />
-                            Orange Pi 5 Plus vs. Orange Pi 6 Plus
+                            Orange Pi 5 Plus vs. NVIDIA Jetson Orin Nano
                         </h2>
                         <p className="text-lg leading-relaxed mb-8 italic">
                             ¿Por qué elegimos el chip RK3588 para alimentar el núcleo de SmarterOS y OpenClaw?
@@ -282,15 +299,15 @@ function BoxDetail({ board, processor, currentConfig, setSelectedConfig }: { boa
                                 <tr className="bg-zinc-100">
                                     <th className="border border-zinc-200 p-4 text-left font-black uppercase text-xs">Característica</th>
                                     <th className="border border-zinc-200 p-4 text-left font-black uppercase text-xs">Orange Pi 5 Plus</th>
-                                    <th className="border border-zinc-200 p-4 text-left font-black uppercase text-xs">Orange Pi 6 Plus</th>
+                                    <th className="border border-zinc-200 p-4 text-left font-black uppercase text-xs">Jetson Orin Nano (66 TOPS)</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {[
-                                    { f: "CPU", r: "RK3588 (8 núcleos)", o: "RK3599 (12 núcleos Next-Gen)", i: "Arquitectura de procesamiento ultra-denso." },
-                                    { f: "IA / NPU", r: "6 TOPS", o: "12 TOPS (Core Dual)", i: "Inferencia en tiempo real para visión y voz." },
-                                    { f: "RAM", r: "Hasta 32 GB LPDDR4x", o: "Hasta 64 GB LPDDR5", i: "Carga de LLMs masivos localmente." },
-                                    { f: "Network", r: "2x 2.5 Gigabit", o: "2x 10 Gigabit / Fiber Optic", i: "Backbone de datos para infraestructura crítica." }
+                                    { f: "CPU", r: "RK3588 (8 núcleos)", o: "6-core ARM A78AE", i: "Arquitectura de procesamiento ultra-denso." },
+                                    { f: "IA / NPU", r: "6 TOPS", o: "66 TOPS AI", i: "Inferencia en tiempo real para visión y voz." },
+                                    { f: "RAM", r: "Hasta 32 GB LPDDR4x", o: "8GB LPDDR5 (68 GB/s)", i: "Carga de LLMs masivos localmente." },
+                                    { f: "Network", r: "2x 2.5 Gigabit", o: "Gigabit Ethernet + Expansion", i: "Backbone de datos para infraestructura crítica." }
                                 ].map((row) => (
                                     <tr key={row.f}>
                                         <td className="border border-zinc-200 p-4 font-bold text-xs uppercase">{row.f}</td>
@@ -308,8 +325,8 @@ function BoxDetail({ board, processor, currentConfig, setSelectedConfig }: { boa
                             Veredicto Tecnológico
                         </h3>
                         <p className="text-sm leading-relaxed mb-4 font-medium">
-                            Mientras que la Raspberry Pi 5 es una excelente placa educativa, el RK3588 ofrece una arquitectura de servidor para el mundo real.
-                            Su NPU integrada permite que OpenClaw procese visión computacional y flujos de n8n simultáneamente sin cuellos de botella.
+                            En comparación con arquitecturas básicas de consumo, la NVIDIA Jetson Orin Nano es una supercomputadora para IA en el borde.
+                            Su GPU Ampere con 1024 núcleos CUDA habilita OpenClaw para ejecutar Modelos de Lenguaje (LLMs) y visión computacional masiva 100% local.
                         </p>
                         <div className="flex items-center gap-4 pt-6 border-t border-primary/20">
                             <span className="text-4xl font-black text-primary">92%</span>

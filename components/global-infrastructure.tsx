@@ -1,107 +1,131 @@
 "use client"
 
-import { Globe, Cpu, Atom, Zap, Server } from "lucide-react"
+import { Globe, Cpu, Atom, Zap, Server, Database, Brain, ArrowUpRight } from "lucide-react"
 
-const locations = [
+const strategyTiers = [
     {
-        name: "Nunex.lat",
-        region: "Latinoamérica",
-        role: "El brazo ejecutor. Despliegue de infraestructura local y VPS de alto rendimiento (Hostinger).",
-        tech: "Infraestructura Regional",
-        icon: <Server className="h-6 w-6 text-sky-400" />,
+        name: "Startup / Pyme",
+        hardware: "Orange Pi 5 & 6",
+        region: "Latinoamérica (Nunex.lat)",
+        description: "Optimización de costos con arquitectura ARM64. Ideal para CRM Chatwoot, ERP Odoo v19 y automatizaciones n8n locales.",
+        tech: "Eficiencia Local",
+        color: "text-sky-400",
         bg: "bg-sky-500/10",
-        border: "border-sky-500/20"
+        border: "border-sky-500/20",
+        icon: <Server className="h-6 w-6" />
     },
     {
-        name: "Neuronal Silicio",
-        region: "Suiza",
-        role: "Precisión matemática y legal. Procesamiento exacto de facturas, RUTs y cumplimiento Ley REP.",
-        tech: "Inteligencia Fría y Exacta",
-        icon: <Cpu className="h-6 w-6 text-primary" />,
+        name: "Comercio / Scaleup",
+        hardware: "NVIDIA Jetson Orin Nano",
+        region: "Suiza (Neuronal Silicio)",
+        description: "Potencia de 66 TOPS para visión artificial y procesamiento de facturación exacta. Inteligencia soberana para retail avanzado.",
+        tech: "Edge AI Soberana",
+        color: "text-primary",
         bg: "bg-primary/10",
-        border: "border-primary/20"
+        border: "border-primary/20",
+        icon: <Cpu className="h-6 w-6" />
     },
     {
-        name: "Cortical Hardware",
-        region: "Australia",
-        role: "Integración con Cortical Labs. Computación biológica, inteligencia orgánica y ultra bajo consumo.",
-        tech: "Hardware Biológico Orgánico",
-        icon: <Atom className="h-6 w-6 text-emerald-400" />,
+        name: "Enterprise / Industrial",
+        hardware: "Cortical Labs Cloud / Físico",
+        region: "Australia (Cortical Labs)",
+        description: "Integración con neuronas biológicas (DishBrain). Ultra bajo consumo y procesamiento cortical para tareas de alta complejidad.",
+        tech: "IA Biológica",
+        color: "text-emerald-400",
         bg: "bg-emerald-500/10",
-        border: "border-emerald-500/20"
+        border: "border-emerald-500/20",
+        icon: <Atom className="h-6 w-6" />
+    },
+    {
+        name: "Académico / Gobiernos",
+        hardware: "Smarter Cluster M4 Cloud",
+        region: "Global Distributed",
+        description: "Nodos distribuidos para investigación en neuroderechos y ética de IA. Sandbox seguro para desarrollo de neurotecnologías.",
+        tech: "Infraestructura Global",
+        color: "text-amber-400",
+        bg: "bg-amber-500/10",
+        border: "border-amber-500/20",
+        icon: <Globe className="h-6 w-6" />
     }
 ]
 
 export function GlobalInfrastructure() {
     return (
-        <section id="labs" className="relative overflow-hidden bg-background py-24 sm:py-32">
-            <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.05]">
-                <Globe className="w-full h-full text-primary" />
+        <section id="labs" className="relative overflow-hidden py-24 sm:py-32">
+            {/* Background Map Glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] pointer-events-none">
+                <Globe className="w-full h-full text-white" />
             </div>
 
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto max-w-3xl text-center mb-16">
-                    <h2 className="text-base font-semibold leading-7 text-primary uppercase tracking-[0.3em]">Smarter Labs</h2>
-                    <p className="mt-2 text-4xl font-black tracking-tight text-foreground sm:text-6xl uppercase italic">
-                        Infraestructura Global
-                    </p>
-                    <p className="mt-6 text-xl leading-8 text-muted-foreground font-medium">
-                        No somos software. Somos una red distribuida de capital e inteligencia operando en tres continentes.
+            <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+                <div className="mx-auto max-w-3xl text-center mb-20">
+                    <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 mb-6">
+                        <Zap className="h-4 w-4 text-primary" />
+                        <span className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Estrategia de Capital e Inteligencia</span>
+                    </div>
+                    <h2 className="text-4xl font-black tracking-tighter text-white sm:text-6xl uppercase italic leading-none">
+                        Propuesta de Inversión <br />
+                        <span className="text-primary">Nunex Lat Group</span>
+                    </h2>
+                    <p className="mt-6 text-lg leading-relaxed text-zinc-400 font-medium">
+                        Infraestructura tecnológica distribuida por <span className="text-white font-bold">nunex.lat</span>. 
+                        Cuatro niveles de despliegue para el futuro de la IA soberana.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-                    <div className="absolute top-0 right-0 p-8 z-20 hidden lg:block">
-                        <div className="bg-background/80 backdrop-blur-md border border-primary/20 rounded-2xl p-4 shadow-xl">
-                            <div className="flex items-center gap-2 mb-2">
-                                <span className="relative flex h-2 w-2">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                                </span>
-                                <span className="text-[10px] font-black uppercase tracking-widest text-primary">LightRAG Ignition</span>
-                            </div>
-                            <div className="space-y-1">
-                                <p className="text-[11px] font-bold text-foreground">Vueltas Autónomas: 5/5</p>
-                                <p className="text-[11px] font-medium text-emerald-400">Energía Recibida (Flow Webhook OK)</p>
-                            </div>
-                        </div>
-                    </div>
-                    {locations.map((loc) => (
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    {strategyTiers.map((tier) => (
                         <div
-                            key={loc.name}
-                            className={`relative flex flex-col p-8 rounded-3xl border ${loc.border} bg-card/60 backdrop-blur-xl transition-all hover:scale-[1.05] hover:shadow-2xl hover:shadow-primary/5`}
+                            key={tier.name}
+                            className={`group relative flex flex-col p-6 rounded-[2rem] border ${tier.border} bg-zinc-900/40 backdrop-blur-xl transition-all hover:-translate-y-2 hover:bg-zinc-900/60`}
                         >
-                            <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl ${loc.bg} shadow-inner`}>
-                                {loc.icon}
+                            <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl ${tier.bg} border ${tier.border} ${tier.color} shadow-inner`}>
+                                {tier.icon}
                             </div>
-                            <h3 className="text-2xl font-black text-foreground italic uppercase tracking-tighter">{loc.name}</h3>
-                            <p className="text-sm font-bold text-primary mb-4 uppercase tracking-widest">{loc.region}</p>
                             
-                            <div className="space-y-4 mb-8">
-                                <p className="text-muted-foreground leading-relaxed font-medium">
-                                    {loc.role}
-                                </p>
+                            <div className="mb-2">
+                                <h3 className="text-lg font-black text-white italic uppercase tracking-tighter">{tier.name}</h3>
+                                <p className={`text-sm font-bold ${tier.color} uppercase tracking-widest`}>{tier.hardware}</p>
                             </div>
 
-                            <div className="mt-auto pt-6 border-t border-border/50">
-                                <span className="inline-flex items-center gap-2 rounded-full bg-secondary/50 px-3 py-1 text-[10px] font-bold text-foreground border border-border">
-                                    <Zap className="h-3 w-3 text-primary" />
-                                    {loc.tech}
+                            <div className="flex items-center gap-2 mb-4">
+                                <span className="h-1.5 w-1.5 rounded-full bg-zinc-600"></span>
+                                <p className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">{tier.region}</p>
+                            </div>
+                            
+                            <p className="text-zinc-400 text-xs leading-relaxed font-medium mb-8">
+                                {tier.description}
+                            </p>
+
+                            <div className="mt-auto pt-4 border-t border-zinc-800 flex items-center justify-between">
+                                <span className="inline-flex items-center gap-2 rounded-full bg-zinc-800/50 px-3 py-1 text-[9px] font-bold text-zinc-300 border border-zinc-700">
+                                    {tier.tech}
                                 </span>
+                                <ArrowUpRight className="h-4 w-4 text-zinc-600 group-hover:text-primary transition-colors" />
                             </div>
                         </div>
                     ))}
                 </div>
 
-                <div className="mt-20 rounded-[2rem] border border-primary/20 bg-primary/5 p-8 lg:p-16 text-center relative overflow-hidden">
-                    <div className="relative z-10 max-w-2xl mx-auto">
-                        <h3 className="text-2xl font-black text-foreground uppercase italic mb-6">El Guión de Nunex Capital Group</h3>
-                        <blockquote className="text-xl md:text-2xl font-medium text-foreground leading-relaxed italic">
-                            "Smarterbot.cl es la interfaz; Smarter Labs es el motor. A través de Nunex Capital Group, traemos a Latinoamérica el poder del Silicio suizo para la gestión exacta y el Hardware Cortical australiano para el futuro de la IA biológica."
+                {/* Footer Quote */}
+                <div className="mt-20 rounded-[2.5rem] border border-primary/20 bg-primary/5 p-8 lg:p-12 text-center relative overflow-hidden">
+                    <div className="absolute top-0 right-0 p-8 opacity-5">
+                        <Database className="w-32 h-32 text-primary" />
+                    </div>
+                    <div className="relative z-10 max-w-3xl mx-auto">
+                        <h4 className="text-xl font-black text-white uppercase italic mb-4 tracking-tighter">Smarter Labs x Nunex Capital</h4>
+                        <blockquote className="text-lg md:text-xl font-medium text-zinc-300 leading-relaxed italic">
+                            "No vendemos software, distribuimos soberanía operativa. A través de Nunex Lat Group, conectamos el hardware más eficiente del mundo con las leyes de neuroderechos de Chile, creando el primer ecosistema de IA segura y rentable."
                         </blockquote>
-                        <p className="mt-8 text-primary font-bold tracking-widest uppercase text-sm">
-                            Arquitectura LightRAG &bull; Costo Operativo Eficiente
-                        </p>
+                        <div className="mt-6 flex flex-wrap justify-center gap-4 text-[10px] font-bold text-primary uppercase tracking-[0.2em]">
+                            <span>Chile</span>
+                            <span className="text-zinc-700">•</span>
+                            <span>Suiza</span>
+                            <span className="text-zinc-700">•</span>
+                            <span>Australia</span>
+                            <span className="text-zinc-700">•</span>
+                            <span>Global Cloud</span>
+                        </div>
                     </div>
                 </div>
             </div>

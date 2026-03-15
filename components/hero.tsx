@@ -27,7 +27,7 @@ export function Hero() {
             <div className="inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/10 px-5 py-2">
               <Zap className="h-4 w-4 text-primary" />
               <span className="text-sm font-semibold text-primary tracking-wide">
-                Smarter Labs by Nunex Capital Group
+                Smarter Labs by Nunex Lat Group
               </span>
             </div>
           </div>
@@ -47,7 +47,7 @@ export function Hero() {
           {/* CTAs */}
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="https://os.smarterbot.cl/"
+              href="https://origin.smarterbot.cl/"
               className="group flex items-center gap-2 rounded-lg bg-primary px-10 py-4 text-base font-black text-primary-foreground transition-all hover:scale-105 shadow-xl shadow-primary/20 uppercase"
             >
               Ingresar al Sistema

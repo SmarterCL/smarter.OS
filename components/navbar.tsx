@@ -6,9 +6,7 @@ import { Menu, X, Github } from "lucide-react"
 const navLinks = [
   { label: "SmarterOS Box", href: "/#box" },
   { label: "Bolt Studio", href: "/#studio" },
-  { label: "Inversión", href: "/#investment" },
   { label: "Asistente", href: "/#bolt" },
-  { label: "Planes", href: "/#planes" },
 ]
 
 export function Navbar() {
@@ -25,7 +23,7 @@ export function Navbar() {
             <span className="text-lg font-bold leading-none tracking-tight text-foreground">
               {"Smarter"}<span className="text-primary">{" Labs"}</span>
             </span>
-            <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-medium">by Nunex Capital</span>
+            <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-medium">by Nunex Lat Group</span>
           </div>
         </a>
 
@@ -41,7 +39,7 @@ export function Navbar() {
           ))}
           <div className="flex items-center gap-4">
             <a
-              href="https://os.smarterbot.cl/"
+              href="https://origin.smarterbot.cl/"
               className="flex items-center gap-2 rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 hover:opacity-90 active:scale-95"
             >
               Ingresar al Sistema
@@ -77,7 +75,7 @@ export function Navbar() {
           ))}
           <div className="mt-8 flex flex-col items-center gap-6 w-full">
             <a
-              href="https://os.smarterbot.cl/"
+              href="https://origin.smarterbot.cl/"
               className="w-full max-w-xs rounded-2xl bg-primary px-8 py-4 text-center text-lg font-bold text-primary-foreground shadow-xl shadow-primary/20"
             >
               Ingresar al Sistema
