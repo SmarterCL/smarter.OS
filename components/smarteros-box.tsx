@@ -75,7 +75,7 @@ export function SmarterOSBox() {
                     </p>
                     <p className="mt-6 text-lg leading-8 text-muted-foreground">
                         La infraestructura física de OpenClaw. Hardware diseñado para correr tu cerebro digital localmente.
-                        Sin suscripciones ocultas, con el poder del chip RK3588.
+                        Sin suscripciones ocultas, con el poder de la serie Rockchip RK35xx.
                     </p>
                 </div>
 
@@ -92,10 +92,10 @@ export function SmarterOSBox() {
                     </div>
 
                     <TabsContent value="5plus" className="mt-0 focus-visible:outline-none">
-                        <BoxDetail board="Orange Pi 5 Plus" processor="RK3588 (Standard)" currentConfig={currentConfig} setSelectedConfig={setSelectedConfig} />
+                        <BoxDetail board="Orange Pi 5 Plus" processor="RK3588 (8 núcleos)" currentConfig={currentConfig} setSelectedConfig={setSelectedConfig} />
                     </TabsContent>
                     <TabsContent value="6plus" className="mt-0 focus-visible:outline-none">
-                        <BoxDetail board="Orange Pi 6 Plus" processor="RK3588 (Next Gen)" currentConfig={currentConfig} setSelectedConfig={setSelectedConfig} />
+                        <BoxDetail board="Orange Pi 6 Plus" processor="RK3599 (12 núcleos)" currentConfig={currentConfig} setSelectedConfig={setSelectedConfig} />
                     </TabsContent>
                 </Tabs>
             </div>
