@@ -3,7 +3,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Check, Info, TrendingUp, Zap, Cpu, Globe, Server, FileText, BarChart3, TrendingDown } from "lucide-react"
+import { Check, Info, TrendingUp, Zap, Cpu, Globe, Server, FileText, BarChart3, TrendingDown, ShoppingCart } from "lucide-react"
 
 const stackItems = [
     "SmarterOS",
