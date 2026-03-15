@@ -8,17 +8,18 @@ import { RecomendacionSteps } from "@/components/recomendacion-steps"
 import { SmarterBolt } from "@/components/smarter-bolt"
 import { Footer } from "@/components/footer"
 import { TelcoArchitecture } from "@/components/telco-architecture"
+import { GlobalInfrastructure } from "@/components/global-infrastructure"
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Navbar />
       <Hero />
+      <GlobalInfrastructure />
       <ActiveAgents />
       <SmarterOSBox />
       <BoltStudio />
       <SmarterBolt />
-      <TelcoArchitecture />
       <Pricing />
       <RecomendacionSteps />
       <Footer />

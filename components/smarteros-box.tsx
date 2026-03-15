@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Box, Check, Cpu, Globe, Layout, Rocket, Server, Shield, Smartphone, Zap, MessageCircle, Send, FileDown, ShoppingCart } from "lucide-react"
+import { Box, Check, Cpu, Globe, Layout, Rocket, Server, Shield, Smartphone, Zap, MessageCircle, Send, FileDown, ShoppingCart, CreditCard, FileText, Brain } from "lucide-react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 const configurations = [
@@ -69,12 +69,12 @@ export function SmarterOSBox() {
         <section id="box" className="relative overflow-hidden bg-background py-24 sm:py-32 border-t border-border/10">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl text-center mb-16">
-                    <h2 className="text-base font-semibold leading-7 text-primary uppercase tracking-widest">SmarterOS Box v1</h2>
-                    <p className="mt-2 text-4xl font-black tracking-tight text-foreground sm:text-5xl">
+                    <h2 className="text-base font-semibold leading-7 text-primary uppercase tracking-widest">OpenClaw v1</h2>
+                    <p className="mt-2 text-4xl font-black tracking-tight text-foreground sm:text-5xl uppercase italic">
                         AI Automation Appliance
                     </p>
                     <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                        El hardware diseñado para correr tu cerebro digital localmente.
+                        La infraestructura física de OpenClaw. Hardware diseñado para correr tu cerebro digital localmente.
                         Sin suscripciones ocultas, con el poder del chip RK3588.
                     </p>
                 </div>
@@ -132,18 +132,18 @@ function BoxDetail({ board, processor, currentConfig, setSelectedConfig }: { boa
                     <div className="absolute top-0 right-0 p-4 opacity-5">
                         <Cpu className="h-24 w-24" />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground">¿Por qué este modelo?</h3>
+                    <h3 className="text-xl font-bold text-foreground uppercase tracking-tighter italic">¿Por qué este modelo?</h3>
                     <p className="mt-4 text-muted-foreground leading-relaxed italic">
                         Similar a como Synology es para almacenamiento o Ubiquiti para redes,
-                        SmarterOS Box es para la **automatización de procesos empresariales**.
+                        <strong className="text-foreground"> OpenClaw</strong> es para la **automatización de procesos empresariales y soberanía de datos**.
                     </p>
                     <div className="mt-8 flex items-center gap-6">
                         <div className="flex -space-x-3">
                             <div className="h-12 w-12 rounded-2xl border-2 border-background bg-zinc-800 flex items-center justify-center text-[10px] font-black text-white shadow-xl">SYNO</div>
                             <div className="h-12 w-12 rounded-2xl border-2 border-background bg-zinc-800 flex items-center justify-center text-[10px] font-black text-white shadow-xl">UBI</div>
-                            <div className="h-12 w-12 rounded-2xl border-2 border-background bg-primary flex items-center justify-center text-[10px] font-black text-primary-foreground shadow-xl shadow-primary/20">SMT</div>
+                            <div className="h-12 w-12 rounded-2xl border-2 border-background bg-primary flex items-center justify-center text-[10px] font-black text-primary-foreground shadow-xl shadow-primary/20">OCW</div>
                         </div>
-                        <p className="text-sm font-black text-foreground uppercase tracking-widest">El nuevo estándar en Hardware IA.</p>
+                        <p className="text-sm font-black text-foreground uppercase tracking-widest">El nuevo estándar en Hardware IA Biológica.</p>
                     </div>
                 </div>
             </div>

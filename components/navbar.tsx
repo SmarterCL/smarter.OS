@@ -18,13 +18,13 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="/" className="flex items-center gap-3 group">
           <div className="flex h-10 w-10 overflow-hidden rounded-xl border border-border/50 transition-transform group-hover:scale-105">
-            <img src="/icon.jpg" alt="SmarterOS Logo" className="h-full w-full object-cover" />
+            <img src="/icon.jpg" alt="Smarter Labs Logo" className="h-full w-full object-cover" />
           </div>
           <div className="flex flex-col">
             <span className="text-lg font-bold leading-none tracking-tight text-foreground">
-              {"Smarter"}<span className="text-primary">{"OS"}</span>
+              {"Smarter"}<span className="text-primary">{" Labs"}</span>
             </span>
-            <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-medium">BORN TO RUN</span>
+            <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-medium">by Nunex Capital</span>
           </div>
         </a>
 
@@ -40,12 +40,10 @@ export function Navbar() {
           ))}
           <div className="flex items-center gap-4">
             <a
-              href="https://flow.smarterbot.cl/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="https://os.smarterbot.cl/"
               className="flex items-center gap-2 rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 hover:opacity-90 active:scale-95"
             >
-              Activar Box
+              Ingresar al Sistema
             </a>
           </div>
         </div>
@@ -78,12 +76,10 @@ export function Navbar() {
           ))}
           <div className="mt-8 flex flex-col items-center gap-6 w-full">
             <a
-              href="https://flow.smarterbot.cl/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="https://os.smarterbot.cl/"
               className="w-full max-w-xs rounded-2xl bg-primary px-8 py-4 text-center text-lg font-bold text-primary-foreground shadow-xl shadow-primary/20"
             >
-              Activar Box
+              Ingresar al Sistema
             </a>
             <a
               href="https://github.com/SmarterCL/smarter.io"

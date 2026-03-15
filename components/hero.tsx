@@ -27,39 +27,37 @@ export function Hero() {
             <div className="inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/10 px-5 py-2">
               <Zap className="h-4 w-4 text-primary" />
               <span className="text-sm font-semibold text-primary tracking-wide">
-                Sistema Operativo Empresarial para Chile
+                Smarter Labs by Nunex Capital Group
               </span>
             </div>
           </div>
 
-          <h1 className="mt-6 text-balance text-4xl font-black leading-tight tracking-tight text-foreground sm:text-6xl lg:text-8xl">
-            Si tienes una Startup, Comercio o Empresa,
+          <h1 className="mt-6 text-balance text-4xl font-black leading-tight tracking-tight text-foreground sm:text-6xl lg:text-8xl italic uppercase">
+            Inteligencia Privada,
             <br />
-            <span className="text-muted-foreground mt-4 block text-3xl sm:text-4xl lg:text-5xl font-bold">
-              no necesitas saber de tecnología.
+            <span className="text-primary mt-4 block">
+              Soberanía Total.
             </span>
           </h1>
 
-          <p className="mx-auto mt-8 max-w-2xl text-pretty text-2xl leading-relaxed text-primary lg:text-3xl font-black uppercase tracking-tighter italic">
-            Solo necesitas que sea Smarter
+          <p className="mx-auto mt-8 max-w-2xl text-pretty text-2xl leading-relaxed text-muted-foreground lg:text-3xl font-bold tracking-tighter">
+            Presentando <span className="text-foreground border-b-2 border-primary">OpenClaw</span>: Tu infraestructura de capital e inteligencia distribuida.
           </p>
 
           {/* CTAs */}
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="https://flow.smarterbot.cl/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-bold text-primary-foreground transition-all hover:opacity-90"
+              href="https://os.smarterbot.cl/"
+              className="group flex items-center gap-2 rounded-lg bg-primary px-10 py-4 text-base font-black text-primary-foreground transition-all hover:scale-105 shadow-xl shadow-primary/20 uppercase"
             >
-              Activar ahora
+              Ingresar al Sistema
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="#recomendacion"
-              className="flex items-center gap-2 rounded-lg border border-muted-foreground/30 bg-secondary/30 px-8 py-3.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary/50"
+              href="#labs"
+              className="flex items-center gap-2 rounded-lg border border-muted-foreground/30 bg-secondary/30 px-8 py-4 text-sm font-bold text-foreground transition-colors hover:bg-secondary/50 uppercase"
             >
-              Recomendar y obtener comisión
+              Explorar Labs
             </a>
           </div>
 

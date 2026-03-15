@@ -15,40 +15,40 @@ interface AgentTask {
 const INITIAL_TASKS: AgentTask[] = [
     {
         id: "1",
-        agent: "Bolt IA",
-        task: "Optimizando base de datos...",
+        agent: "Neuronal Silicio (Suiza)",
+        task: "Validando factura Ley REP #992...",
         status: "working",
         icon: <Cpu className="h-4 w-4" />,
-        color: "text-emerald-400"
-    },
-    {
-        id: "2",
-        agent: "Odoo",
-        task: "Sincronizando 15 productos con MercadoLibre...",
-        status: "working",
-        icon: <Database className="h-4 w-4" />,
         color: "text-blue-400"
     },
     {
+        id: "2",
+        agent: "Cortical Hardware (Australia)",
+        task: "Procesando respuesta adaptativa orgánica...",
+        status: "working",
+        icon: <Database className="h-4 w-4" />,
+        color: "text-emerald-400"
+    },
+    {
         id: "3",
-        agent: "PicoClaw",
-        task: "Validando RUT de nuevo cliente...",
+        agent: "OpenClaw (Latam)",
+        task: "Sincronizando LightRAG con memoria local...",
         status: "working",
         icon: <Globe className="h-4 w-4" />,
-        color: "text-purple-400"
+        color: "text-primary"
     },
     {
         id: "4",
-        agent: "n8n",
-        task: "Automatizando cobro factura #4592...",
+        agent: "n8n (Flow Webhook)",
+        task: "Escuchando pagos entrantes...",
         status: "working",
         icon: <Zap className="h-4 w-4" />,
         color: "text-amber-400"
     },
     {
         id: "5",
-        agent: "Identity",
-        task: "Verificación biométrica completada",
+        agent: "Smarter Labs",
+        task: "Energía Recibida - Sistema Activado",
         status: "success",
         icon: <ShieldCheck className="h-4 w-4" />,
         color: "text-sky-400"
@@ -74,12 +74,13 @@ export function ActiveAgents() {
                     }
                 } else {
                     // Resetear o rotar
-                    const randomAgents = ["PicoClaw", "Bolt IA", "Odoo Connector", "Flow Proxy"]
+                    const randomAgents = ["Neuronal Silicio", "Cortical Labs", "OpenClaw", "LightRAG Engine"]
                     const randomTasks = [
-                        "Analizando patrones de venta...",
-                        "Optimizando base de datos...",
-                        "Validando RUT de nuevo cliente...",
-                        "Generando reporte SII..."
+                        "Detección de patrones en RUTs...",
+                        "Procesamiento bio-computacional...",
+                        "Vuelta 3/5 LightRAG completada...",
+                        "Enrutando a Nodo Suizo...",
+                        "Energía Solar optimizada en Nodo Australia"
                     ]
                     const agent = randomAgents[Math.floor(Math.random() * randomAgents.length)]
                     newTasks[indexToUpdate] = {
@@ -91,7 +92,7 @@ export function ActiveAgents() {
                 }
                 return newTasks
             })
-        }, 3000)
+        }, 4000)
 
         return () => clearInterval(interval)
     }, [])
