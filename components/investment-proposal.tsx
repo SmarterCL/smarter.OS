@@ -17,11 +17,11 @@ const stackItems = [
 ]
 
 const costs = [
-    { item: "VPS Hostinger", cost: "~200 USD" },
-    { item: "OpenClaw", cost: "~200 USD" },
-    { item: "Infraestructura AI", cost: "~200 USD" },
-    { item: "Integración SmarterOS", cost: "~200 USD" },
-    { item: "Operación / soporte", cost: "~200 USD" },
+    { item: "Infra KVM 2 + Dominio + Backup", cost: "$185.000 CLP" },
+    { item: "AI Credits (Nexos.ai)", cost: "$130.000 CLP" },
+    { item: "OpenClaw Deployment", cost: "$200.000 CLP" },
+    { item: "SmarterOS Operating Stack", cost: "$285.000 CLP" },
+    { item: "Operación / Soporte (1 año)", cost: "$200.000 CLP" },
 ]
 
 export function InvestmentProposal() {
@@ -52,7 +52,7 @@ export function InvestmentProposal() {
                                 1. El Producto
                             </TabsTrigger>
                             <TabsTrigger value="cost" className="rounded-xl px-6 py-3 data-[state=active]:bg-primary data-[state=active]:text-zinc-950 font-bold uppercase text-xs tracking-widest">
-                                2. Costo & Retorno
+                                2. Desglose Cart
                             </TabsTrigger>
                             <TabsTrigger value="investment" className="rounded-xl px-6 py-3 data-[state=active]:bg-primary data-[state=active]:text-zinc-950 font-bold uppercase text-xs tracking-widest">
                                 3. Inversión & ANR
@@ -85,7 +85,7 @@ export function InvestmentProposal() {
                                 </CardContent>
                                 <div className="p-8 bg-primary/5 mt-auto border-t border-zinc-800">
                                     <p className="text-sm italic font-medium text-zinc-300">
-                                        "Por ~1000 USD desplegamos una empresa digital completa operada por IA."
+                                        "Por ~$1.000.000 CLP desplegamos una empresa digital completa operada por IA."
                                     </p>
                                 </div>
                             </Card>
@@ -122,20 +122,37 @@ export function InvestmentProposal() {
                     <TabsContent value="cost" className="mt-0 focus-visible:outline-none">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                             <Card className="bg-zinc-900/50 border-zinc-800 backdrop-blur-sm p-8">
-                                <h3 className="text-xl font-black uppercase italic mb-8 flex items-center gap-3">
-                                    <TrendingDown className="w-6 h-6 text-emerald-400" />
-                                    Costo de Despliegue (CAPEX)
-                                </h3>
-                                <div className="space-y-4">
-                                    {costs.map((c) => (
-                                        <div key={c.item} className="flex justify-between items-center p-4 rounded-xl border border-zinc-800 bg-zinc-800/20">
-                                            <span className="text-sm font-bold text-zinc-300 uppercase tracking-widest">{c.item}</span>
-                                            <span className="text-sm font-black text-primary">{c.cost}</span>
-                                        </div>
-                                    ))}
-                                    <div className="mt-8 p-6 rounded-2xl bg-primary/10 border-2 border-primary/20 flex justify-between items-center">
-                                        <span className="text-lg font-black uppercase italic">Total Paquete</span>
-                                        <span className="text-3xl font-black text-primary italic">≈ 1.000 USD</span>
+                                <div className="flex justify-between items-center mb-8">
+                                    <h3 className="text-xl font-black uppercase italic flex items-center gap-3">
+                                        <ShoppingCart className="w-6 h-6 text-primary" />
+                                        Detalle del Carrito
+                                    </h3>
+                                    <Badge className="bg-emerald-500 text-zinc-950 font-black">AHORRO 45%</Badge>
+                                </div>
+                                <div className="space-y-3">
+                                    <div className="flex justify-between text-xs border-b border-zinc-800 pb-2">
+                                        <span className="text-zinc-400">Plan KVM 2 Business (12 Meses)</span>
+                                        <span className="font-bold">$101.880</span>
+                                    </div>
+                                    <div className="flex justify-between text-xs border-b border-zinc-800 pb-2">
+                                        <span className="text-zinc-400">Nexos.ai Credits (OpenAI, Anthropic, etc)</span>
+                                        <span className="font-bold">$119.990</span>
+                                    </div>
+                                    <div className="flex justify-between text-xs border-b border-zinc-800 pb-2">
+                                        <span className="text-zinc-400">Backup Diario Automático</span>
+                                        <span className="font-bold">$71.880</span>
+                                    </div>
+                                    <div className="flex justify-between text-xs border-b border-zinc-800 pb-2">
+                                        <span className="text-zinc-400">Email Dedicado IA + Dominio Gratis</span>
+                                        <span className="font-bold">$5.400</span>
+                                    </div>
+                                    <div className="flex justify-between text-xs text-emerald-400 uppercase font-black">
+                                        <span>Oxylabs Web Scraping (1000 Credits)</span>
+                                        <span>GRATIS</span>
+                                    </div>
+                                    <div className="mt-6 p-4 bg-zinc-800/50 rounded-xl border border-primary/20 flex justify-between items-center">
+                                        <span className="text-sm font-black uppercase">Subtotal Infraestructura</span>
+                                        <span className="text-xl font-black text-white">$299.150 CLP</span>
                                     </div>
                                 </div>
                             </Card>
@@ -143,29 +160,18 @@ export function InvestmentProposal() {
                             <Card className="bg-zinc-900/50 border-zinc-800 backdrop-blur-sm p-8 flex flex-col">
                                 <h3 className="text-xl font-black uppercase italic mb-8 flex items-center gap-3">
                                     <TrendingUp className="w-6 h-6 text-primary" />
-                                    Valor Percibido vs. Tradicional
+                                    Costo Total del Stack (ANUAL)
                                 </h3>
-                                <div className="flex-1 space-y-8">
-                                    <div className="relative">
-                                        <div className="absolute top-0 left-0 w-1 h-full bg-zinc-800" />
-                                        <div className="pl-6 space-y-4">
-                                            <div className="flex justify-between items-center opacity-50">
-                                                <span className="text-sm uppercase font-bold">Modelo Tradicional</span>
-                                                <span className="text-sm font-black line-through">80k – 120k USD</span>
-                                            </div>
-                                            <p className="text-xs text-zinc-500 italic">Servidores físicos + Licencias Enterprise + Consultoría + Equipo Técnico IT</p>
+                                <div className="space-y-4 flex-1">
+                                    {costs.map((c) => (
+                                        <div key={c.item} className="flex justify-between items-center p-3 rounded-lg border border-zinc-800 bg-zinc-800/20">
+                                            <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">{c.item}</span>
+                                            <span className="text-sm font-black text-primary">{c.cost}</span>
                                         </div>
-                                    </div>
-
-                                    <div className="relative">
-                                        <div className="absolute top-0 left-0 w-1 h-full bg-primary" />
-                                        <div className="pl-6 space-y-4">
-                                            <div className="flex justify-between items-center">
-                                                <span className="text-sm uppercase font-black text-primary">SmarterOS Stack</span>
-                                                <span className="text-2xl font-black text-white">1k – 5k USD</span>
-                                            </div>
-                                            <p className="text-sm text-zinc-300 font-medium">El inversor no compra servidores; compra <span className="text-primary italic">capacidad de operación digital inmediata.</span></p>
-                                        </div>
+                                    ))}
+                                    <div className="mt-4 p-6 rounded-2xl bg-primary border-2 border-primary shadow-[0_0_30px_rgba(255,215,0,0.2)] flex justify-between items-center">
+                                        <span className="text-lg font-black uppercase italic text-zinc-950">Total CAPEX</span>
+                                        <span className="text-3xl font-black text-zinc-950 italic">≈ $1.000.000 CLP</span>
                                     </div>
                                 </div>
                             </Card>
