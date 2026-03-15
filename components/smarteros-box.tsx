@@ -111,8 +111,8 @@ function BoxDetail({ board, processor, currentConfig, setSelectedConfig }: { boa
                 <div className="relative group">
                     <div className="relative overflow-hidden rounded-3xl border border-border/50 bg-gradient-to-b from-card/50 to-background p-2 shadow-2xl transition-all group-hover:shadow-primary/5">
                         <img
-                            src="/smarteros_box_v1_mockup_1772989966038.png"
-                            alt="SmarterOS Box Mockup"
+                            src="/Users/mac/.gemini/antigravity/brain/84ad6398-f213-47bf-80ee-cb5f67a5777a/orangepi_hardware_mockup_1773590543542.png"
+                            alt="Orange Pi Hardware Mockup"
                             className="w-full rounded-2xl object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
@@ -271,7 +271,7 @@ function BoxDetail({ board, processor, currentConfig, setSelectedConfig }: { boa
                     <div>
                         <h2 className="text-2xl font-black uppercase mb-6 flex items-center gap-3">
                             <Cpu className="h-6 w-6 text-primary" />
-                            Orange Pi 5 Plus vs. Raspberry Pi 5
+                            Orange Pi 5 Plus vs. Orange Pi 6 Plus
                         </h2>
                         <p className="text-lg leading-relaxed mb-8 italic">
                             ¿Por qué elegimos el chip RK3588 para alimentar el núcleo de SmarterOS y OpenClaw?
@@ -281,16 +281,16 @@ function BoxDetail({ board, processor, currentConfig, setSelectedConfig }: { boa
                             <thead>
                                 <tr className="bg-zinc-100">
                                     <th className="border border-zinc-200 p-4 text-left font-black uppercase text-xs">Característica</th>
-                                    <th className="border border-zinc-200 p-4 text-left font-black uppercase text-xs">Raspberry Pi 5</th>
                                     <th className="border border-zinc-200 p-4 text-left font-black uppercase text-xs">Orange Pi 5 Plus</th>
+                                    <th className="border border-zinc-200 p-4 text-left font-black uppercase text-xs">Orange Pi 6 Plus</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {[
-                                    { f: "CPU", r: "Broadcom BCM2712 (4 núcleos)", o: "RK3588 (8 núcleos: 4xA76 + 4xA55)", i: "Arquitectura de servidor. Respuesta en milisegundos." },
-                                    { f: "IA / NPU", r: "No tiene", o: "6 TOPS (Integrada)", i: "Visión Pro nativa." },
-                                    { f: "RAM", r: "8 GB", o: "Hasta 32 GB", i: "Súper Integración: LLMs locales." },
-                                    { f: "Network", r: "1x Gigabit", o: "2x 2.5 Gigabit", i: "Gateway de Datos masivo." }
+                                    { f: "CPU", r: "RK3588 (8 núcleos)", o: "RK3599 (12 núcleos Next-Gen)", i: "Arquitectura de procesamiento ultra-denso." },
+                                    { f: "IA / NPU", r: "6 TOPS", o: "12 TOPS (Core Dual)", i: "Inferencia en tiempo real para visión y voz." },
+                                    { f: "RAM", r: "Hasta 32 GB LPDDR4x", o: "Hasta 64 GB LPDDR5", i: "Carga de LLMs masivos localmente." },
+                                    { f: "Network", r: "2x 2.5 Gigabit", o: "2x 10 Gigabit / Fiber Optic", i: "Backbone de datos para infraestructura crítica." }
                                 ].map((row) => (
                                     <tr key={row.f}>
                                         <td className="border border-zinc-200 p-4 font-bold text-xs uppercase">{row.f}</td>
